@@ -1,16 +1,21 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-09-25T18:25:00+00:00",
-  "archive_base_commit": "472bccdd37f4d7e75e16a762687f8a9731f55b30",
+  "checked_at_utc": "2026-09-27T19:30:00+00:00",
+  "archive_base_commit": "c048368cd23ed3bc6aacf7ee80422162eb1a2b2f",
   "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
-  "source_commit": "62377f2ce98b1db4e9f5f2cd8b19d25f63fdd0e4",
+  "source_commit": "255b46b83ccbbe539c15fe646f0ceb7e4ffc2490",
   "destination": "03-сайт/сайт_текущий",
-  "note": "Этап 2 финал: /faq/ 62377f2 — 1-й абзац запах старости ответы врача. Этап 2 закрыт полностью.",
+  "note": "Актуализация 27.09.2026: снимок приведён к состоянию сайта после завершения иллюстраций (69 картинок). Прежние записи сохранены.",
   "source_files": [
     {
       "path": "CNAME",
       "bytes": 16,
       "sha256": "1dbb014c4f3e807d0df4d4ffcdbabc8d1aa548b8ee7f9e263e2a9096d639acef"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15,
+      "sha256": "def52c78004b0029bc0232bd9ff2c404a508b0368f57a52517569e88ae9c8ca5"
     },
     {
       "path": "app/icon-180.png",
@@ -29,13 +34,13 @@
     },
     {
       "path": "app/index.html",
-      "bytes": 66182,
-      "sha256": "4ba50e9077286c5168798db38bb4eaf728d8e36b0c93092fdf94fd62096d74b0"
+      "bytes": 66174,
+      "sha256": "0666036c75204458acf1fd084c24d81e08a3102766a661d2269563bcb4a043b8"
     },
     {
       "path": "app/manifest.webmanifest",
-      "bytes": 714,
-      "sha256": "36815f6f91b9f2813513e279d94a29688fdf43334b3c7bf62f091f2e1620fe36"
+      "bytes": 712,
+      "sha256": "5f81278d83d6ab9f6bef43e796479ddf6df7ab4936ebe00d196d56cf06a58010"
     },
     {
       "path": "app/sw.js",
@@ -44,23 +49,23 @@
     },
     {
       "path": "chto-takoe-2-nonenal/index.html",
-      "bytes": 39564,
-      "sha256": "f0734efdbf8da29f68e4cb71cede671155127c9aa8d95728070b35159bacb057"
+      "bytes": 47182,
+      "sha256": "bc8bbad9ed92d5d8e4e0a2be221ec571f33a14a0053b548c4188682e2d0a26a9"
     },
     {
       "path": "constructor-v5.html",
-      "bytes": 54154,
-      "sha256": "f76b9797562ffb2a232c62d2934c8284f6747a583576e52c19c86efc28be9381"
+      "bytes": 58756,
+      "sha256": "73ac789e08bfb4301e6a80c4db7c5743c88417b1b4da83e7ed683317a59798a9"
     },
     {
       "path": "faq/index.html",
-      "bytes": 35386,
-      "sha256": "eac794df0833f31a45328d0ecc210d69aec3d0a36db632dde979e6d2bc84ba9f"
+      "bytes": 37568,
+      "sha256": "6339efcf3bb79d00c9582fbae1dd20a144c8a0122c57ef2ce73094a614a58824"
     },
     {
       "path": "favicon.ico",
-      "bytes": 12674,
-      "sha256": "4d14df23d4a7e6795e68759c44d2a925f637f2d4b47510cb0691f9e038a69b1a"
+      "bytes": 3469,
+      "sha256": "c8660b1542b914f67f34803c181395344985092c3ab3a71a2f299dac697bac8b"
     },
     {
       "path": "googlebfe090009deb22b8.html",
@@ -88,14 +93,79 @@
       "sha256": "3a907c1997426b03c14c6c66a62e04d921c292d1f2970ef9c0266664db620f73"
     },
     {
+      "path": "images/divan-chetyre-obivki.webp",
+      "bytes": 171998,
+      "sha256": "e0385af73b9a156d3d5230ba6cc21be375e77242553d25f87a661348ee0910e1"
+    },
+    {
+      "path": "images/divan-lovushka-pylesosa.webp",
+      "bytes": 156078,
+      "sha256": "86eb15a4b40cba2c4720e7edca5b4514d93a39d761c55d46ac31d444e03565da"
+    },
+    {
+      "path": "images/divan-portret-gostinaya.webp",
+      "bytes": 157274,
+      "sha256": "dee1a6a0d49d85a32e2ff92e7444c7137fc75cb30e42ab4e114947b48d574187"
+    },
+    {
+      "path": "images/divan-protokol-5-shagov.webp",
+      "bytes": 169358,
+      "sha256": "fd8b143ab5cc080e50e5fb55dc4c6a1c0986e9ded55a5f88f577e833d721776e"
+    },
+    {
       "path": "images/divan.jpg",
       "bytes": 48762,
       "sha256": "2dc2412169b76141d215d8d5ca2b5aed80bd661f4cb3ce58d04c800d207ce48f"
     },
     {
+      "path": "images/faq-parfyum-zametnee.webp",
+      "bytes": 163214,
+      "sha256": "65a9808b30b89575119a3c92d4521260e2a562b38cce49e5cb40d744a5cd40c4"
+    },
+    {
+      "path": "images/faq-telo-ili-mebel.webp",
+      "bytes": 122386,
+      "sha256": "ddbff5d5a290ea113de59165a8a2cbbb12c88d12958d00eda7debcb8f4aaa8f1"
+    },
+    {
+      "path": "images/faq-vozvrat-zapaha.webp",
+      "bytes": 137152,
+      "sha256": "debf2e33451604db65064079298f51bbddcb9939d0b6704121282326a6e90594"
+    },
+    {
       "path": "images/favicon.png",
-      "bytes": 4888,
-      "sha256": "10f5d065fcc0962dc9ac44237d4e57e213879d58f1341a40a0f7e1adc2a6f0c1"
+      "bytes": 1581,
+      "sha256": "d7c9c2af747c171c92155818c6161e95e2021fd0a8e6d3e18083ef93f6c610fb"
+    },
+    {
+      "path": "images/glavnaya-3-shaga.webp",
+      "bytes": 156416,
+      "sha256": "6d7fd25ea94a29bf44a485de4dea9fbd6ced855b4cd23f39f19362485dbcb893"
+    },
+    {
+      "path": "images/glavnaya-molekula-portret.webp",
+      "bytes": 103924,
+      "sha256": "9bd8fea49e9390cfd17d305693e68673ca54251e5fc885503e7f25997279428a"
+    },
+    {
+      "path": "images/glavnaya-svezhest-doma.webp",
+      "bytes": 100768,
+      "sha256": "183c7733d319c1f2679cc294ed9ef8fea20cdfb970ead08f49c06d7a69e996f1"
+    },
+    {
+      "path": "images/gov-chetyre-barera.webp",
+      "bytes": 147264,
+      "sha256": "04fc1965d07fe51a5d9b4bdfb10f895de0d65ae5c84d753f0933e3ae6fbecd8b"
+    },
+    {
+      "path": "images/gov-pomosh-deystviem.webp",
+      "bytes": 140148,
+      "sha256": "f7b925c73a9f3bbd0daad2f6c00a9dcec8043b58e60af8aa5031ba63f1b3bd85"
+    },
+    {
+      "path": "images/gov-tretiy-obekt.webp",
+      "bytes": 167550,
+      "sha256": "36f57a5ee4a8d413a6e205f5003f54b06a8e795cc47011086fa8b7a3a2d1d3ea"
     },
     {
       "path": "images/hero-blue.jpg",
@@ -114,18 +184,18 @@
     },
     {
       "path": "images/icon-180.png",
-      "bytes": 20697,
-      "sha256": "77aa6024c7fad5960f2fbb1eca89418a0b424ba1ccb3b1d2c0f08fd4d6269134"
+      "bytes": 8676,
+      "sha256": "04b2dca5ba82cd6261a845d4649608c4d376b1ae8243362fc968dd088fc77533"
     },
     {
       "path": "images/icon-512.png",
-      "bytes": 68952,
-      "sha256": "d5b45cd0ec8c6359cf8f0957d74f0e87f5bb96ca8ac5879e7ec121f0104bfac5"
+      "bytes": 30260,
+      "sha256": "3696359ffc58b7291a8c5385b37aef5cef5783c9206161398ea2db031e82cad1"
     },
     {
       "path": "images/icon.svg",
-      "bytes": 99511,
-      "sha256": "326f580add805b6b984406be6ee82446eae912d83a4379b8920b7ebbc41a73e3"
+      "bytes": 162612,
+      "sha256": "f0c52f2fd89416de8acec979801c62e6ed135568ff2352752d53a6438a442b15"
     },
     {
       "path": "images/img-20260830-1407.jpg",
@@ -158,9 +228,39 @@
       "sha256": "b8a46d81945795b21795465393fce897e8853702b8d6a52a1f552f982683c079"
     },
     {
+      "path": "images/istochnik-khlopok-protiv-poliestra.webp",
+      "bytes": 157930,
+      "sha256": "4266cc197e412dbd9204ca0349949bf5541e0c081872abfcfb2bbe1d5cf529ec"
+    },
+    {
+      "path": "images/istochnik-nos-ne-slyshit.webp",
+      "bytes": 132340,
+      "sha256": "0e0de0c1381d0c1f586f1c3dc58a2962fce723e62346c90b712da42ff9125da2"
+    },
+    {
+      "path": "images/istochnik-paradoks-slepoy-pyatna.webp",
+      "bytes": 142728,
+      "sha256": "c9e17b80cac0bafd60bdadc923e0e2f6968fd05ad53aa86a618fae7fe9ae3ea2"
+    },
+    {
       "path": "images/karta-blue.jpg",
       "bytes": 14678,
       "sha256": "b39165fb19d13c195e80855403263c89b5b4f2d3093ba2dbe4486f86ad772c0f"
+    },
+    {
+      "path": "images/karta-kukhonnye-tryapki.webp",
+      "bytes": 179086,
+      "sha256": "a8e8ae2c160c693b7985f645eaff30af9921bbcd0036b9034fe702da31e2868f"
+    },
+    {
+      "path": "images/karta-perevaya-podushka.webp",
+      "bytes": 124564,
+      "sha256": "6ec203606b058f1a353c7fd36ca3b2eed18105b527d18bbd588f4ff1f92658bb"
+    },
+    {
+      "path": "images/karta-test-zakrytye-dveri.webp",
+      "bytes": 155016,
+      "sha256": "acf27adbe7aee2997e6886f0651e7bab212aec05d65661107013d3bc082e0711"
     },
     {
       "path": "images/kora-blue.jpg",
@@ -178,9 +278,84 @@
       "sha256": "01cd63e779ab3f06266942df60f2d16f6892e359e46c0d6a721496631c2353e0"
     },
     {
+      "path": "images/kvartira-ne-za-odin-den.webp",
+      "bytes": 147778,
+      "sha256": "2ef6d799ddd382baf6fd5c045c711f7c2a22454d4430ef33f2f05bc5b390deff"
+    },
+    {
+      "path": "images/kvartira-ozonator.webp",
+      "bytes": 184426,
+      "sha256": "6a9e15089a04caa6079b4949e2fc916a6eb1bc0e477a8b57db0e7ba156fe8478"
+    },
+    {
+      "path": "images/kvartira-shtory-filtr.webp",
+      "bytes": 144670,
+      "sha256": "61e43e15e162580929385189dee356dfcf476fe87deb5661e8cdfbdc0094813f"
+    },
+    {
+      "path": "images/kviz-devyat-shagov.webp",
+      "bytes": 121772,
+      "sha256": "e6d85705cbc41951a3b13f73932e7edeae8b7636bdfdeb98a8851abf13fcc316"
+    },
+    {
+      "path": "images/kviz-olfaktornyy-sbros.webp",
+      "bytes": 164140,
+      "sha256": "828cc7c4313cba58f1fabc82731844a453a111afc09d1efa3de9e50ae3bf5076"
+    },
+    {
+      "path": "images/kviz-sem-testov.webp",
+      "bytes": 190752,
+      "sha256": "ed60ead45ff51a62cca47297693251fea8a31204ce9627e939f7bf26ef4f3252"
+    },
+    {
+      "path": "images/lekarstva-korvalol.webp",
+      "bytes": 198560,
+      "sha256": "416a1b1131d432cad0311cb077fcda0bcdf2928a6974e94cd1112602486245d0"
+    },
+    {
+      "path": "images/lekarstva-mazi.webp",
+      "bytes": 155406,
+      "sha256": "7615d99d2ebc1fd9fd553d11396b0a909ff78d869e218509578afc83b52f238d"
+    },
+    {
+      "path": "images/lekarstva-ne-otmenyat.webp",
+      "bytes": 188212,
+      "sha256": "b8baef4739efb4aaf7fb1ef2e85f262e80be693dd99c2b559663337b4703b7c1"
+    },
+    {
+      "path": "images/mater-kislorod-enzimy.webp",
+      "bytes": 114208,
+      "sha256": "8a2797e93fb4deab5ac905568dac2c14aad499f5134dc217a7e3ed75c7bc0fcc"
+    },
+    {
+      "path": "images/mater-termogidroliz-dsp.webp",
+      "bytes": 172410,
+      "sha256": "47ccdf8aaab43b97e79ffea1813486577753a2c4dd36aa5c909b8dff0823c189"
+    },
+    {
+      "path": "images/mater-test-skrytyy-uchastok.webp",
+      "bytes": 151318,
+      "sha256": "49d1435f0804c9e9439f7a84a50b96045652f2116e6cb063b349076ce914d415"
+    },
+    {
       "path": "images/matras-blue.jpg",
       "bytes": 42144,
       "sha256": "710f4b304e965ed48403fc92f698fe7cc6ee9162b4ced63b3e1206ca6548ca78"
+    },
+    {
+      "path": "images/matras-protokol-5-etapov.webp",
+      "bytes": 154618,
+      "sha256": "7fb3465f54e62e4947a847e74c7fce3147ba4a74479efe48d105322b4eb9c74a"
+    },
+    {
+      "path": "images/matras-teplovoy-ispritel.webp",
+      "bytes": 108860,
+      "sha256": "5e6df4a6872b3a82e01bda3cec32a4b05c5a0bc7ddd02ef0e0552cbbaa21c186"
+    },
+    {
+      "path": "images/matras-tri-narodnykh-soveta.webp",
+      "bytes": 140232,
+      "sha256": "d76c8c754150ef04fe5098f95d6877d75ea8ce9fe0e46d22753e4a5bad7cef9b"
     },
     {
       "path": "images/matras.jpg",
@@ -198,134 +373,239 @@
       "sha256": "0a8b49f61c6d30c0ddeed594c69cc2dd2c7fcee3c0a1b1800a2c4ed715ce1fa1"
     },
     {
+      "path": "images/nonenal-dub-taniny.webp",
+      "bytes": 198170,
+      "sha256": "13cc3de54638752e8cc39e1c7a6eab0d7de838d589c893408c6c37aa315e5541"
+    },
+    {
+      "path": "images/nonenal-haze-2001.webp",
+      "bytes": 161860,
+      "sha256": "a015cf0d7781470c654d0b3629dfe138db98f6d5946ce22935f091d4fa5f2b5f"
+    },
+    {
+      "path": "images/nonenal-molekula-portret.webp",
+      "bytes": 87718,
+      "sha256": "2f3b0ca9443e6850e95d281973edc403267399adeaf6a29ab26a7bf07fb21dda"
+    },
+    {
+      "path": "images/nonenal-natyurmort.webp",
+      "bytes": 121744,
+      "sha256": "089644069dc2ff5a28ed204f13fc433185bbc1d0e1770e67281209e1ec93ba6d"
+    },
+    {
+      "path": "images/nonenal-nelzya-kozhe.webp",
+      "bytes": 132202,
+      "sha256": "565613aa64d08bc462646c1a4d6064d74f9491456c5dd82e4b45c4ecbfb2abaa"
+    },
+    {
+      "path": "images/nonenal-ochered.webp",
+      "bytes": 180430,
+      "sha256": "cb73dc0a94ea995f2c69ed868c143adaec36801d55c3759e97701bf3a8b1762e"
+    },
+    {
+      "path": "images/ochistitel-obratnaya-desorbtsiya.webp",
+      "bytes": 195900,
+      "sha256": "a9c67ead483877bcc3532435f1602ecdd52faa9a5deb7266ca901d37dc6facb6"
+    },
+    {
+      "path": "images/ochistitel-razmer-molekuly.webp",
+      "bytes": 151764,
+      "sha256": "63e630f7ce16d296757ab565d210f5136c958e68a550afdfe23759859b683e61"
+    },
+    {
+      "path": "images/ochistitel-ugolnyy-porolon.webp",
+      "bytes": 183078,
+      "sha256": "e310b9d357fc8c1f94f52d1b24a085e4eee07f2b8ea57ee204b1f4ed108fc70f"
+    },
+    {
       "path": "images/og/chto-takoe-2-nonenal.jpg",
-      "bytes": 63605,
-      "sha256": "6b035541f0fde657b7dcb0beca052e6a1d318e9ac75754ab2a9e8da7a88119de"
+      "bytes": 70598,
+      "sha256": "edc76c5b3baca8ca301439dd67655dbc0ba5ab7eaf8086e2a933e3fb35c9a182"
     },
     {
       "path": "images/og/faq.jpg",
-      "bytes": 62241,
-      "sha256": "45bc51a3fb2373b12aff17caca767f7003a847ec877824cbcf2f1da0d46458c9"
+      "bytes": 69436,
+      "sha256": "7c476466947b4dc7d4b88e2d9a55732f617ab3d65cd724022804d191bb1a46d7"
     },
     {
       "path": "images/og/home.jpg",
-      "bytes": 64909,
-      "sha256": "05e6d5128e092a1ba90b8d3169375379a06b446248b9754ecd581a007faa6478"
+      "bytes": 71793,
+      "sha256": "a1148df8754afca1633af91bca8684c4e96a7a955e50aca42b826022ef4fc725"
     },
     {
       "path": "images/og/kak-otlichit-istochnik-zapakha.jpg",
-      "bytes": 61274,
-      "sha256": "e8ae6eda506fbf4638fd042f112432500c8d80be37e0894243fd9e69ea9ffa16"
+      "bytes": 74288,
+      "sha256": "af52f1e379c26d75bca484f32245db0c4356b54ab3e62dcf6a81a6fa9569245d"
     },
     {
       "path": "images/og/kak-pogovorit-s-blizkim.jpg",
-      "bytes": 61626,
-      "sha256": "20a4e099e04eccc5642255013696a1a717356268b982baab143ccadc16182f00"
+      "bytes": 68609,
+      "sha256": "b573d8c5c843bb6abd6e130d1b966b37914a49c48844999807b0dc5f0db012a5"
     },
     {
       "path": "images/og/kak-ubrat-zapah-iz-shkafa.jpg",
-      "bytes": 56629,
-      "sha256": "79be50d9d94d08a541e73684f8d95c9dec326950b8a9497a44d28374e92d9ccd"
+      "bytes": 71805,
+      "sha256": "6fee0a7001e65627fcdba550efd9bfbe013b9d6a9f69f30e3c882b5ec0b020d3"
     },
     {
       "path": "images/og/kak-ubrat-zapah-s-divana.jpg",
-      "bytes": 62572,
-      "sha256": "659df09fe9b3664caa04896c1021df5808f06c553ae05a3cd60ac2b851628c5e"
+      "bytes": 72983,
+      "sha256": "ec4f25b9b23730cef7cfd07d6337944ff1e28002764c84cf649c80a9b253f3bb"
     },
     {
       "path": "images/og/kak-ubrat-zapah-s-matrasa.jpg",
-      "bytes": 61454,
-      "sha256": "ce3cef0dcfd914aa711b8c09f01b77c9197ffed6975614ec9c2a06f57fe8a80b"
+      "bytes": 75207,
+      "sha256": "0c394fc71daf14f32840d0b672782320261445360c94c47bb931009ea458dbe9"
     },
     {
       "path": "images/og/kak-ubrat-zapah-v-sanuzle.jpg",
-      "bytes": 57075,
-      "sha256": "b6eaa1e1428eebe788cdb84576e89e87218c98bec465aa443b113f2c738313aa"
+      "bytes": 62706,
+      "sha256": "b260f18dae53bfb42668f0cbebf11fcffa188b8fedbdca45749fce465df7be44"
     },
     {
       "path": "images/og/kak-ubrat-zapah-v-stiralnoj-mashine.jpg",
-      "bytes": 60264,
-      "sha256": "3e3d7da3e0312750e6a0b8e49f09860bdbb1fe0868b9539247af8665669aba19"
+      "bytes": 72360,
+      "sha256": "59bcb7e4b5fbacae6f231074e28bc3aee3d3371c9c071d97cb44da47b0068302"
     },
     {
       "path": "images/og/karta-kvartiry.jpg",
-      "bytes": 60607,
-      "sha256": "d00e28b0799ad7ac75d41b5fa6bde4eea2740603ebc038365b74d6255aff3125"
+      "bytes": 73446,
+      "sha256": "7920e57369ee5ca09c26179d3448a87a5dbd4b7942822d5fc8d80f66b5c88d19"
     },
     {
       "path": "images/og/karta-osetii.jpg",
-      "bytes": 63044,
-      "sha256": "6143f39f9a91ebec9903ab3a107b10a8c8fc371515015fde2e81faf6b21b2f28"
+      "bytes": 72158,
+      "sha256": "19933058114002bf884469d122faf677c255a7ddcb59704afbf577070efe41f3"
     },
     {
       "path": "images/og/kogda-k-vrachu.jpg",
-      "bytes": 54828,
-      "sha256": "6becc49939b8d104b4fb2150332dd30bf4915fc0e6b296b6d690a0e1078b38b8"
+      "bytes": 60785,
+      "sha256": "f67b297b86239c47cb7ef1a9c85fcf391d7ca1c0480a771881afa15c6e6dcf61"
     },
     {
       "path": "images/og/kviz.jpg",
-      "bytes": 49727,
-      "sha256": "ad1b8ef5e05893a2e3c98e38448cdf375058219a25b46fc66f45a4f87cdeef3b"
+      "bytes": 55549,
+      "sha256": "a7d9fe06f23a274ad7d3d9d4d8583e2206d716d0ba65b7021965c342332ecc2c"
     },
     {
       "path": "images/og/lekarstva-i-zapah.jpg",
-      "bytes": 59258,
-      "sha256": "6b0f9664a4415e1d2dd8ed638b1d2463c0c5b400e58d9d3c6ce844958b5620c0"
+      "bytes": 65910,
+      "sha256": "6111c60f584801e3344a249068d23cd8697d6f2a1581b7a9656cff89fb828b07"
     },
     {
       "path": "images/og/material-metod.jpg",
-      "bytes": 60040,
-      "sha256": "87130b272ce2a5bd3b03974585025bdcaf0164c66c09fe8a7c24fa5f859d9bab"
+      "bytes": 66447,
+      "sha256": "05a59c693faf3a229bae6585c738af86af8c91271513572b0994b9360e912cd3"
     },
     {
       "path": "images/og/nabor.jpg",
-      "bytes": 57452,
-      "sha256": "5173ab23013fba6a64273fe84eaf7d5fd3b6c4087b65520020813c23bb62da8c"
+      "bytes": 63921,
+      "sha256": "37817ad0bb16c65cfeb565cd863804c1f179976ac0472045b52262af72fbeedd"
     },
     {
       "path": "images/og/o-proekte.jpg",
-      "bytes": 30734,
-      "sha256": "40db6e45ec16f1857cac449c3823d5049802562eb79f4d2f9b0c0ae9199fcc47"
+      "bytes": 56911,
+      "sha256": "fdbcc314bbde57ceba8321b068e260b809fc4ef39e9368abf8c296fb9c245288"
     },
     {
       "path": "images/og/ochistitel-vozduha.jpg",
-      "bytes": 64471,
-      "sha256": "870ecb5962014db0623c1cdb5703d3349f9f812abb489a9901cf622ba9007bde"
+      "bytes": 71246,
+      "sha256": "8b7bcbafb17a95f6b96e4e3f8885c4a994a01d94c1aab1dbb936d4791f5eb34b"
     },
     {
       "path": "images/og/odezhda-i-tekstil.jpg",
-      "bytes": 58725,
-      "sha256": "1108d00e28c61faa3d7bfa767e07f77a14b8611389827642202b0f897ca6fbe4"
+      "bytes": 64509,
+      "sha256": "eb40991ccb06a85c086ff27994cf3c0cda01d92b94a56cfc6b5d1f7a3ea14b5f"
     },
     {
       "path": "images/og/poroshok-dlya-tekstila.jpg",
-      "bytes": 60652,
-      "sha256": "0f9d3de7cba603420a2ce55805ab35f5762b6eceb902d6170bf236ed1ce8ed15"
+      "bytes": 67280,
+      "sha256": "de677389c839a1cc2a22d6bb169b6b692184d59c8456a92345f021c30819e9c2"
     },
     {
       "path": "images/og/sredstva-ot-zapaha.jpg",
-      "bytes": 63150,
-      "sha256": "2c505ceff4b335a6fdb05761043618c71c9373eadd8455e97c6cd58f71baa27a"
+      "bytes": 74085,
+      "sha256": "7998608ad9627b1f6d133da694c67767a92f669c5a9f928b16d6f74a42b9c148"
     },
     {
       "path": "images/og/tonik-protirka.jpg",
-      "bytes": 57439,
-      "sha256": "7b71e38f9bb948c2845082b0b096d4702e5fd8bb9ccae4db7cab4826817b5a14"
+      "bytes": 64090,
+      "sha256": "e570a88f420d49858cd7f9e7ad62140353654e6996d55b273a3310ddf09541af"
     },
     {
       "path": "images/og/ubrat-zapah.jpg",
-      "bytes": 66825,
-      "sha256": "3e90ee8925c5b89096febada8adba8bf26feae465752ce32a4b9de540e5379a4"
+      "bytes": 65268,
+      "sha256": "ecd5d8879dd1f185500b464f16c390aa8a4bd1452b3da8193f2f18fe607fd595"
     },
     {
       "path": "images/og/ventilyatsiya-i-vlazhnost.jpg",
-      "bytes": 61463,
-      "sha256": "89d353019795e2e7244b868e234895ef39d61dedd97f2ba70d04c6f2f62c5934"
+      "bytes": 67334,
+      "sha256": "6eab750341e564ec0319343f04cbbe718c7a93377ff1a353ee1fd0b46c9a7656"
     },
     {
       "path": "images/og/zapah-v-kvartire.jpg",
-      "bytes": 61343,
-      "sha256": "7b5c84549f53ad45c4e7da0507527dbc5191690ce02a312e9d08e4680c2acbc6"
+      "bytes": 73719,
+      "sha256": "89b42192c479aef172e021dea8e2ba9ad95968dba292cfcacc5d5267c5ba359c"
+    },
+    {
+      "path": "images/osetiya-dub-skalnyy.webp",
+      "bytes": 195928,
+      "sha256": "cd13e2ed0d76599ab427939c08a96a097e98cdc4641a7ceb5b431d526686991c"
+    },
+    {
+      "path": "images/osetiya-karta-expeditsiy.webp",
+      "bytes": 192354,
+      "sha256": "f1724541f15889a1d8d9129deeeda89decf38a54a8e3e4df24aacecca0ad3b1b"
+    },
+    {
+      "path": "images/osetiya-sushka-v-teni.webp",
+      "bytes": 206334,
+      "sha256": "07d36d1397a9253c02ca692487d09a5c9404f91ee79e20fcf2fc3a01027e2683"
+    },
+    {
+      "path": "images/poroshok-opticheskiy-otbelivatel.webp",
+      "bytes": 160644,
+      "sha256": "0152fd840cdfff501e5cebfb7debe228c01ec73eb98500e57fcdc72688ceae08"
+    },
+    {
+      "path": "images/poroshok-taed.webp",
+      "bytes": 170194,
+      "sha256": "687ad5fb1ceefbcfcdc4bdc36d5a1b3a46b75c8b6931fa81bfc0f2fdfef8b6af"
+    },
+    {
+      "path": "images/poroshok-zhyostkost-vody.webp",
+      "bytes": 158994,
+      "sha256": "901c145f72324900e2d9d9ea59f694de49f2c6a6d7e93000d3367cf963252e05"
+    },
+    {
+      "path": "images/proekt-dubina-pyat-sredstv.webp",
+      "bytes": 151508,
+      "sha256": "9dfc333439112d2f76eb71a7a84c5ec2de8a9ae663e027354f731d978e910bfa"
+    },
+    {
+      "path": "images/proekt-odna-granitsa.webp",
+      "bytes": 130756,
+      "sha256": "7cf0e4ead9c8b92ed84220c842ab98f2e5e00bc854315aaa18c7e55cb39aa767"
+    },
+    {
+      "path": "images/proekt-s-chego-nachalos.webp",
+      "bytes": 105768,
+      "sha256": "c74c13d5a71c859f4eb7dd0190bd1fa71d1506b52c02cf9cb0c981dea24fd068"
+    },
+    {
+      "path": "images/sanuzel-donnyy-kamen.webp",
+      "bytes": 134408,
+      "sha256": "d0e69ac5677c3d8479126010d491cd94515e69fab0ef7103b39a4fda6a8f088e"
+    },
+    {
+      "path": "images/sanuzel-evakuatsiya-vody.webp",
+      "bytes": 137216,
+      "sha256": "30438d4e3dee9bc5e82ab49e4b58c468d06c35670364033594bfa17f6a5c675e"
+    },
+    {
+      "path": "images/sanuzel-khimicheskaya-nesovmestimost.webp",
+      "bytes": 149790,
+      "sha256": "d132535657b8260115113dbaaad7cfa7b1cca0af6f85b90b87a9e9274a2e1c7b"
     },
     {
       "path": "images/shkaf-blue.jpg",
@@ -333,104 +613,234 @@
       "sha256": "2e485497a22f9aa7a9a71a77c5adc4a08d07d244286a880203eeed8756cdaff7"
     },
     {
+      "path": "images/shkaf-naftalin.webp",
+      "bytes": 169906,
+      "sha256": "a0452306102e8aee9011be50df51a36babdc17d322f9e780309702d0e7a8dc65"
+    },
+    {
+      "path": "images/shkaf-protokol-5-shagov.webp",
+      "bytes": 179920,
+      "sha256": "344f9332f86401b2cf8b2e89710a52d7997ccbc52c5da9be1173cd94ce0f23ff"
+    },
+    {
+      "path": "images/shkaf-zakon-odnoy-noshenoy-veshchi.webp",
+      "bytes": 150024,
+      "sha256": "9783f76a4b1bfa10a06d2f56fa812d6f3a26e66691e31698b1ae3a22b50db027"
+    },
+    {
       "path": "images/shkaf.jpg",
       "bytes": 58475,
       "sha256": "96cde428f6c725eabb6ea8fe5a87767f84a3512413a6654e7e3f20f3bab86469"
     },
     {
+      "path": "images/sredstva-inci-etiketka.webp",
+      "bytes": 192630,
+      "sha256": "767e1a7ea60dbb62772b38f270b9d09d7880be38ee715fd92896aa6ffbb1a02b"
+    },
+    {
+      "path": "images/sredstva-polka-magazina.webp",
+      "bytes": 177170,
+      "sha256": "36b9eee5bde2d5b0557fe28662e6069f231b7f93d37c74e2ca3e42979ead7052"
+    },
+    {
+      "path": "images/sredstva-taniny-dub.webp",
+      "bytes": 137396,
+      "sha256": "5ab14c58bfe5f7b6d698588bf264e1b629bfe2df5a3ac5ba9fc20c609ed76524"
+    },
+    {
+      "path": "images/sredstva-taniny-persimon.webp",
+      "bytes": 140438,
+      "sha256": "bd63cb8309072f51aef5516964703f79b37d25d2ae5e2a17b289ddff6ed41733"
+    },
+    {
+      "path": "images/stiralka-chernyy-potolok.webp",
+      "bytes": 130240,
+      "sha256": "911fa920f8d8439f83418c25158f176e4018a21b636b22009b4c855c94242965"
+    },
+    {
+      "path": "images/stiralka-effekt-sifona.webp",
+      "bytes": 137806,
+      "sha256": "eec5150bf9caa7c65ff722a68382ba22cb53e3d86c6e0eccf941770655d0588d"
+    },
+    {
+      "path": "images/stiralka-limonnaya-kislota.webp",
+      "bytes": 175588,
+      "sha256": "23f9ca5f13e616c8d7f79994a0c8981efe7a3872b4b61b0c025c043f44484420"
+    },
+    {
+      "path": "images/tekstil-proverka-kapley.webp",
+      "bytes": 153866,
+      "sha256": "8a27a25f4a23487325cdcbcc59ecb08aaa4da91ca4abfec44e2fcf0004d40f71"
+    },
+    {
+      "path": "images/tekstil-sinteticheskiy-pled.webp",
+      "bytes": 195936,
+      "sha256": "f814aa9995cb42cab1f90ba1d696283fe1627f396f09e1720c7e9f9f5e56e649"
+    },
+    {
+      "path": "images/tekstil-utyug.webp",
+      "bytes": 169562,
+      "sha256": "afb4a905e8bb0737f1c2c60b63ecf365aa7230568a6b886b9554e25722e4ff8e"
+    },
+    {
+      "path": "images/telo-chetyre-pravila.webp",
+      "bytes": 154230,
+      "sha256": "bf38acb2dfdd2ce9e3d2927e9cee5070e54be2145ff1c45652e95c21e2cadd22"
+    },
+    {
+      "path": "images/telo-goryachiy-dush.webp",
+      "bytes": 141530,
+      "sha256": "96f0258b89f5d362a97fa84185f0bd8ea1d92b6658974f4a9ce8116d1940f3cb"
+    },
+    {
+      "path": "images/telo-test-banka.webp",
+      "bytes": 149868,
+      "sha256": "f74ae70f8d4e3e63203f53346e92c686aec4b913eded6b9e5b69345cde5b8cd7"
+    },
+    {
+      "path": "images/tonik-spirtovye-losony.webp",
+      "bytes": 137080,
+      "sha256": "0d7aa8090eaa310b4def9ee079246ecf7b5ebe22e4b8685c2a3ca4794d3f1f98"
+    },
+    {
+      "path": "images/tonik-taniny-bez-smyvaniya.webp",
+      "bytes": 157320,
+      "sha256": "6a4e3b48474d51b8760490bb0a060d688516df8d4539330ad4907fabc4fe18e4"
+    },
+    {
+      "path": "images/tonik-tochki-nakopleniya.webp",
+      "bytes": 131088,
+      "sha256": "1f18caf2367bda3f2ff9bb707040dc9f15848951541085cf4ddad9e21d8ec579"
+    },
+    {
+      "path": "images/vent-moyka-vozdukha.webp",
+      "bytes": 155664,
+      "sha256": "bec60a0a4d73cadf7eb1b2e6933bd11e71901be13bb90aa6da385a1ca7043a01"
+    },
+    {
+      "path": "images/vent-oprokinutyvanie-tyagi.webp",
+      "bytes": 163312,
+      "sha256": "35a015897a7ced865d7753cd399ae2ad0d480ada904d0f3c10a3bfa85968d891"
+    },
+    {
+      "path": "images/vent-zalpovoe-provetrivanie.webp",
+      "bytes": 157740,
+      "sha256": "c5aac2c09ab837565980ac0744a1b99e63f58c4ed45d5435d14d721b9feff5f4"
+    },
+    {
+      "path": "images/vrach-odontogennyy.webp",
+      "bytes": 146740,
+      "sha256": "46df2573a07116945367eadb3d1d9de288acb4c43d882d4baa5ebd1869546d6f"
+    },
+    {
+      "path": "images/vrach-prolezhni.webp",
+      "bytes": 167762,
+      "sha256": "05e29895a3f3e969dcf5207c2e72dd958f76fa3fd2d724c727f700aa3a4dbd01"
+    },
+    {
+      "path": "images/vrach-skrytyy-diabet.webp",
+      "bytes": 167618,
+      "sha256": "1d86c2c953d4ea8ce4bd35b73bae187e53aca5cc010afee9a1c00f9ce09c7e48"
+    },
+    {
       "path": "index.html",
-      "bytes": 19769,
-      "sha256": "4f64a81901a401d94e82cbc628950a03e1e0eaecabe27a3312aba1c390061e76"
+      "bytes": 24472,
+      "sha256": "47a1921e17e9f2bf6abaa17d016da46ba31301086c4c197188f1119102ceca2c"
     },
     {
       "path": "kak-otlichit-istochnik-zapakha/index.html",
-      "bytes": 35348,
-      "sha256": "323953e9db3780eb93394255e6b031f825ae5a5c0c29ef8c06ca138fa5edbdf8"
+      "bytes": 40180,
+      "sha256": "bf74be07709f5d944ffe50f925fa034cf10aa427926be778b5d306aa41a2ada6"
     },
     {
       "path": "kak-pogovorit-s-blizkim/index.html",
-      "bytes": 31066,
-      "sha256": "c9da65457aa4e3217311cb01e0bf36a5fc740597afadec9a795d35a229ea021b"
+      "bytes": 33005,
+      "sha256": "f7f96b4c284b8cc11c8feacb55f61bf50d308cd4a4cf999a886a3591be56841a"
     },
     {
       "path": "kak-ubrat-zapah-iz-shkafa/index.html",
-      "bytes": 37036,
-      "sha256": "21a11c5ae59b7deb3601e6d877acea3d79e3fdb059103d3dd788de2a0b54c661"
+      "bytes": 38820,
+      "sha256": "bedb53d822f017d0be9e4ab7cf976d8346d16ba9dd084e5fd452b5b5a2265f23"
     },
     {
       "path": "kak-ubrat-zapah-s-divana/index.html",
-      "bytes": 36460,
-      "sha256": "06d8fd5e187b99538af286c8cf7398ff90c9a485ed2396fe4326d33bbd94222d"
+      "bytes": 38658,
+      "sha256": "cf962e358a16ded8b36f4a568c4bfdb2a5551511d8856af71803002055f2e952"
     },
     {
       "path": "kak-ubrat-zapah-s-matrasa/index.html",
-      "bytes": 36836,
-      "sha256": "f11c5b42d2d10bc1dd3d0e3b7dd2ec909d21b18b4e21714315ca401a6a00ff7f"
+      "bytes": 38488,
+      "sha256": "03027510162d2a0aa63d8fb4c2f8c1f934c33b3bd36aac994f7210fb63983049"
     },
     {
       "path": "kak-ubrat-zapah-v-sanuzle/index.html",
-      "bytes": 31729,
-      "sha256": "1e69a1b8760d91019d21997c0c2c545254a77bb90f9b3550517ba0a7436bd1d5"
+      "bytes": 36711,
+      "sha256": "37cc09d6130116d362817ab03eb0845d428476690084797619fe0bc51f8d3153"
     },
     {
       "path": "kak-ubrat-zapah-v-stiralnoj-mashine/index.html",
-      "bytes": 31413,
-      "sha256": "b7cee95af5daee9fb379d614fe1e9f823808ca63144479c94b23ec8bac71af0b"
+      "bytes": 36318,
+      "sha256": "593e82eda74c9d437726fe0f852d40b289ff575868f897b91df8c73767626552"
     },
     {
       "path": "karta-kvartiry/index.html",
-      "bytes": 21991,
-      "sha256": "7042af8753417e318cdd74d51a202ba9cf29bbb3f2fbea2493db0ddb0f02dc53"
+      "bytes": 27134,
+      "sha256": "3efdc19f73472b7e0bd54665b8ae5afb56dbb9fcbd45f7963f8e2c2ffcfe366d"
     },
     {
       "path": "karta-osetii/index.html",
-      "bytes": 18323,
-      "sha256": "d7a7058b6996e11b7b7bcfffc65b893e330f2e305a35b2d1d311f41ed66ecb88"
+      "bytes": 23704,
+      "sha256": "c7371dd7355cdb32d0c471708a09326bd4b2cb77e36e115be8d8a6b746ed4b14"
     },
     {
       "path": "kogda-k-vrachu/index.html",
-      "bytes": 27914,
-      "sha256": "7fefb85702973d61bce4ecbfbfedeb5f095967ef21431c49c9713d19fc84d4d0"
+      "bytes": 29749,
+      "sha256": "cf1da4c2a38f239707810c23b885448fa42df2f49f4ed53ab7bd70c59f864315"
     },
     {
       "path": "kviz/index.html",
-      "bytes": 36525,
-      "sha256": "3ca7555f334ce4d8b383bf4081e459f28e61da9ca6a228be09037e14d45790d3"
+      "bytes": 41716,
+      "sha256": "c33826e72f72b4c46c7034e2780dc6cae4031c749e515289477ba284d7cb087a"
     },
     {
       "path": "lekarstva-i-zapah/index.html",
-      "bytes": 26506,
-      "sha256": "e5f5b6167f485ac6db5d472151ff33cdbd2d6b008feec28aa762a66c557f8863"
+      "bytes": 31514,
+      "sha256": "fd11a648679161e7175adf62c126c68b2cf9573d7192834c24207f1882201cf6"
     },
     {
       "path": "material-metod/index.html",
-      "bytes": 34959,
-      "sha256": "735a7e81a163b9bfebdde09a4e22f9c3bc0cb3739ec08d4c1ce5a5b8acdf7f66"
+      "bytes": 40264,
+      "sha256": "0ecb49644893cca2463c5ccd8dccad4c1e441e1dd7965cf639a510fac258b3b2"
     },
     {
       "path": "nabor/index.html",
-      "bytes": 12591,
-      "sha256": "1c699e2156c1fc6af00c7d4ea9d40d619e30f8ce22e6ef0cdd85edf22ae8e9ac"
+      "bytes": 15924,
+      "sha256": "1872edb80da0bd916d2caecec1fc35d96a0ae4d623333f03bc44bc355d5a1725"
     },
     {
       "path": "o-proekte/index.html",
-      "bytes": 21711,
-      "sha256": "e23065c8cb702045f356f87ef34c5cd2b2bad24e9df461782029ad256a98cf72"
+      "bytes": 27185,
+      "sha256": "b18ff0c8db80204e1833ffef4031ade7d7df9842b1a7f9bba70bc3d200fa968c"
     },
     {
       "path": "ochistitel-vozduha/index.html",
-      "bytes": 29944,
-      "sha256": "ed5cd5e2e1851fbbe1a225e52ac1a6f19d3092cf7a7a8c306010450753e46b0b"
+      "bytes": 35282,
+      "sha256": "773482855117e9ef733559df1f0d1d84ca199412e0ab4b47c2834a2f69aaec2e"
     },
     {
       "path": "odezhda-i-tekstil/index.html",
-      "bytes": 35027,
-      "sha256": "4b8dd68d4a3c9cf873d56129668f3946d385fcba5bbe0eea4102c88f76b9de4f"
+      "bytes": 36901,
+      "sha256": "a253a6ad141d19d2d54be6caa1ad033a9eb7a847ce70f9f009b480c352de6d6d"
+    },
+    {
+      "path": "politika-konfidencialnosti/index.html",
+      "bytes": 17803,
+      "sha256": "f96b27eb5a15dbd2c4a0fddd7e26c020a294a9ba94a46b0de22cc330974ada9a"
     },
     {
       "path": "poroshok-dlya-tekstila/index.html",
-      "bytes": 29800,
-      "sha256": "0c244da6985fa5d503affc5fb9f344d5f2905e7d3e29dc93fa6b45c26c62c48d"
+      "bytes": 31890,
+      "sha256": "174b4a48df007e0a9028caf78bb83092769e32deccbd3f98c3f2f76d318e6d92"
     },
     {
       "path": "robots.txt",
@@ -445,12 +855,17 @@
     {
       "path": "sitemap.xml",
       "bytes": 4494,
-      "sha256": "2c90b4ab97d9cde88d67b0f8ae9a4ca6486500cbc6cdf47721b99f1adaf7a953"
+      "sha256": "9f829d69396238acf705ca41171b3fc8fc88c867cc45e2359754000d07af7e87"
+    },
+    {
+      "path": "soglasie-na-obrabotku/index.html",
+      "bytes": 13728,
+      "sha256": "c184ac9c88119a4310afa5242f4233ff286a2e3682904ba9110db53e5ede2241"
     },
     {
       "path": "sredstva-ot-zapaha/index.html",
-      "bytes": 32151,
-      "sha256": "d235fd2edb1005455fb2e742a2c2e37f10e84dcad8c8d90f67dfa1871e21ec5b"
+      "bytes": 33985,
+      "sha256": "c9b35b0f23bb8a247c7fca871b901dfe0b81ecdbf677037769ddbcacea1d94dc"
     },
     {
       "path": "style.css",
@@ -459,18 +874,18 @@
     },
     {
       "path": "tonik-protirka/index.html",
-      "bytes": 24750,
-      "sha256": "dc0165e60245fb9151d38993d73100845bd967b0a7cf980b5d75e06ba170a4b0"
+      "bytes": 30080,
+      "sha256": "de5a276356313bbeff7e93ca0fb6e0f98d8b57b8cf60fce2c3732d15a34e49ff"
     },
     {
       "path": "ubrat-zapah/index.html",
-      "bytes": 29403,
-      "sha256": "e9fb4f74e55bd71e2cc8910812b2accb508450a3b65ba923887716f58e74dacb"
+      "bytes": 36034,
+      "sha256": "d2ff8ded8d7e81376352dcdd6814139fbcaa3b7e3258b85952587ca3edf5e1a8"
     },
     {
       "path": "ventilyatsiya-i-vlazhnost/index.html",
-      "bytes": 27881,
-      "sha256": "5b18b8a665e92b38cac94ef0e5067ea2931f3ca027e20e68707b881bf3e09462"
+      "bytes": 32949,
+      "sha256": "9aea4f152088e60121bf5cdd6150e5127c6b82732ea7e2b4752d780d67e09015"
     },
     {
       "path": "yandex_e3e7231de3258122.html",
@@ -479,11 +894,20 @@
     },
     {
       "path": "zapah-v-kvartire/index.html",
-      "bytes": 34266,
-      "sha256": "f862c2517492129ba4e55a14033c1e10eecadfbe773f6b2e24cf0b250bff237f"
+      "bytes": 36170,
+      "sha256": "64127cba2cdf4b5dcb22e61f075de95c3821f85f32b83d6f2363a74718313ee5"
     }
   ],
   "http_checks": [
+    {
+      "path": "README.md",
+      "url": "https://zapahstarosti.ru/README.md",
+      "final_url": "https://zapahstarosti.ru/README.md",
+      "status": 200,
+      "bytes": 15,
+      "sha256": "def52c78004b0029bc0232bd9ff2c404a508b0368f57a52517569e88ae9c8ca5",
+      "matches_source": true
+    },
     {
       "path": "app/icon-180.png",
       "url": "https://zapahstarosti.ru/app/icon-180.png",
@@ -516,8 +940,8 @@
       "url": "https://zapahstarosti.ru/app/",
       "final_url": "https://zapahstarosti.ru/app/",
       "status": 200,
-      "bytes": 66182,
-      "sha256": "4ba50e9077286c5168798db38bb4eaf728d8e36b0c93092fdf94fd62096d74b0",
+      "bytes": 66174,
+      "sha256": "0666036c75204458acf1fd084c24d81e08a3102766a661d2269563bcb4a043b8",
       "matches_source": true
     },
     {
@@ -525,8 +949,8 @@
       "url": "https://zapahstarosti.ru/app/manifest.webmanifest",
       "final_url": "https://zapahstarosti.ru/app/manifest.webmanifest",
       "status": 200,
-      "bytes": 714,
-      "sha256": "36815f6f91b9f2813513e279d94a29688fdf43334b3c7bf62f091f2e1620fe36",
+      "bytes": 712,
+      "sha256": "5f81278d83d6ab9f6bef43e796479ddf6df7ab4936ebe00d196d56cf06a58010",
       "matches_source": true
     },
     {
@@ -543,8 +967,8 @@
       "url": "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
       "final_url": "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
       "status": 200,
-      "bytes": 39564,
-      "sha256": "f0734efdbf8da29f68e4cb71cede671155127c9aa8d95728070b35159bacb057",
+      "bytes": 47182,
+      "sha256": "bc8bbad9ed92d5d8e4e0a2be221ec571f33a14a0053b548c4188682e2d0a26a9",
       "matches_source": true
     },
     {
@@ -552,8 +976,8 @@
       "url": "https://zapahstarosti.ru/constructor-v5.html",
       "final_url": "https://zapahstarosti.ru/constructor-v5.html",
       "status": 200,
-      "bytes": 54154,
-      "sha256": "f76b9797562ffb2a232c62d2934c8284f6747a583576e52c19c86efc28be9381",
+      "bytes": 58756,
+      "sha256": "73ac789e08bfb4301e6a80c4db7c5743c88417b1b4da83e7ed683317a59798a9",
       "matches_source": true
     },
     {
@@ -561,8 +985,8 @@
       "url": "https://zapahstarosti.ru/faq/",
       "final_url": "https://zapahstarosti.ru/faq/",
       "status": 200,
-      "bytes": 35386,
-      "sha256": "eac794df0833f31a45328d0ecc210d69aec3d0a36db632dde979e6d2bc84ba9f",
+      "bytes": 37568,
+      "sha256": "6339efcf3bb79d00c9582fbae1dd20a144c8a0122c57ef2ce73094a614a58824",
       "matches_source": true
     },
     {
@@ -570,8 +994,8 @@
       "url": "https://zapahstarosti.ru/favicon.ico",
       "final_url": "https://zapahstarosti.ru/favicon.ico",
       "status": 200,
-      "bytes": 12674,
-      "sha256": "4d14df23d4a7e6795e68759c44d2a925f637f2d4b47510cb0691f9e038a69b1a",
+      "bytes": 3469,
+      "sha256": "c8660b1542b914f67f34803c181395344985092c3ab3a71a2f299dac697bac8b",
       "matches_source": true
     },
     {
@@ -620,6 +1044,42 @@
       "matches_source": true
     },
     {
+      "path": "images/divan-chetyre-obivki.webp",
+      "url": "https://zapahstarosti.ru/images/divan-chetyre-obivki.webp",
+      "final_url": "https://zapahstarosti.ru/images/divan-chetyre-obivki.webp",
+      "status": 200,
+      "bytes": 171998,
+      "sha256": "e0385af73b9a156d3d5230ba6cc21be375e77242553d25f87a661348ee0910e1",
+      "matches_source": true
+    },
+    {
+      "path": "images/divan-lovushka-pylesosa.webp",
+      "url": "https://zapahstarosti.ru/images/divan-lovushka-pylesosa.webp",
+      "final_url": "https://zapahstarosti.ru/images/divan-lovushka-pylesosa.webp",
+      "status": 200,
+      "bytes": 156078,
+      "sha256": "86eb15a4b40cba2c4720e7edca5b4514d93a39d761c55d46ac31d444e03565da",
+      "matches_source": true
+    },
+    {
+      "path": "images/divan-portret-gostinaya.webp",
+      "url": "https://zapahstarosti.ru/images/divan-portret-gostinaya.webp",
+      "final_url": "https://zapahstarosti.ru/images/divan-portret-gostinaya.webp",
+      "status": 200,
+      "bytes": 157274,
+      "sha256": "dee1a6a0d49d85a32e2ff92e7444c7137fc75cb30e42ab4e114947b48d574187",
+      "matches_source": true
+    },
+    {
+      "path": "images/divan-protokol-5-shagov.webp",
+      "url": "https://zapahstarosti.ru/images/divan-protokol-5-shagov.webp",
+      "final_url": "https://zapahstarosti.ru/images/divan-protokol-5-shagov.webp",
+      "status": 200,
+      "bytes": 169358,
+      "sha256": "fd8b143ab5cc080e50e5fb55dc4c6a1c0986e9ded55a5f88f577e833d721776e",
+      "matches_source": true
+    },
+    {
       "path": "images/divan.jpg",
       "url": "https://zapahstarosti.ru/images/divan.jpg",
       "final_url": "https://zapahstarosti.ru/images/divan.jpg",
@@ -629,12 +1089,93 @@
       "matches_source": true
     },
     {
+      "path": "images/faq-parfyum-zametnee.webp",
+      "url": "https://zapahstarosti.ru/images/faq-parfyum-zametnee.webp",
+      "final_url": "https://zapahstarosti.ru/images/faq-parfyum-zametnee.webp",
+      "status": 200,
+      "bytes": 163214,
+      "sha256": "65a9808b30b89575119a3c92d4521260e2a562b38cce49e5cb40d744a5cd40c4",
+      "matches_source": true
+    },
+    {
+      "path": "images/faq-telo-ili-mebel.webp",
+      "url": "https://zapahstarosti.ru/images/faq-telo-ili-mebel.webp",
+      "final_url": "https://zapahstarosti.ru/images/faq-telo-ili-mebel.webp",
+      "status": 200,
+      "bytes": 122386,
+      "sha256": "ddbff5d5a290ea113de59165a8a2cbbb12c88d12958d00eda7debcb8f4aaa8f1",
+      "matches_source": true
+    },
+    {
+      "path": "images/faq-vozvrat-zapaha.webp",
+      "url": "https://zapahstarosti.ru/images/faq-vozvrat-zapaha.webp",
+      "final_url": "https://zapahstarosti.ru/images/faq-vozvrat-zapaha.webp",
+      "status": 200,
+      "bytes": 137152,
+      "sha256": "debf2e33451604db65064079298f51bbddcb9939d0b6704121282326a6e90594",
+      "matches_source": true
+    },
+    {
       "path": "images/favicon.png",
       "url": "https://zapahstarosti.ru/images/favicon.png",
       "final_url": "https://zapahstarosti.ru/images/favicon.png",
       "status": 200,
-      "bytes": 4888,
-      "sha256": "10f5d065fcc0962dc9ac44237d4e57e213879d58f1341a40a0f7e1adc2a6f0c1",
+      "bytes": 1581,
+      "sha256": "d7c9c2af747c171c92155818c6161e95e2021fd0a8e6d3e18083ef93f6c610fb",
+      "matches_source": true
+    },
+    {
+      "path": "images/glavnaya-3-shaga.webp",
+      "url": "https://zapahstarosti.ru/images/glavnaya-3-shaga.webp",
+      "final_url": "https://zapahstarosti.ru/images/glavnaya-3-shaga.webp",
+      "status": 200,
+      "bytes": 156416,
+      "sha256": "6d7fd25ea94a29bf44a485de4dea9fbd6ced855b4cd23f39f19362485dbcb893",
+      "matches_source": true
+    },
+    {
+      "path": "images/glavnaya-molekula-portret.webp",
+      "url": "https://zapahstarosti.ru/images/glavnaya-molekula-portret.webp",
+      "final_url": "https://zapahstarosti.ru/images/glavnaya-molekula-portret.webp",
+      "status": 200,
+      "bytes": 103924,
+      "sha256": "9bd8fea49e9390cfd17d305693e68673ca54251e5fc885503e7f25997279428a",
+      "matches_source": true
+    },
+    {
+      "path": "images/glavnaya-svezhest-doma.webp",
+      "url": "https://zapahstarosti.ru/images/glavnaya-svezhest-doma.webp",
+      "final_url": "https://zapahstarosti.ru/images/glavnaya-svezhest-doma.webp",
+      "status": 200,
+      "bytes": 100768,
+      "sha256": "183c7733d319c1f2679cc294ed9ef8fea20cdfb970ead08f49c06d7a69e996f1",
+      "matches_source": true
+    },
+    {
+      "path": "images/gov-chetyre-barera.webp",
+      "url": "https://zapahstarosti.ru/images/gov-chetyre-barera.webp",
+      "final_url": "https://zapahstarosti.ru/images/gov-chetyre-barera.webp",
+      "status": 200,
+      "bytes": 147264,
+      "sha256": "04fc1965d07fe51a5d9b4bdfb10f895de0d65ae5c84d753f0933e3ae6fbecd8b",
+      "matches_source": true
+    },
+    {
+      "path": "images/gov-pomosh-deystviem.webp",
+      "url": "https://zapahstarosti.ru/images/gov-pomosh-deystviem.webp",
+      "final_url": "https://zapahstarosti.ru/images/gov-pomosh-deystviem.webp",
+      "status": 200,
+      "bytes": 140148,
+      "sha256": "f7b925c73a9f3bbd0daad2f6c00a9dcec8043b58e60af8aa5031ba63f1b3bd85",
+      "matches_source": true
+    },
+    {
+      "path": "images/gov-tretiy-obekt.webp",
+      "url": "https://zapahstarosti.ru/images/gov-tretiy-obekt.webp",
+      "final_url": "https://zapahstarosti.ru/images/gov-tretiy-obekt.webp",
+      "status": 200,
+      "bytes": 167550,
+      "sha256": "36f57a5ee4a8d413a6e205f5003f54b06a8e795cc47011086fa8b7a3a2d1d3ea",
       "matches_source": true
     },
     {
@@ -669,8 +1210,8 @@
       "url": "https://zapahstarosti.ru/images/icon-180.png",
       "final_url": "https://zapahstarosti.ru/images/icon-180.png",
       "status": 200,
-      "bytes": 20697,
-      "sha256": "77aa6024c7fad5960f2fbb1eca89418a0b424ba1ccb3b1d2c0f08fd4d6269134",
+      "bytes": 8676,
+      "sha256": "04b2dca5ba82cd6261a845d4649608c4d376b1ae8243362fc968dd088fc77533",
       "matches_source": true
     },
     {
@@ -678,8 +1219,8 @@
       "url": "https://zapahstarosti.ru/images/icon-512.png",
       "final_url": "https://zapahstarosti.ru/images/icon-512.png",
       "status": 200,
-      "bytes": 68952,
-      "sha256": "d5b45cd0ec8c6359cf8f0957d74f0e87f5bb96ca8ac5879e7ec121f0104bfac5",
+      "bytes": 30260,
+      "sha256": "3696359ffc58b7291a8c5385b37aef5cef5783c9206161398ea2db031e82cad1",
       "matches_source": true
     },
     {
@@ -687,8 +1228,8 @@
       "url": "https://zapahstarosti.ru/images/icon.svg",
       "final_url": "https://zapahstarosti.ru/images/icon.svg",
       "status": 200,
-      "bytes": 99511,
-      "sha256": "326f580add805b6b984406be6ee82446eae912d83a4379b8920b7ebbc41a73e3",
+      "bytes": 162612,
+      "sha256": "f0c52f2fd89416de8acec979801c62e6ed135568ff2352752d53a6438a442b15",
       "matches_source": true
     },
     {
@@ -746,12 +1287,66 @@
       "matches_source": true
     },
     {
+      "path": "images/istochnik-khlopok-protiv-poliestra.webp",
+      "url": "https://zapahstarosti.ru/images/istochnik-khlopok-protiv-poliestra.webp",
+      "final_url": "https://zapahstarosti.ru/images/istochnik-khlopok-protiv-poliestra.webp",
+      "status": 200,
+      "bytes": 157930,
+      "sha256": "4266cc197e412dbd9204ca0349949bf5541e0c081872abfcfb2bbe1d5cf529ec",
+      "matches_source": true
+    },
+    {
+      "path": "images/istochnik-nos-ne-slyshit.webp",
+      "url": "https://zapahstarosti.ru/images/istochnik-nos-ne-slyshit.webp",
+      "final_url": "https://zapahstarosti.ru/images/istochnik-nos-ne-slyshit.webp",
+      "status": 200,
+      "bytes": 132340,
+      "sha256": "0e0de0c1381d0c1f586f1c3dc58a2962fce723e62346c90b712da42ff9125da2",
+      "matches_source": true
+    },
+    {
+      "path": "images/istochnik-paradoks-slepoy-pyatna.webp",
+      "url": "https://zapahstarosti.ru/images/istochnik-paradoks-slepoy-pyatna.webp",
+      "final_url": "https://zapahstarosti.ru/images/istochnik-paradoks-slepoy-pyatna.webp",
+      "status": 200,
+      "bytes": 142728,
+      "sha256": "c9e17b80cac0bafd60bdadc923e0e2f6968fd05ad53aa86a618fae7fe9ae3ea2",
+      "matches_source": true
+    },
+    {
       "path": "images/karta-blue.jpg",
       "url": "https://zapahstarosti.ru/images/karta-blue.jpg",
       "final_url": "https://zapahstarosti.ru/images/karta-blue.jpg",
       "status": 200,
       "bytes": 14678,
       "sha256": "b39165fb19d13c195e80855403263c89b5b4f2d3093ba2dbe4486f86ad772c0f",
+      "matches_source": true
+    },
+    {
+      "path": "images/karta-kukhonnye-tryapki.webp",
+      "url": "https://zapahstarosti.ru/images/karta-kukhonnye-tryapki.webp",
+      "final_url": "https://zapahstarosti.ru/images/karta-kukhonnye-tryapki.webp",
+      "status": 200,
+      "bytes": 179086,
+      "sha256": "a8e8ae2c160c693b7985f645eaff30af9921bbcd0036b9034fe702da31e2868f",
+      "matches_source": true
+    },
+    {
+      "path": "images/karta-perevaya-podushka.webp",
+      "url": "https://zapahstarosti.ru/images/karta-perevaya-podushka.webp",
+      "final_url": "https://zapahstarosti.ru/images/karta-perevaya-podushka.webp",
+      "status": 200,
+      "bytes": 124564,
+      "sha256": "6ec203606b058f1a353c7fd36ca3b2eed18105b527d18bbd588f4ff1f92658bb",
+      "matches_source": true
+    },
+    {
+      "path": "images/karta-test-zakrytye-dveri.webp",
+      "url": "https://zapahstarosti.ru/images/karta-test-zakrytye-dveri.webp",
+      "final_url": "https://zapahstarosti.ru/images/karta-test-zakrytye-dveri.webp",
+      "status": 200,
+      "bytes": 155016,
+      "sha256": "acf27adbe7aee2997e6886f0651e7bab212aec05d65661107013d3bc082e0711",
       "matches_source": true
     },
     {
@@ -782,12 +1377,147 @@
       "matches_source": true
     },
     {
+      "path": "images/kvartira-ne-za-odin-den.webp",
+      "url": "https://zapahstarosti.ru/images/kvartira-ne-za-odin-den.webp",
+      "final_url": "https://zapahstarosti.ru/images/kvartira-ne-za-odin-den.webp",
+      "status": 200,
+      "bytes": 147778,
+      "sha256": "2ef6d799ddd382baf6fd5c045c711f7c2a22454d4430ef33f2f05bc5b390deff",
+      "matches_source": true
+    },
+    {
+      "path": "images/kvartira-ozonator.webp",
+      "url": "https://zapahstarosti.ru/images/kvartira-ozonator.webp",
+      "final_url": "https://zapahstarosti.ru/images/kvartira-ozonator.webp",
+      "status": 200,
+      "bytes": 184426,
+      "sha256": "6a9e15089a04caa6079b4949e2fc916a6eb1bc0e477a8b57db0e7ba156fe8478",
+      "matches_source": true
+    },
+    {
+      "path": "images/kvartira-shtory-filtr.webp",
+      "url": "https://zapahstarosti.ru/images/kvartira-shtory-filtr.webp",
+      "final_url": "https://zapahstarosti.ru/images/kvartira-shtory-filtr.webp",
+      "status": 200,
+      "bytes": 144670,
+      "sha256": "61e43e15e162580929385189dee356dfcf476fe87deb5661e8cdfbdc0094813f",
+      "matches_source": true
+    },
+    {
+      "path": "images/kviz-devyat-shagov.webp",
+      "url": "https://zapahstarosti.ru/images/kviz-devyat-shagov.webp",
+      "final_url": "https://zapahstarosti.ru/images/kviz-devyat-shagov.webp",
+      "status": 200,
+      "bytes": 121772,
+      "sha256": "e6d85705cbc41951a3b13f73932e7edeae8b7636bdfdeb98a8851abf13fcc316",
+      "matches_source": true
+    },
+    {
+      "path": "images/kviz-olfaktornyy-sbros.webp",
+      "url": "https://zapahstarosti.ru/images/kviz-olfaktornyy-sbros.webp",
+      "final_url": "https://zapahstarosti.ru/images/kviz-olfaktornyy-sbros.webp",
+      "status": 200,
+      "bytes": 164140,
+      "sha256": "828cc7c4313cba58f1fabc82731844a453a111afc09d1efa3de9e50ae3bf5076",
+      "matches_source": true
+    },
+    {
+      "path": "images/kviz-sem-testov.webp",
+      "url": "https://zapahstarosti.ru/images/kviz-sem-testov.webp",
+      "final_url": "https://zapahstarosti.ru/images/kviz-sem-testov.webp",
+      "status": 200,
+      "bytes": 190752,
+      "sha256": "ed60ead45ff51a62cca47297693251fea8a31204ce9627e939f7bf26ef4f3252",
+      "matches_source": true
+    },
+    {
+      "path": "images/lekarstva-korvalol.webp",
+      "url": "https://zapahstarosti.ru/images/lekarstva-korvalol.webp",
+      "final_url": "https://zapahstarosti.ru/images/lekarstva-korvalol.webp",
+      "status": 200,
+      "bytes": 198560,
+      "sha256": "416a1b1131d432cad0311cb077fcda0bcdf2928a6974e94cd1112602486245d0",
+      "matches_source": true
+    },
+    {
+      "path": "images/lekarstva-mazi.webp",
+      "url": "https://zapahstarosti.ru/images/lekarstva-mazi.webp",
+      "final_url": "https://zapahstarosti.ru/images/lekarstva-mazi.webp",
+      "status": 200,
+      "bytes": 155406,
+      "sha256": "7615d99d2ebc1fd9fd553d11396b0a909ff78d869e218509578afc83b52f238d",
+      "matches_source": true
+    },
+    {
+      "path": "images/lekarstva-ne-otmenyat.webp",
+      "url": "https://zapahstarosti.ru/images/lekarstva-ne-otmenyat.webp",
+      "final_url": "https://zapahstarosti.ru/images/lekarstva-ne-otmenyat.webp",
+      "status": 200,
+      "bytes": 188212,
+      "sha256": "b8baef4739efb4aaf7fb1ef2e85f262e80be693dd99c2b559663337b4703b7c1",
+      "matches_source": true
+    },
+    {
+      "path": "images/mater-kislorod-enzimy.webp",
+      "url": "https://zapahstarosti.ru/images/mater-kislorod-enzimy.webp",
+      "final_url": "https://zapahstarosti.ru/images/mater-kislorod-enzimy.webp",
+      "status": 200,
+      "bytes": 114208,
+      "sha256": "8a2797e93fb4deab5ac905568dac2c14aad499f5134dc217a7e3ed75c7bc0fcc",
+      "matches_source": true
+    },
+    {
+      "path": "images/mater-termogidroliz-dsp.webp",
+      "url": "https://zapahstarosti.ru/images/mater-termogidroliz-dsp.webp",
+      "final_url": "https://zapahstarosti.ru/images/mater-termogidroliz-dsp.webp",
+      "status": 200,
+      "bytes": 172410,
+      "sha256": "47ccdf8aaab43b97e79ffea1813486577753a2c4dd36aa5c909b8dff0823c189",
+      "matches_source": true
+    },
+    {
+      "path": "images/mater-test-skrytyy-uchastok.webp",
+      "url": "https://zapahstarosti.ru/images/mater-test-skrytyy-uchastok.webp",
+      "final_url": "https://zapahstarosti.ru/images/mater-test-skrytyy-uchastok.webp",
+      "status": 200,
+      "bytes": 151318,
+      "sha256": "49d1435f0804c9e9439f7a84a50b96045652f2116e6cb063b349076ce914d415",
+      "matches_source": true
+    },
+    {
       "path": "images/matras-blue.jpg",
       "url": "https://zapahstarosti.ru/images/matras-blue.jpg",
       "final_url": "https://zapahstarosti.ru/images/matras-blue.jpg",
       "status": 200,
       "bytes": 42144,
       "sha256": "710f4b304e965ed48403fc92f698fe7cc6ee9162b4ced63b3e1206ca6548ca78",
+      "matches_source": true
+    },
+    {
+      "path": "images/matras-protokol-5-etapov.webp",
+      "url": "https://zapahstarosti.ru/images/matras-protokol-5-etapov.webp",
+      "final_url": "https://zapahstarosti.ru/images/matras-protokol-5-etapov.webp",
+      "status": 200,
+      "bytes": 154618,
+      "sha256": "7fb3465f54e62e4947a847e74c7fce3147ba4a74479efe48d105322b4eb9c74a",
+      "matches_source": true
+    },
+    {
+      "path": "images/matras-teplovoy-ispritel.webp",
+      "url": "https://zapahstarosti.ru/images/matras-teplovoy-ispritel.webp",
+      "final_url": "https://zapahstarosti.ru/images/matras-teplovoy-ispritel.webp",
+      "status": 200,
+      "bytes": 108860,
+      "sha256": "5e6df4a6872b3a82e01bda3cec32a4b05c5a0bc7ddd02ef0e0552cbbaa21c186",
+      "matches_source": true
+    },
+    {
+      "path": "images/matras-tri-narodnykh-soveta.webp",
+      "url": "https://zapahstarosti.ru/images/matras-tri-narodnykh-soveta.webp",
+      "final_url": "https://zapahstarosti.ru/images/matras-tri-narodnykh-soveta.webp",
+      "status": 200,
+      "bytes": 140232,
+      "sha256": "d76c8c754150ef04fe5098f95d6877d75ea8ce9fe0e46d22753e4a5bad7cef9b",
       "matches_source": true
     },
     {
@@ -818,12 +1548,93 @@
       "matches_source": true
     },
     {
+      "path": "images/nonenal-dub-taniny.webp",
+      "url": "https://zapahstarosti.ru/images/nonenal-dub-taniny.webp",
+      "final_url": "https://zapahstarosti.ru/images/nonenal-dub-taniny.webp",
+      "status": 200,
+      "bytes": 198170,
+      "sha256": "13cc3de54638752e8cc39e1c7a6eab0d7de838d589c893408c6c37aa315e5541",
+      "matches_source": true
+    },
+    {
+      "path": "images/nonenal-haze-2001.webp",
+      "url": "https://zapahstarosti.ru/images/nonenal-haze-2001.webp",
+      "final_url": "https://zapahstarosti.ru/images/nonenal-haze-2001.webp",
+      "status": 200,
+      "bytes": 161860,
+      "sha256": "a015cf0d7781470c654d0b3629dfe138db98f6d5946ce22935f091d4fa5f2b5f",
+      "matches_source": true
+    },
+    {
+      "path": "images/nonenal-molekula-portret.webp",
+      "url": "https://zapahstarosti.ru/images/nonenal-molekula-portret.webp",
+      "final_url": "https://zapahstarosti.ru/images/nonenal-molekula-portret.webp",
+      "status": 200,
+      "bytes": 87718,
+      "sha256": "2f3b0ca9443e6850e95d281973edc403267399adeaf6a29ab26a7bf07fb21dda",
+      "matches_source": true
+    },
+    {
+      "path": "images/nonenal-natyurmort.webp",
+      "url": "https://zapahstarosti.ru/images/nonenal-natyurmort.webp",
+      "final_url": "https://zapahstarosti.ru/images/nonenal-natyurmort.webp",
+      "status": 200,
+      "bytes": 121744,
+      "sha256": "089644069dc2ff5a28ed204f13fc433185bbc1d0e1770e67281209e1ec93ba6d",
+      "matches_source": true
+    },
+    {
+      "path": "images/nonenal-nelzya-kozhe.webp",
+      "url": "https://zapahstarosti.ru/images/nonenal-nelzya-kozhe.webp",
+      "final_url": "https://zapahstarosti.ru/images/nonenal-nelzya-kozhe.webp",
+      "status": 200,
+      "bytes": 132202,
+      "sha256": "565613aa64d08bc462646c1a4d6064d74f9491456c5dd82e4b45c4ecbfb2abaa",
+      "matches_source": true
+    },
+    {
+      "path": "images/nonenal-ochered.webp",
+      "url": "https://zapahstarosti.ru/images/nonenal-ochered.webp",
+      "final_url": "https://zapahstarosti.ru/images/nonenal-ochered.webp",
+      "status": 200,
+      "bytes": 180430,
+      "sha256": "cb73dc0a94ea995f2c69ed868c143adaec36801d55c3759e97701bf3a8b1762e",
+      "matches_source": true
+    },
+    {
+      "path": "images/ochistitel-obratnaya-desorbtsiya.webp",
+      "url": "https://zapahstarosti.ru/images/ochistitel-obratnaya-desorbtsiya.webp",
+      "final_url": "https://zapahstarosti.ru/images/ochistitel-obratnaya-desorbtsiya.webp",
+      "status": 200,
+      "bytes": 195900,
+      "sha256": "a9c67ead483877bcc3532435f1602ecdd52faa9a5deb7266ca901d37dc6facb6",
+      "matches_source": true
+    },
+    {
+      "path": "images/ochistitel-razmer-molekuly.webp",
+      "url": "https://zapahstarosti.ru/images/ochistitel-razmer-molekuly.webp",
+      "final_url": "https://zapahstarosti.ru/images/ochistitel-razmer-molekuly.webp",
+      "status": 200,
+      "bytes": 151764,
+      "sha256": "63e630f7ce16d296757ab565d210f5136c958e68a550afdfe23759859b683e61",
+      "matches_source": true
+    },
+    {
+      "path": "images/ochistitel-ugolnyy-porolon.webp",
+      "url": "https://zapahstarosti.ru/images/ochistitel-ugolnyy-porolon.webp",
+      "final_url": "https://zapahstarosti.ru/images/ochistitel-ugolnyy-porolon.webp",
+      "status": 200,
+      "bytes": 183078,
+      "sha256": "e310b9d357fc8c1f94f52d1b24a085e4eee07f2b8ea57ee204b1f4ed108fc70f",
+      "matches_source": true
+    },
+    {
       "path": "images/og/chto-takoe-2-nonenal.jpg",
       "url": "https://zapahstarosti.ru/images/og/chto-takoe-2-nonenal.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/chto-takoe-2-nonenal.jpg",
       "status": 200,
-      "bytes": 63605,
-      "sha256": "6b035541f0fde657b7dcb0beca052e6a1d318e9ac75754ab2a9e8da7a88119de",
+      "bytes": 70598,
+      "sha256": "edc76c5b3baca8ca301439dd67655dbc0ba5ab7eaf8086e2a933e3fb35c9a182",
       "matches_source": true
     },
     {
@@ -831,8 +1642,8 @@
       "url": "https://zapahstarosti.ru/images/og/faq.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/faq.jpg",
       "status": 200,
-      "bytes": 62241,
-      "sha256": "45bc51a3fb2373b12aff17caca767f7003a847ec877824cbcf2f1da0d46458c9",
+      "bytes": 69436,
+      "sha256": "7c476466947b4dc7d4b88e2d9a55732f617ab3d65cd724022804d191bb1a46d7",
       "matches_source": true
     },
     {
@@ -840,8 +1651,8 @@
       "url": "https://zapahstarosti.ru/images/og/home.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/home.jpg",
       "status": 200,
-      "bytes": 64909,
-      "sha256": "05e6d5128e092a1ba90b8d3169375379a06b446248b9754ecd581a007faa6478",
+      "bytes": 71793,
+      "sha256": "a1148df8754afca1633af91bca8684c4e96a7a955e50aca42b826022ef4fc725",
       "matches_source": true
     },
     {
@@ -849,8 +1660,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-otlichit-istochnik-zapakha.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-otlichit-istochnik-zapakha.jpg",
       "status": 200,
-      "bytes": 61274,
-      "sha256": "e8ae6eda506fbf4638fd042f112432500c8d80be37e0894243fd9e69ea9ffa16",
+      "bytes": 74288,
+      "sha256": "af52f1e379c26d75bca484f32245db0c4356b54ab3e62dcf6a81a6fa9569245d",
       "matches_source": true
     },
     {
@@ -858,8 +1669,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-pogovorit-s-blizkim.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-pogovorit-s-blizkim.jpg",
       "status": 200,
-      "bytes": 61626,
-      "sha256": "20a4e099e04eccc5642255013696a1a717356268b982baab143ccadc16182f00",
+      "bytes": 68609,
+      "sha256": "b573d8c5c843bb6abd6e130d1b966b37914a49c48844999807b0dc5f0db012a5",
       "matches_source": true
     },
     {
@@ -867,8 +1678,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-iz-shkafa.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-iz-shkafa.jpg",
       "status": 200,
-      "bytes": 56629,
-      "sha256": "79be50d9d94d08a541e73684f8d95c9dec326950b8a9497a44d28374e92d9ccd",
+      "bytes": 71805,
+      "sha256": "6fee0a7001e65627fcdba550efd9bfbe013b9d6a9f69f30e3c882b5ec0b020d3",
       "matches_source": true
     },
     {
@@ -876,8 +1687,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-s-divana.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-s-divana.jpg",
       "status": 200,
-      "bytes": 62572,
-      "sha256": "659df09fe9b3664caa04896c1021df5808f06c553ae05a3cd60ac2b851628c5e",
+      "bytes": 72983,
+      "sha256": "ec4f25b9b23730cef7cfd07d6337944ff1e28002764c84cf649c80a9b253f3bb",
       "matches_source": true
     },
     {
@@ -885,8 +1696,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-s-matrasa.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-s-matrasa.jpg",
       "status": 200,
-      "bytes": 61454,
-      "sha256": "ce3cef0dcfd914aa711b8c09f01b77c9197ffed6975614ec9c2a06f57fe8a80b",
+      "bytes": 75207,
+      "sha256": "0c394fc71daf14f32840d0b672782320261445360c94c47bb931009ea458dbe9",
       "matches_source": true
     },
     {
@@ -894,8 +1705,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-v-sanuzle.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-v-sanuzle.jpg",
       "status": 200,
-      "bytes": 57075,
-      "sha256": "b6eaa1e1428eebe788cdb84576e89e87218c98bec465aa443b113f2c738313aa",
+      "bytes": 62706,
+      "sha256": "b260f18dae53bfb42668f0cbebf11fcffa188b8fedbdca45749fce465df7be44",
       "matches_source": true
     },
     {
@@ -903,8 +1714,8 @@
       "url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-v-stiralnoj-mashine.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kak-ubrat-zapah-v-stiralnoj-mashine.jpg",
       "status": 200,
-      "bytes": 60264,
-      "sha256": "3e3d7da3e0312750e6a0b8e49f09860bdbb1fe0868b9539247af8665669aba19",
+      "bytes": 72360,
+      "sha256": "59bcb7e4b5fbacae6f231074e28bc3aee3d3371c9c071d97cb44da47b0068302",
       "matches_source": true
     },
     {
@@ -912,8 +1723,8 @@
       "url": "https://zapahstarosti.ru/images/og/karta-kvartiry.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/karta-kvartiry.jpg",
       "status": 200,
-      "bytes": 60607,
-      "sha256": "d00e28b0799ad7ac75d41b5fa6bde4eea2740603ebc038365b74d6255aff3125",
+      "bytes": 73446,
+      "sha256": "7920e57369ee5ca09c26179d3448a87a5dbd4b7942822d5fc8d80f66b5c88d19",
       "matches_source": true
     },
     {
@@ -921,8 +1732,8 @@
       "url": "https://zapahstarosti.ru/images/og/karta-osetii.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/karta-osetii.jpg",
       "status": 200,
-      "bytes": 63044,
-      "sha256": "6143f39f9a91ebec9903ab3a107b10a8c8fc371515015fde2e81faf6b21b2f28",
+      "bytes": 72158,
+      "sha256": "19933058114002bf884469d122faf677c255a7ddcb59704afbf577070efe41f3",
       "matches_source": true
     },
     {
@@ -930,8 +1741,8 @@
       "url": "https://zapahstarosti.ru/images/og/kogda-k-vrachu.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kogda-k-vrachu.jpg",
       "status": 200,
-      "bytes": 54828,
-      "sha256": "6becc49939b8d104b4fb2150332dd30bf4915fc0e6b296b6d690a0e1078b38b8",
+      "bytes": 60785,
+      "sha256": "f67b297b86239c47cb7ef1a9c85fcf391d7ca1c0480a771881afa15c6e6dcf61",
       "matches_source": true
     },
     {
@@ -939,8 +1750,8 @@
       "url": "https://zapahstarosti.ru/images/og/kviz.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/kviz.jpg",
       "status": 200,
-      "bytes": 49727,
-      "sha256": "ad1b8ef5e05893a2e3c98e38448cdf375058219a25b46fc66f45a4f87cdeef3b",
+      "bytes": 55549,
+      "sha256": "a7d9fe06f23a274ad7d3d9d4d8583e2206d716d0ba65b7021965c342332ecc2c",
       "matches_source": true
     },
     {
@@ -948,8 +1759,8 @@
       "url": "https://zapahstarosti.ru/images/og/lekarstva-i-zapah.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/lekarstva-i-zapah.jpg",
       "status": 200,
-      "bytes": 59258,
-      "sha256": "6b0f9664a4415e1d2dd8ed638b1d2463c0c5b400e58d9d3c6ce844958b5620c0",
+      "bytes": 65910,
+      "sha256": "6111c60f584801e3344a249068d23cd8697d6f2a1581b7a9656cff89fb828b07",
       "matches_source": true
     },
     {
@@ -957,8 +1768,8 @@
       "url": "https://zapahstarosti.ru/images/og/material-metod.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/material-metod.jpg",
       "status": 200,
-      "bytes": 60040,
-      "sha256": "87130b272ce2a5bd3b03974585025bdcaf0164c66c09fe8a7c24fa5f859d9bab",
+      "bytes": 66447,
+      "sha256": "05a59c693faf3a229bae6585c738af86af8c91271513572b0994b9360e912cd3",
       "matches_source": true
     },
     {
@@ -966,8 +1777,8 @@
       "url": "https://zapahstarosti.ru/images/og/nabor.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/nabor.jpg",
       "status": 200,
-      "bytes": 57452,
-      "sha256": "5173ab23013fba6a64273fe84eaf7d5fd3b6c4087b65520020813c23bb62da8c",
+      "bytes": 63921,
+      "sha256": "37817ad0bb16c65cfeb565cd863804c1f179976ac0472045b52262af72fbeedd",
       "matches_source": true
     },
     {
@@ -975,8 +1786,8 @@
       "url": "https://zapahstarosti.ru/images/og/o-proekte.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/o-proekte.jpg",
       "status": 200,
-      "bytes": 30734,
-      "sha256": "40db6e45ec16f1857cac449c3823d5049802562eb79f4d2f9b0c0ae9199fcc47",
+      "bytes": 56911,
+      "sha256": "fdbcc314bbde57ceba8321b068e260b809fc4ef39e9368abf8c296fb9c245288",
       "matches_source": true
     },
     {
@@ -984,8 +1795,8 @@
       "url": "https://zapahstarosti.ru/images/og/ochistitel-vozduha.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/ochistitel-vozduha.jpg",
       "status": 200,
-      "bytes": 64471,
-      "sha256": "870ecb5962014db0623c1cdb5703d3349f9f812abb489a9901cf622ba9007bde",
+      "bytes": 71246,
+      "sha256": "8b7bcbafb17a95f6b96e4e3f8885c4a994a01d94c1aab1dbb936d4791f5eb34b",
       "matches_source": true
     },
     {
@@ -993,8 +1804,8 @@
       "url": "https://zapahstarosti.ru/images/og/odezhda-i-tekstil.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/odezhda-i-tekstil.jpg",
       "status": 200,
-      "bytes": 58725,
-      "sha256": "1108d00e28c61faa3d7bfa767e07f77a14b8611389827642202b0f897ca6fbe4",
+      "bytes": 64509,
+      "sha256": "eb40991ccb06a85c086ff27994cf3c0cda01d92b94a56cfc6b5d1f7a3ea14b5f",
       "matches_source": true
     },
     {
@@ -1002,8 +1813,8 @@
       "url": "https://zapahstarosti.ru/images/og/poroshok-dlya-tekstila.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/poroshok-dlya-tekstila.jpg",
       "status": 200,
-      "bytes": 60652,
-      "sha256": "0f9d3de7cba603420a2ce55805ab35f5762b6eceb902d6170bf236ed1ce8ed15",
+      "bytes": 67280,
+      "sha256": "de677389c839a1cc2a22d6bb169b6b692184d59c8456a92345f021c30819e9c2",
       "matches_source": true
     },
     {
@@ -1011,8 +1822,8 @@
       "url": "https://zapahstarosti.ru/images/og/sredstva-ot-zapaha.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/sredstva-ot-zapaha.jpg",
       "status": 200,
-      "bytes": 63150,
-      "sha256": "2c505ceff4b335a6fdb05761043618c71c9373eadd8455e97c6cd58f71baa27a",
+      "bytes": 74085,
+      "sha256": "7998608ad9627b1f6d133da694c67767a92f669c5a9f928b16d6f74a42b9c148",
       "matches_source": true
     },
     {
@@ -1020,8 +1831,8 @@
       "url": "https://zapahstarosti.ru/images/og/tonik-protirka.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/tonik-protirka.jpg",
       "status": 200,
-      "bytes": 57439,
-      "sha256": "7b71e38f9bb948c2845082b0b096d4702e5fd8bb9ccae4db7cab4826817b5a14",
+      "bytes": 64090,
+      "sha256": "e570a88f420d49858cd7f9e7ad62140353654e6996d55b273a3310ddf09541af",
       "matches_source": true
     },
     {
@@ -1029,8 +1840,8 @@
       "url": "https://zapahstarosti.ru/images/og/ubrat-zapah.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/ubrat-zapah.jpg",
       "status": 200,
-      "bytes": 66825,
-      "sha256": "3e90ee8925c5b89096febada8adba8bf26feae465752ce32a4b9de540e5379a4",
+      "bytes": 65268,
+      "sha256": "ecd5d8879dd1f185500b464f16c390aa8a4bd1452b3da8193f2f18fe607fd595",
       "matches_source": true
     },
     {
@@ -1038,8 +1849,8 @@
       "url": "https://zapahstarosti.ru/images/og/ventilyatsiya-i-vlazhnost.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/ventilyatsiya-i-vlazhnost.jpg",
       "status": 200,
-      "bytes": 61463,
-      "sha256": "89d353019795e2e7244b868e234895ef39d61dedd97f2ba70d04c6f2f62c5934",
+      "bytes": 67334,
+      "sha256": "6eab750341e564ec0319343f04cbbe718c7a93377ff1a353ee1fd0b46c9a7656",
       "matches_source": true
     },
     {
@@ -1047,8 +1858,116 @@
       "url": "https://zapahstarosti.ru/images/og/zapah-v-kvartire.jpg",
       "final_url": "https://zapahstarosti.ru/images/og/zapah-v-kvartire.jpg",
       "status": 200,
-      "bytes": 61343,
-      "sha256": "7b5c84549f53ad45c4e7da0507527dbc5191690ce02a312e9d08e4680c2acbc6",
+      "bytes": 73719,
+      "sha256": "89b42192c479aef172e021dea8e2ba9ad95968dba292cfcacc5d5267c5ba359c",
+      "matches_source": true
+    },
+    {
+      "path": "images/osetiya-dub-skalnyy.webp",
+      "url": "https://zapahstarosti.ru/images/osetiya-dub-skalnyy.webp",
+      "final_url": "https://zapahstarosti.ru/images/osetiya-dub-skalnyy.webp",
+      "status": 200,
+      "bytes": 195928,
+      "sha256": "cd13e2ed0d76599ab427939c08a96a097e98cdc4641a7ceb5b431d526686991c",
+      "matches_source": true
+    },
+    {
+      "path": "images/osetiya-karta-expeditsiy.webp",
+      "url": "https://zapahstarosti.ru/images/osetiya-karta-expeditsiy.webp",
+      "final_url": "https://zapahstarosti.ru/images/osetiya-karta-expeditsiy.webp",
+      "status": 200,
+      "bytes": 192354,
+      "sha256": "f1724541f15889a1d8d9129deeeda89decf38a54a8e3e4df24aacecca0ad3b1b",
+      "matches_source": true
+    },
+    {
+      "path": "images/osetiya-sushka-v-teni.webp",
+      "url": "https://zapahstarosti.ru/images/osetiya-sushka-v-teni.webp",
+      "final_url": "https://zapahstarosti.ru/images/osetiya-sushka-v-teni.webp",
+      "status": 200,
+      "bytes": 206334,
+      "sha256": "07d36d1397a9253c02ca692487d09a5c9404f91ee79e20fcf2fc3a01027e2683",
+      "matches_source": true
+    },
+    {
+      "path": "images/poroshok-opticheskiy-otbelivatel.webp",
+      "url": "https://zapahstarosti.ru/images/poroshok-opticheskiy-otbelivatel.webp",
+      "final_url": "https://zapahstarosti.ru/images/poroshok-opticheskiy-otbelivatel.webp",
+      "status": 200,
+      "bytes": 160644,
+      "sha256": "0152fd840cdfff501e5cebfb7debe228c01ec73eb98500e57fcdc72688ceae08",
+      "matches_source": true
+    },
+    {
+      "path": "images/poroshok-taed.webp",
+      "url": "https://zapahstarosti.ru/images/poroshok-taed.webp",
+      "final_url": "https://zapahstarosti.ru/images/poroshok-taed.webp",
+      "status": 200,
+      "bytes": 170194,
+      "sha256": "687ad5fb1ceefbcfcdc4bdc36d5a1b3a46b75c8b6931fa81bfc0f2fdfef8b6af",
+      "matches_source": true
+    },
+    {
+      "path": "images/poroshok-zhyostkost-vody.webp",
+      "url": "https://zapahstarosti.ru/images/poroshok-zhyostkost-vody.webp",
+      "final_url": "https://zapahstarosti.ru/images/poroshok-zhyostkost-vody.webp",
+      "status": 200,
+      "bytes": 158994,
+      "sha256": "901c145f72324900e2d9d9ea59f694de49f2c6a6d7e93000d3367cf963252e05",
+      "matches_source": true
+    },
+    {
+      "path": "images/proekt-dubina-pyat-sredstv.webp",
+      "url": "https://zapahstarosti.ru/images/proekt-dubina-pyat-sredstv.webp",
+      "final_url": "https://zapahstarosti.ru/images/proekt-dubina-pyat-sredstv.webp",
+      "status": 200,
+      "bytes": 151508,
+      "sha256": "9dfc333439112d2f76eb71a7a84c5ec2de8a9ae663e027354f731d978e910bfa",
+      "matches_source": true
+    },
+    {
+      "path": "images/proekt-odna-granitsa.webp",
+      "url": "https://zapahstarosti.ru/images/proekt-odna-granitsa.webp",
+      "final_url": "https://zapahstarosti.ru/images/proekt-odna-granitsa.webp",
+      "status": 200,
+      "bytes": 130756,
+      "sha256": "7cf0e4ead9c8b92ed84220c842ab98f2e5e00bc854315aaa18c7e55cb39aa767",
+      "matches_source": true
+    },
+    {
+      "path": "images/proekt-s-chego-nachalos.webp",
+      "url": "https://zapahstarosti.ru/images/proekt-s-chego-nachalos.webp",
+      "final_url": "https://zapahstarosti.ru/images/proekt-s-chego-nachalos.webp",
+      "status": 200,
+      "bytes": 105768,
+      "sha256": "c74c13d5a71c859f4eb7dd0190bd1fa71d1506b52c02cf9cb0c981dea24fd068",
+      "matches_source": true
+    },
+    {
+      "path": "images/sanuzel-donnyy-kamen.webp",
+      "url": "https://zapahstarosti.ru/images/sanuzel-donnyy-kamen.webp",
+      "final_url": "https://zapahstarosti.ru/images/sanuzel-donnyy-kamen.webp",
+      "status": 200,
+      "bytes": 134408,
+      "sha256": "d0e69ac5677c3d8479126010d491cd94515e69fab0ef7103b39a4fda6a8f088e",
+      "matches_source": true
+    },
+    {
+      "path": "images/sanuzel-evakuatsiya-vody.webp",
+      "url": "https://zapahstarosti.ru/images/sanuzel-evakuatsiya-vody.webp",
+      "final_url": "https://zapahstarosti.ru/images/sanuzel-evakuatsiya-vody.webp",
+      "status": 200,
+      "bytes": 137216,
+      "sha256": "30438d4e3dee9bc5e82ab49e4b58c468d06c35670364033594bfa17f6a5c675e",
+      "matches_source": true
+    },
+    {
+      "path": "images/sanuzel-khimicheskaya-nesovmestimost.webp",
+      "url": "https://zapahstarosti.ru/images/sanuzel-khimicheskaya-nesovmestimost.webp",
+      "final_url": "https://zapahstarosti.ru/images/sanuzel-khimicheskaya-nesovmestimost.webp",
+      "status": 200,
+      "bytes": 149790,
+      "sha256": "d132535657b8260115113dbaaad7cfa7b1cca0af6f85b90b87a9e9274a2e1c7b",
       "matches_source": true
     },
     {
@@ -1061,6 +1980,33 @@
       "matches_source": true
     },
     {
+      "path": "images/shkaf-naftalin.webp",
+      "url": "https://zapahstarosti.ru/images/shkaf-naftalin.webp",
+      "final_url": "https://zapahstarosti.ru/images/shkaf-naftalin.webp",
+      "status": 200,
+      "bytes": 169906,
+      "sha256": "a0452306102e8aee9011be50df51a36babdc17d322f9e780309702d0e7a8dc65",
+      "matches_source": true
+    },
+    {
+      "path": "images/shkaf-protokol-5-shagov.webp",
+      "url": "https://zapahstarosti.ru/images/shkaf-protokol-5-shagov.webp",
+      "final_url": "https://zapahstarosti.ru/images/shkaf-protokol-5-shagov.webp",
+      "status": 200,
+      "bytes": 179920,
+      "sha256": "344f9332f86401b2cf8b2e89710a52d7997ccbc52c5da9be1173cd94ce0f23ff",
+      "matches_source": true
+    },
+    {
+      "path": "images/shkaf-zakon-odnoy-noshenoy-veshchi.webp",
+      "url": "https://zapahstarosti.ru/images/shkaf-zakon-odnoy-noshenoy-veshchi.webp",
+      "final_url": "https://zapahstarosti.ru/images/shkaf-zakon-odnoy-noshenoy-veshchi.webp",
+      "status": 200,
+      "bytes": 150024,
+      "sha256": "9783f76a4b1bfa10a06d2f56fa812d6f3a26e66691e31698b1ae3a22b50db027",
+      "matches_source": true
+    },
+    {
       "path": "images/shkaf.jpg",
       "url": "https://zapahstarosti.ru/images/shkaf.jpg",
       "final_url": "https://zapahstarosti.ru/images/shkaf.jpg",
@@ -1070,12 +2016,210 @@
       "matches_source": true
     },
     {
+      "path": "images/sredstva-inci-etiketka.webp",
+      "url": "https://zapahstarosti.ru/images/sredstva-inci-etiketka.webp",
+      "final_url": "https://zapahstarosti.ru/images/sredstva-inci-etiketka.webp",
+      "status": 200,
+      "bytes": 192630,
+      "sha256": "767e1a7ea60dbb62772b38f270b9d09d7880be38ee715fd92896aa6ffbb1a02b",
+      "matches_source": true
+    },
+    {
+      "path": "images/sredstva-polka-magazina.webp",
+      "url": "https://zapahstarosti.ru/images/sredstva-polka-magazina.webp",
+      "final_url": "https://zapahstarosti.ru/images/sredstva-polka-magazina.webp",
+      "status": 200,
+      "bytes": 177170,
+      "sha256": "36b9eee5bde2d5b0557fe28662e6069f231b7f93d37c74e2ca3e42979ead7052",
+      "matches_source": true
+    },
+    {
+      "path": "images/sredstva-taniny-dub.webp",
+      "url": "https://zapahstarosti.ru/images/sredstva-taniny-dub.webp",
+      "final_url": "https://zapahstarosti.ru/images/sredstva-taniny-dub.webp",
+      "status": 200,
+      "bytes": 137396,
+      "sha256": "5ab14c58bfe5f7b6d698588bf264e1b629bfe2df5a3ac5ba9fc20c609ed76524",
+      "matches_source": true
+    },
+    {
+      "path": "images/sredstva-taniny-persimon.webp",
+      "url": "https://zapahstarosti.ru/images/sredstva-taniny-persimon.webp",
+      "final_url": "https://zapahstarosti.ru/images/sredstva-taniny-persimon.webp",
+      "status": 200,
+      "bytes": 140438,
+      "sha256": "bd63cb8309072f51aef5516964703f79b37d25d2ae5e2a17b289ddff6ed41733",
+      "matches_source": true
+    },
+    {
+      "path": "images/stiralka-chernyy-potolok.webp",
+      "url": "https://zapahstarosti.ru/images/stiralka-chernyy-potolok.webp",
+      "final_url": "https://zapahstarosti.ru/images/stiralka-chernyy-potolok.webp",
+      "status": 200,
+      "bytes": 130240,
+      "sha256": "911fa920f8d8439f83418c25158f176e4018a21b636b22009b4c855c94242965",
+      "matches_source": true
+    },
+    {
+      "path": "images/stiralka-effekt-sifona.webp",
+      "url": "https://zapahstarosti.ru/images/stiralka-effekt-sifona.webp",
+      "final_url": "https://zapahstarosti.ru/images/stiralka-effekt-sifona.webp",
+      "status": 200,
+      "bytes": 137806,
+      "sha256": "eec5150bf9caa7c65ff722a68382ba22cb53e3d86c6e0eccf941770655d0588d",
+      "matches_source": true
+    },
+    {
+      "path": "images/stiralka-limonnaya-kislota.webp",
+      "url": "https://zapahstarosti.ru/images/stiralka-limonnaya-kislota.webp",
+      "final_url": "https://zapahstarosti.ru/images/stiralka-limonnaya-kislota.webp",
+      "status": 200,
+      "bytes": 175588,
+      "sha256": "23f9ca5f13e616c8d7f79994a0c8981efe7a3872b4b61b0c025c043f44484420",
+      "matches_source": true
+    },
+    {
+      "path": "images/tekstil-proverka-kapley.webp",
+      "url": "https://zapahstarosti.ru/images/tekstil-proverka-kapley.webp",
+      "final_url": "https://zapahstarosti.ru/images/tekstil-proverka-kapley.webp",
+      "status": 200,
+      "bytes": 153866,
+      "sha256": "8a27a25f4a23487325cdcbcc59ecb08aaa4da91ca4abfec44e2fcf0004d40f71",
+      "matches_source": true
+    },
+    {
+      "path": "images/tekstil-sinteticheskiy-pled.webp",
+      "url": "https://zapahstarosti.ru/images/tekstil-sinteticheskiy-pled.webp",
+      "final_url": "https://zapahstarosti.ru/images/tekstil-sinteticheskiy-pled.webp",
+      "status": 200,
+      "bytes": 195936,
+      "sha256": "f814aa9995cb42cab1f90ba1d696283fe1627f396f09e1720c7e9f9f5e56e649",
+      "matches_source": true
+    },
+    {
+      "path": "images/tekstil-utyug.webp",
+      "url": "https://zapahstarosti.ru/images/tekstil-utyug.webp",
+      "final_url": "https://zapahstarosti.ru/images/tekstil-utyug.webp",
+      "status": 200,
+      "bytes": 169562,
+      "sha256": "afb4a905e8bb0737f1c2c60b63ecf365aa7230568a6b886b9554e25722e4ff8e",
+      "matches_source": true
+    },
+    {
+      "path": "images/telo-chetyre-pravila.webp",
+      "url": "https://zapahstarosti.ru/images/telo-chetyre-pravila.webp",
+      "final_url": "https://zapahstarosti.ru/images/telo-chetyre-pravila.webp",
+      "status": 200,
+      "bytes": 154230,
+      "sha256": "bf38acb2dfdd2ce9e3d2927e9cee5070e54be2145ff1c45652e95c21e2cadd22",
+      "matches_source": true
+    },
+    {
+      "path": "images/telo-goryachiy-dush.webp",
+      "url": "https://zapahstarosti.ru/images/telo-goryachiy-dush.webp",
+      "final_url": "https://zapahstarosti.ru/images/telo-goryachiy-dush.webp",
+      "status": 200,
+      "bytes": 141530,
+      "sha256": "96f0258b89f5d362a97fa84185f0bd8ea1d92b6658974f4a9ce8116d1940f3cb",
+      "matches_source": true
+    },
+    {
+      "path": "images/telo-test-banka.webp",
+      "url": "https://zapahstarosti.ru/images/telo-test-banka.webp",
+      "final_url": "https://zapahstarosti.ru/images/telo-test-banka.webp",
+      "status": 200,
+      "bytes": 149868,
+      "sha256": "f74ae70f8d4e3e63203f53346e92c686aec4b913eded6b9e5b69345cde5b8cd7",
+      "matches_source": true
+    },
+    {
+      "path": "images/tonik-spirtovye-losony.webp",
+      "url": "https://zapahstarosti.ru/images/tonik-spirtovye-losony.webp",
+      "final_url": "https://zapahstarosti.ru/images/tonik-spirtovye-losony.webp",
+      "status": 200,
+      "bytes": 137080,
+      "sha256": "0d7aa8090eaa310b4def9ee079246ecf7b5ebe22e4b8685c2a3ca4794d3f1f98",
+      "matches_source": true
+    },
+    {
+      "path": "images/tonik-taniny-bez-smyvaniya.webp",
+      "url": "https://zapahstarosti.ru/images/tonik-taniny-bez-smyvaniya.webp",
+      "final_url": "https://zapahstarosti.ru/images/tonik-taniny-bez-smyvaniya.webp",
+      "status": 200,
+      "bytes": 157320,
+      "sha256": "6a4e3b48474d51b8760490bb0a060d688516df8d4539330ad4907fabc4fe18e4",
+      "matches_source": true
+    },
+    {
+      "path": "images/tonik-tochki-nakopleniya.webp",
+      "url": "https://zapahstarosti.ru/images/tonik-tochki-nakopleniya.webp",
+      "final_url": "https://zapahstarosti.ru/images/tonik-tochki-nakopleniya.webp",
+      "status": 200,
+      "bytes": 131088,
+      "sha256": "1f18caf2367bda3f2ff9bb707040dc9f15848951541085cf4ddad9e21d8ec579",
+      "matches_source": true
+    },
+    {
+      "path": "images/vent-moyka-vozdukha.webp",
+      "url": "https://zapahstarosti.ru/images/vent-moyka-vozdukha.webp",
+      "final_url": "https://zapahstarosti.ru/images/vent-moyka-vozdukha.webp",
+      "status": 200,
+      "bytes": 155664,
+      "sha256": "bec60a0a4d73cadf7eb1b2e6933bd11e71901be13bb90aa6da385a1ca7043a01",
+      "matches_source": true
+    },
+    {
+      "path": "images/vent-oprokinutyvanie-tyagi.webp",
+      "url": "https://zapahstarosti.ru/images/vent-oprokinutyvanie-tyagi.webp",
+      "final_url": "https://zapahstarosti.ru/images/vent-oprokinutyvanie-tyagi.webp",
+      "status": 200,
+      "bytes": 163312,
+      "sha256": "35a015897a7ced865d7753cd399ae2ad0d480ada904d0f3c10a3bfa85968d891",
+      "matches_source": true
+    },
+    {
+      "path": "images/vent-zalpovoe-provetrivanie.webp",
+      "url": "https://zapahstarosti.ru/images/vent-zalpovoe-provetrivanie.webp",
+      "final_url": "https://zapahstarosti.ru/images/vent-zalpovoe-provetrivanie.webp",
+      "status": 200,
+      "bytes": 157740,
+      "sha256": "c5aac2c09ab837565980ac0744a1b99e63f58c4ed45d5435d14d721b9feff5f4",
+      "matches_source": true
+    },
+    {
+      "path": "images/vrach-odontogennyy.webp",
+      "url": "https://zapahstarosti.ru/images/vrach-odontogennyy.webp",
+      "final_url": "https://zapahstarosti.ru/images/vrach-odontogennyy.webp",
+      "status": 200,
+      "bytes": 146740,
+      "sha256": "46df2573a07116945367eadb3d1d9de288acb4c43d882d4baa5ebd1869546d6f",
+      "matches_source": true
+    },
+    {
+      "path": "images/vrach-prolezhni.webp",
+      "url": "https://zapahstarosti.ru/images/vrach-prolezhni.webp",
+      "final_url": "https://zapahstarosti.ru/images/vrach-prolezhni.webp",
+      "status": 200,
+      "bytes": 167762,
+      "sha256": "05e29895a3f3e969dcf5207c2e72dd958f76fa3fd2d724c727f700aa3a4dbd01",
+      "matches_source": true
+    },
+    {
+      "path": "images/vrach-skrytyy-diabet.webp",
+      "url": "https://zapahstarosti.ru/images/vrach-skrytyy-diabet.webp",
+      "final_url": "https://zapahstarosti.ru/images/vrach-skrytyy-diabet.webp",
+      "status": 200,
+      "bytes": 167618,
+      "sha256": "1d86c2c953d4ea8ce4bd35b73bae187e53aca5cc010afee9a1c00f9ce09c7e48",
+      "matches_source": true
+    },
+    {
       "path": "index.html",
       "url": "https://zapahstarosti.ru/",
       "final_url": "https://zapahstarosti.ru/",
       "status": 200,
-      "bytes": 19769,
-      "sha256": "4f64a81901a401d94e82cbc628950a03e1e0eaecabe27a3312aba1c390061e76",
+      "bytes": 24472,
+      "sha256": "47a1921e17e9f2bf6abaa17d016da46ba31301086c4c197188f1119102ceca2c",
       "matches_source": true
     },
     {
@@ -1083,8 +2227,8 @@
       "url": "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
       "final_url": "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
       "status": 200,
-      "bytes": 35348,
-      "sha256": "323953e9db3780eb93394255e6b031f825ae5a5c0c29ef8c06ca138fa5edbdf8",
+      "bytes": 40180,
+      "sha256": "bf74be07709f5d944ffe50f925fa034cf10aa427926be778b5d306aa41a2ada6",
       "matches_source": true
     },
     {
@@ -1092,8 +2236,8 @@
       "url": "https://zapahstarosti.ru/kak-pogovorit-s-blizkim/",
       "final_url": "https://zapahstarosti.ru/kak-pogovorit-s-blizkim/",
       "status": 200,
-      "bytes": 31066,
-      "sha256": "c9da65457aa4e3217311cb01e0bf36a5fc740597afadec9a795d35a229ea021b",
+      "bytes": 33005,
+      "sha256": "f7f96b4c284b8cc11c8feacb55f61bf50d308cd4a4cf999a886a3591be56841a",
       "matches_source": true
     },
     {
@@ -1101,8 +2245,8 @@
       "url": "https://zapahstarosti.ru/kak-ubrat-zapah-iz-shkafa/",
       "final_url": "https://zapahstarosti.ru/kak-ubrat-zapah-iz-shkafa/",
       "status": 200,
-      "bytes": 37036,
-      "sha256": "21a11c5ae59b7deb3601e6d877acea3d79e3fdb059103d3dd788de2a0b54c661",
+      "bytes": 38820,
+      "sha256": "bedb53d822f017d0be9e4ab7cf976d8346d16ba9dd084e5fd452b5b5a2265f23",
       "matches_source": true
     },
     {
@@ -1110,8 +2254,8 @@
       "url": "https://zapahstarosti.ru/kak-ubrat-zapah-s-divana/",
       "final_url": "https://zapahstarosti.ru/kak-ubrat-zapah-s-divana/",
       "status": 200,
-      "bytes": 36460,
-      "sha256": "06d8fd5e187b99538af286c8cf7398ff90c9a485ed2396fe4326d33bbd94222d",
+      "bytes": 38658,
+      "sha256": "cf962e358a16ded8b36f4a568c4bfdb2a5551511d8856af71803002055f2e952",
       "matches_source": true
     },
     {
@@ -1119,8 +2263,8 @@
       "url": "https://zapahstarosti.ru/kak-ubrat-zapah-s-matrasa/",
       "final_url": "https://zapahstarosti.ru/kak-ubrat-zapah-s-matrasa/",
       "status": 200,
-      "bytes": 36836,
-      "sha256": "f11c5b42d2d10bc1dd3d0e3b7dd2ec909d21b18b4e21714315ca401a6a00ff7f",
+      "bytes": 38488,
+      "sha256": "03027510162d2a0aa63d8fb4c2f8c1f934c33b3bd36aac994f7210fb63983049",
       "matches_source": true
     },
     {
@@ -1128,8 +2272,8 @@
       "url": "https://zapahstarosti.ru/kak-ubrat-zapah-v-sanuzle/",
       "final_url": "https://zapahstarosti.ru/kak-ubrat-zapah-v-sanuzle/",
       "status": 200,
-      "bytes": 31729,
-      "sha256": "1e69a1b8760d91019d21997c0c2c545254a77bb90f9b3550517ba0a7436bd1d5",
+      "bytes": 36711,
+      "sha256": "37cc09d6130116d362817ab03eb0845d428476690084797619fe0bc51f8d3153",
       "matches_source": true
     },
     {
@@ -1137,8 +2281,8 @@
       "url": "https://zapahstarosti.ru/kak-ubrat-zapah-v-stiralnoj-mashine/",
       "final_url": "https://zapahstarosti.ru/kak-ubrat-zapah-v-stiralnoj-mashine/",
       "status": 200,
-      "bytes": 31413,
-      "sha256": "b7cee95af5daee9fb379d614fe1e9f823808ca63144479c94b23ec8bac71af0b",
+      "bytes": 36318,
+      "sha256": "593e82eda74c9d437726fe0f852d40b289ff575868f897b91df8c73767626552",
       "matches_source": true
     },
     {
@@ -1146,8 +2290,8 @@
       "url": "https://zapahstarosti.ru/karta-kvartiry/",
       "final_url": "https://zapahstarosti.ru/karta-kvartiry/",
       "status": 200,
-      "bytes": 21991,
-      "sha256": "7042af8753417e318cdd74d51a202ba9cf29bbb3f2fbea2493db0ddb0f02dc53",
+      "bytes": 27134,
+      "sha256": "3efdc19f73472b7e0bd54665b8ae5afb56dbb9fcbd45f7963f8e2c2ffcfe366d",
       "matches_source": true
     },
     {
@@ -1155,8 +2299,8 @@
       "url": "https://zapahstarosti.ru/karta-osetii/",
       "final_url": "https://zapahstarosti.ru/karta-osetii/",
       "status": 200,
-      "bytes": 18323,
-      "sha256": "d7a7058b6996e11b7b7bcfffc65b893e330f2e305a35b2d1d311f41ed66ecb88",
+      "bytes": 23704,
+      "sha256": "c7371dd7355cdb32d0c471708a09326bd4b2cb77e36e115be8d8a6b746ed4b14",
       "matches_source": true
     },
     {
@@ -1164,8 +2308,8 @@
       "url": "https://zapahstarosti.ru/kogda-k-vrachu/",
       "final_url": "https://zapahstarosti.ru/kogda-k-vrachu/",
       "status": 200,
-      "bytes": 27914,
-      "sha256": "7fefb85702973d61bce4ecbfbfedeb5f095967ef21431c49c9713d19fc84d4d0",
+      "bytes": 29749,
+      "sha256": "cf1da4c2a38f239707810c23b885448fa42df2f49f4ed53ab7bd70c59f864315",
       "matches_source": true
     },
     {
@@ -1173,8 +2317,8 @@
       "url": "https://zapahstarosti.ru/kviz/",
       "final_url": "https://zapahstarosti.ru/kviz/",
       "status": 200,
-      "bytes": 36525,
-      "sha256": "3ca7555f334ce4d8b383bf4081e459f28e61da9ca6a228be09037e14d45790d3",
+      "bytes": 41716,
+      "sha256": "c33826e72f72b4c46c7034e2780dc6cae4031c749e515289477ba284d7cb087a",
       "matches_source": true
     },
     {
@@ -1182,8 +2326,8 @@
       "url": "https://zapahstarosti.ru/lekarstva-i-zapah/",
       "final_url": "https://zapahstarosti.ru/lekarstva-i-zapah/",
       "status": 200,
-      "bytes": 26506,
-      "sha256": "e5f5b6167f485ac6db5d472151ff33cdbd2d6b008feec28aa762a66c557f8863",
+      "bytes": 31514,
+      "sha256": "fd11a648679161e7175adf62c126c68b2cf9573d7192834c24207f1882201cf6",
       "matches_source": true
     },
     {
@@ -1191,8 +2335,8 @@
       "url": "https://zapahstarosti.ru/material-metod/",
       "final_url": "https://zapahstarosti.ru/material-metod/",
       "status": 200,
-      "bytes": 34959,
-      "sha256": "735a7e81a163b9bfebdde09a4e22f9c3bc0cb3739ec08d4c1ce5a5b8acdf7f66",
+      "bytes": 40264,
+      "sha256": "0ecb49644893cca2463c5ccd8dccad4c1e441e1dd7965cf639a510fac258b3b2",
       "matches_source": true
     },
     {
@@ -1200,8 +2344,8 @@
       "url": "https://zapahstarosti.ru/nabor/",
       "final_url": "https://zapahstarosti.ru/nabor/",
       "status": 200,
-      "bytes": 12591,
-      "sha256": "1c699e2156c1fc6af00c7d4ea9d40d619e30f8ce22e6ef0cdd85edf22ae8e9ac",
+      "bytes": 15924,
+      "sha256": "1872edb80da0bd916d2caecec1fc35d96a0ae4d623333f03bc44bc355d5a1725",
       "matches_source": true
     },
     {
@@ -1209,8 +2353,8 @@
       "url": "https://zapahstarosti.ru/o-proekte/",
       "final_url": "https://zapahstarosti.ru/o-proekte/",
       "status": 200,
-      "bytes": 21711,
-      "sha256": "e23065c8cb702045f356f87ef34c5cd2b2bad24e9df461782029ad256a98cf72",
+      "bytes": 27185,
+      "sha256": "b18ff0c8db80204e1833ffef4031ade7d7df9842b1a7f9bba70bc3d200fa968c",
       "matches_source": true
     },
     {
@@ -1218,8 +2362,8 @@
       "url": "https://zapahstarosti.ru/ochistitel-vozduha/",
       "final_url": "https://zapahstarosti.ru/ochistitel-vozduha/",
       "status": 200,
-      "bytes": 29944,
-      "sha256": "ed5cd5e2e1851fbbe1a225e52ac1a6f19d3092cf7a7a8c306010450753e46b0b",
+      "bytes": 35282,
+      "sha256": "773482855117e9ef733559df1f0d1d84ca199412e0ab4b47c2834a2f69aaec2e",
       "matches_source": true
     },
     {
@@ -1227,8 +2371,17 @@
       "url": "https://zapahstarosti.ru/odezhda-i-tekstil/",
       "final_url": "https://zapahstarosti.ru/odezhda-i-tekstil/",
       "status": 200,
-      "bytes": 35027,
-      "sha256": "4b8dd68d4a3c9cf873d56129668f3946d385fcba5bbe0eea4102c88f76b9de4f",
+      "bytes": 36901,
+      "sha256": "a253a6ad141d19d2d54be6caa1ad033a9eb7a847ce70f9f009b480c352de6d6d",
+      "matches_source": true
+    },
+    {
+      "path": "politika-konfidencialnosti/index.html",
+      "url": "https://zapahstarosti.ru/politika-konfidencialnosti/",
+      "final_url": "https://zapahstarosti.ru/politika-konfidencialnosti/",
+      "status": 200,
+      "bytes": 17803,
+      "sha256": "f96b27eb5a15dbd2c4a0fddd7e26c020a294a9ba94a46b0de22cc330974ada9a",
       "matches_source": true
     },
     {
@@ -1236,8 +2389,8 @@
       "url": "https://zapahstarosti.ru/poroshok-dlya-tekstila/",
       "final_url": "https://zapahstarosti.ru/poroshok-dlya-tekstila/",
       "status": 200,
-      "bytes": 29800,
-      "sha256": "0c244da6985fa5d503affc5fb9f344d5f2905e7d3e29dc93fa6b45c26c62c48d",
+      "bytes": 31890,
+      "sha256": "174b4a48df007e0a9028caf78bb83092769e32deccbd3f98c3f2f76d318e6d92",
       "matches_source": true
     },
     {
@@ -1264,7 +2417,16 @@
       "final_url": "https://zapahstarosti.ru/sitemap.xml",
       "status": 200,
       "bytes": 4494,
-      "sha256": "2c90b4ab97d9cde88d67b0f8ae9a4ca6486500cbc6cdf47721b99f1adaf7a953",
+      "sha256": "9f829d69396238acf705ca41171b3fc8fc88c867cc45e2359754000d07af7e87",
+      "matches_source": true
+    },
+    {
+      "path": "soglasie-na-obrabotku/index.html",
+      "url": "https://zapahstarosti.ru/soglasie-na-obrabotku/",
+      "final_url": "https://zapahstarosti.ru/soglasie-na-obrabotku/",
+      "status": 200,
+      "bytes": 13728,
+      "sha256": "c184ac9c88119a4310afa5242f4233ff286a2e3682904ba9110db53e5ede2241",
       "matches_source": true
     },
     {
@@ -1272,8 +2434,8 @@
       "url": "https://zapahstarosti.ru/sredstva-ot-zapaha/",
       "final_url": "https://zapahstarosti.ru/sredstva-ot-zapaha/",
       "status": 200,
-      "bytes": 32151,
-      "sha256": "d235fd2edb1005455fb2e742a2c2e37f10e84dcad8c8d90f67dfa1871e21ec5b",
+      "bytes": 33985,
+      "sha256": "c9b35b0f23bb8a247c7fca871b901dfe0b81ecdbf677037769ddbcacea1d94dc",
       "matches_source": true
     },
     {
@@ -1290,8 +2452,8 @@
       "url": "https://zapahstarosti.ru/tonik-protirka/",
       "final_url": "https://zapahstarosti.ru/tonik-protirka/",
       "status": 200,
-      "bytes": 24750,
-      "sha256": "dc0165e60245fb9151d38993d73100845bd967b0a7cf980b5d75e06ba170a4b0",
+      "bytes": 30080,
+      "sha256": "de5a276356313bbeff7e93ca0fb6e0f98d8b57b8cf60fce2c3732d15a34e49ff",
       "matches_source": true
     },
     {
@@ -1299,8 +2461,8 @@
       "url": "https://zapahstarosti.ru/ubrat-zapah/",
       "final_url": "https://zapahstarosti.ru/ubrat-zapah/",
       "status": 200,
-      "bytes": 29403,
-      "sha256": "e9fb4f74e55bd71e2cc8910812b2accb508450a3b65ba923887716f58e74dacb",
+      "bytes": 36034,
+      "sha256": "d2ff8ded8d7e81376352dcdd6814139fbcaa3b7e3258b85952587ca3edf5e1a8",
       "matches_source": true
     },
     {
@@ -1308,8 +2470,8 @@
       "url": "https://zapahstarosti.ru/ventilyatsiya-i-vlazhnost/",
       "final_url": "https://zapahstarosti.ru/ventilyatsiya-i-vlazhnost/",
       "status": 200,
-      "bytes": 27881,
-      "sha256": "5b18b8a665e92b38cac94ef0e5067ea2931f3ca027e20e68707b881bf3e09462",
+      "bytes": 32949,
+      "sha256": "9aea4f152088e60121bf5cdd6150e5127c6b82732ea7e2b4752d780d67e09015",
       "matches_source": true
     },
     {
@@ -1326,28 +2488,27 @@
       "url": "https://zapahstarosti.ru/zapah-v-kvartire/",
       "final_url": "https://zapahstarosti.ru/zapah-v-kvartire/",
       "status": 200,
-      "bytes": 34266,
-      "sha256": "f862c2517492129ba4e55a14033c1e10eecadfbe773f6b2e24cf0b250bff237f",
-      "matches_source": true,
-      "checked_at": "2026-09-25T17:30:00+00:00"
+      "bytes": 36170,
+      "sha256": "64127cba2cdf4b5dcb22e61f075de95c3821f85f32b83d6f2363a74718313ee5",
+      "matches_source": true
     }
   ],
   "content_pages": 26,
   "indexing_allowed": 25,
   "noindex_content": [
-    "/nabor/"
+    "https://zapahstarosti.ru/nabor/"
   ],
   "sitemap_urls": 25,
   "tracker_versions": {
     "published": {
       "path": "03-сайт/сайт_текущий/app/index.html",
-      "bytes": 66182,
-      "sha256": "4ba50e9077286c5168798db38bb4eaf728d8e36b0c93092fdf94fd62096d74b0"
+      "bytes": 66174,
+      "sha256": "0666036c75204458acf1fd084c24d81e08a3102766a661d2269563bcb4a043b8"
     },
     "newer_unpublished": {
       "path": "05_приложение/app/index.html",
-      "bytes": 80825,
-      "sha256": "1b7bb717edaf6922d4e9e51044b149acee55a4f5518bd44d8ebbf456010a6df1",
+      "bytes": 80817,
+      "sha256": "219eae74165175b03e8ce143dc2c0feb9b45d713a61d60f97ad0bfd13af8f29c",
       "steps": 20,
       "actions": 153,
       "untouched": true
@@ -1822,5 +2983,23 @@
       "sitemap.xml"
     ],
     "live_check": "25.09.2026: 2 из 2 совпадают по sha256"
+  },
+  "illustrations_2026_09_27": {
+    "what": "Снимок приведён к сайту после полного цикла иллюстраций: 69 картинок в стиле акварель/тушь на бумаге, включая последние страницы /kviz/ и /faq/",
+    "source_commit_range": "b14e44d..255b46b",
+    "webp_added": 80,
+    "pages_with_figures": 25,
+    "checked_live": true,
+    "sitemap_lastmod": "2026-09-27 (обновлены все 25 URL)",
+    "yandex_webmaster": "27.09.2026 все 25 URL отправлены на переобход; суточная квота 150, остаток 125; критических проблем диагностики нет"
+  },
+  "service_pages_noindex": [
+    "https://zapahstarosti.ru/app/",
+    "https://zapahstarosti.ru/politika-konfidencialnosti/",
+    "https://zapahstarosti.ru/soglasie-na-obrabotku/"
+  ],
+  "pwa_brand_rename_2026_09_26": {
+    "what": "Новая (неопубликованная) версия трекера: ДУБРАВА 40+ → ДУБИНА 40+ в title, подзаголовке, подсказке и тексте этапа про регистрацию имени. Структура не менялась: 20 этапов, 153 поддействия.",
+    "commit": "394ea85"
   }
 }
