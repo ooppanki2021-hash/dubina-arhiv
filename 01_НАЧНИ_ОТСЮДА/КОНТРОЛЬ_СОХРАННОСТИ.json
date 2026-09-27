@@ -1,1426 +1,1445 @@
 {
-  "schema_version": 2,
-  "date": "2026-09-27",
-  "generated_at_utc": "2026-09-27T19:50:00+00:00",
-  "base_commit": "c048368cd23ed3bc6aacf7ee80422162eb1a2b2f",
-  "repository": "https://github.com/ooppanki2021-hash/dubrava",
-  "purpose": "Инвентарь архива и описание согласованной актуализации без удаления. Обычный коммит с сохранением родителя; видимость репозитория не меняется. Снимок сайта приведён к коммиту 255b46b (иллюстрации), см. 03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json.",
-  "counts": {
+ "schema_version": 2,
+ "date": "2026-09-28",
+ "generated_at_utc": "2026-09-27T23:01:04+00:00",
+ "base_commit": "affbc26",
+ "repository": "https://github.com/ooppanki2021-hash/dubrava",
+ "purpose": "Инвентарь архива и описание согласованной актуализации без удаления. Обычный коммит с сохранением родителя; видимость репозитория не меняется. Снимок сайта приведён к коммиту 74151d0 (задачи 38–40), см. 03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json.",
+ "counts": {
+  "files": 253,
+  "previous_baseline_files": 252,
+  "added_since_previous_baseline": 1,
+  "renamed": 13,
+  "deleted": 0
+ },
+ "deleted_files": [],
+ "renames_acknowledged": [
+  {
+   "from": "04_упаковка/исходники_дизайнера/DUBRAVA_корешки_оба.png",
+   "to": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_корешки_оба.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/исходники_дизайнера/DUBRAVA_порошок_цветной_40plus_лицо.png",
+   "to": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_порошок_цветной_40plus_лицо.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/исходники_дизайнера/DUBRAVA_спина_v3-4_насыщенность.png",
+   "to": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_спина_v3-4_насыщенность.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_корешки_порошок_светлый.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_светлый.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_корешки_порошок_цветной.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_цветной.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_логотип.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_логотип_на_фоне.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_логотип_на_фоне@2x.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне@2x.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_порошок_светлый_белая_плашка_v1.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_светлый_белая_плашка_v1.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_порошок_цветной_плашка_v8.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_цветной_плашка_v8.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_спина_гель_v3.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_гель_v3.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_спина_порошок_v4.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v4.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  },
+  {
+   "from": "04_упаковка/финальные_макеты/DUBRAVA_спина_порошок_v5.png",
+   "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v5.png",
+   "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
+   "commit": "9d54695"
+  }
+ ],
+ "files": [
+  {
+   "path": "01_НАЧНИ_ОТСЮДА/ЗАПРЕТЫ_И_ГРАНИЦЫ.md",
+   "bytes": 16166,
+   "sha256": "f4355ff106c52cdd4e03cb3120ea4df27e5843ff08e953b4e3f7e082704ccaeb"
+  },
+  {
+   "path": "01_НАЧНИ_ОТСЮДА/ИСТОРИЯ_РЕШЕНИЙ.md",
+   "bytes": 59228,
+   "sha256": "99d52a0351b16621dd84340e38549956fb943dfe36a3bcd4ef25d1166e63cf42"
+  },
+  {
+   "path": "01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json",
+   "bytes": 59414,
+   "sha256": "fc845da446e418d7a1de27df7d5613a8516d53327a123d5fb1abb6315641a181"
+  },
+  {
+   "path": "01_НАЧНИ_ОТСЮДА/ПОЛНОЕ_ДОСЬЕ.md",
+   "bytes": 30870,
+   "sha256": "c81f908e1625cc3f937530335a14f655a5d515d081d2c0fe5b18229e34b37785"
+  },
+  {
+   "path": "01_НАЧНИ_ОТСЮДА/ПРОЧТИ_ПЕРВЫМ.md",
+   "bytes": 15372,
+   "sha256": "6d251b6ae8bbabe65cf87ecb72036b373b06de8e016d819f7665c3c9cc534809"
+  },
+  {
+   "path": "02_документы_проекта/AUDIO_чеклист.md",
+   "bytes": 17895,
+   "sha256": "fb53a4ffb1d8464edce38c585164a4137712c1b929690ede647896cc279ff1c3"
+  },
+  {
+   "path": "02_документы_проекта/og_generate.py",
+   "bytes": 6641,
+   "sha256": "c81c9269976c4af1f940dbf479862ba568ba4bce2927ada308af2bb7253cac41"
+  },
+  {
+   "path": "02_документы_проекта/АУДИТ_КОНТЕНТА_БЕЗОПАСНОСТЬ.md",
+   "bytes": 33621,
+   "sha256": "ef16995597ff9b40ab8f984d609a4cd6a4dd82bbe2a215708f14b43988b863c1"
+  },
+  {
+   "path": "02_документы_проекта/АУДИТ_САЙТА.md",
+   "bytes": 25001,
+   "sha256": "8dffd67f47ffaab59b9a0ef18336d1fe1fe3f9634f3ae3bd75d861a9c9a00765"
+  },
+  {
+   "path": "02_документы_проекта/АУДИТ_СЕМАНТИКА.md",
+   "bytes": 23548,
+   "sha256": "a5d6d469e782c803f8b97d0f001967775f2f94624db6dbc4cfa40416706faa66"
+  },
+  {
+   "path": "02_документы_проекта/АУДИТ_ЮРИДИЧЕСКИЙ.md",
+   "bytes": 14132,
+   "sha256": "ecb7af2c02b1fbfe938bbe789c662e59d1a6d44d56a3ca2f7eb2a5ecd9ab70d7"
+  },
+  {
+   "path": "02_документы_проекта/ГРАНТЫ_оценка.md",
+   "bytes": 13783,
+   "sha256": "c636d6125cb20dbe68d4f900e57e3fc565e1fdd804a131566cd030c2d3249513"
+  },
+  {
+   "path": "02_документы_проекта/ИНСТРУКЦИЯ_открыть_страницы.md",
+   "bytes": 11772,
+   "sha256": "e8f6ac152af3ff6d42ead67edebb33e7b7c8983ad53280039bf4b845eb04c32b"
+  },
+  {
+   "path": "02_документы_проекта/КАРТА_КОНТЕНТА.md",
+   "bytes": 24684,
+   "sha256": "55dfac9aa0c36138ef1af07deef61911fa30429547041716f3a14ec3987162a9"
+  },
+  {
+   "path": "02_документы_проекта/МЕТОДЫ_СТРАТЕГИИ.md",
+   "bytes": 24470,
+   "sha256": "c75dbfa8b85bf12d3d10a01de3b81308b54a01c809473a8bc680db270ec2aa1f"
+  },
+  {
+   "path": "02_документы_проекта/ОПИСЬ.md",
+   "bytes": 5358,
+   "sha256": "0feffc529480ac0eb127b25d0828662d5a42813cf9dc5e26359b1eada6707825"
+  },
+  {
+   "path": "02_документы_проекта/ПЛАН_РАБОТ.md",
+   "bytes": 15790,
+   "sha256": "dc18e51f0b0cd14a008fd42dfb77615aac223353b088cab81141e607c800ceea"
+  },
+  {
+   "path": "02_документы_проекта/ПЛАН_СТАТЕЙ_AUDIO.md",
+   "bytes": 7342,
+   "sha256": "6a90a166bfbf80723e63360a497543a5213cd66900597e77df0dbca8fa9c9323"
+  },
+  {
+   "path": "02_документы_проекта/РАЗБОР_SEO_ФРЕЙМВОРКА.md",
+   "bytes": 16813,
+   "sha256": "8319c47784e57e371b7d74e89c7111fe450fc68c9ff0ab997f2129837f6e527e"
+  },
+  {
+   "path": "02_документы_проекта/РАСЧЁТ_СТОИМОСТИ.md",
+   "bytes": 16607,
+   "sha256": "3a2bf644e8e5f621a0de33a49b587b42a1514d485d8f09f67ce82b66c3660e68"
+  },
+  {
+   "path": "02_документы_проекта/РЕЗЮМЕ_ПРОЕКТА.md",
+   "bytes": 74756,
+   "sha256": "1c795a4709bed477ddc74a0779214d5ec1c2c3b14f256b22b03ba4760f90c523"
+  },
+  {
+   "path": "02_документы_проекта/РЕЦЕПТУРЫ_ЗАМЕЧАНИЯ.md",
+   "bytes": 6829,
+   "sha256": "ad22b3aa187aa43aaa16b6f4e78c1d81f274c26b14fc3b2d1ae2802dff64aa47"
+  },
+  {
+   "path": "02_документы_проекта/УВЕДОМЛЕНИЕ_РКН_черновик.md",
+   "bytes": 3700,
+   "sha256": "7fc5bb6e13921705a250e2fe58dc0de814cdb72b784922433c44fb5867a92844"
+  },
+  {
+   "path": "03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json",
+   "bytes": 121063,
+   "sha256": "597362b051c2535770dd5593d8266f121d96b69874485f423094e686d2163736"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/404.html",
+   "bytes": 13936,
+   "sha256": "49c2dc432228c330be183896808453806895f1899f5716ee4e96254d5ed23c56"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/CNAME",
+   "bytes": 16,
+   "sha256": "1dbb014c4f3e807d0df4d4ffcdbabc8d1aa548b8ee7f9e263e2a9096d639acef"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/README.md",
+   "bytes": 15,
+   "sha256": "def52c78004b0029bc0232bd9ff2c404a508b0368f57a52517569e88ae9c8ca5"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/app/icon-180.png",
+   "bytes": 27006,
+   "sha256": "e84f92e5ff8f53d060a58a1b6070942c6b486a2e2c9321b5aae1063aea67575c"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/app/icon-192.png",
+   "bytes": 29113,
+   "sha256": "a79ff84560cef5174a263d461d804292fb6840c141a7fc2f02fee24130492377"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/app/icon-512.png",
+   "bytes": 79607,
+   "sha256": "9947ae6ebfbd5397805db048f508ee42c39db252f1046ce7c07e45afba089d2d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/app/index.html",
+   "bytes": 66208,
+   "sha256": "accea4c9fdff8bd33f701ff7caabd484a04604b310b93630ad827da76a57f05b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/app/manifest.webmanifest",
+   "bytes": 712,
+   "sha256": "5f81278d83d6ab9f6bef43e796479ddf6df7ab4936ebe00d196d56cf06a58010"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/app/sw.js",
+   "bytes": 832,
+   "sha256": "58ef763ee05c4993c3c6e7bb3d5a3225eb89cef564e57f42fad42d615f819668"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/chto-takoe-2-nonenal/index.html",
+   "bytes": 47906,
+   "sha256": "03c0bc5f59b087536b59e7b6ebff754ec8f5492a4a3f7dac246a3a42cce4686f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/constructor-v5.html",
+   "bytes": 58756,
+   "sha256": "73ac789e08bfb4301e6a80c4db7c5743c88417b1b4da83e7ed683317a59798a9"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/faq/index.html",
+   "bytes": 38856,
+   "sha256": "1f07182a736c2c0f23f9c48255cb510450f2ee0bf4197cf9bd49e155d4f6f954"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/favicon.ico",
+   "bytes": 3469,
+   "sha256": "c8660b1542b914f67f34803c181395344985092c3ab3a71a2f299dac697bac8b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/googlebfe090009deb22b8.html",
+   "bytes": 53,
+   "sha256": "680662b0d59d2d629d531a4c0c9185d039402e8b13ff379519636a5f668df2cb"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/diagnostika-blue.jpg",
+   "bytes": 21143,
+   "sha256": "9f781606b41b12bc0d92fbcb0c6d397ba03605a6ede9e968c3aee0b295b72703"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/diagnostika-light.jpg",
+   "bytes": 147975,
+   "sha256": "4f4fedf0b1bc0e65f86a63374f78c69e28d4304cbb6891db25f3bcdaeb1637f5"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/diagnostika.jpg",
+   "bytes": 29681,
+   "sha256": "0a31f2ece845a647c55501c45d633129a2ad3d320ef483cf5e82924fb268ee2d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/divan-blue.jpg",
+   "bytes": 37531,
+   "sha256": "3a907c1997426b03c14c6c66a62e04d921c292d1f2970ef9c0266664db620f73"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/divan-chetyre-obivki.webp",
+   "bytes": 171998,
+   "sha256": "e0385af73b9a156d3d5230ba6cc21be375e77242553d25f87a661348ee0910e1"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/divan-lovushka-pylesosa.webp",
+   "bytes": 156078,
+   "sha256": "86eb15a4b40cba2c4720e7edca5b4514d93a39d761c55d46ac31d444e03565da"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/divan-portret-gostinaya.webp",
+   "bytes": 157274,
+   "sha256": "dee1a6a0d49d85a32e2ff92e7444c7137fc75cb30e42ab4e114947b48d574187"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/divan-protokol-5-shagov.webp",
+   "bytes": 169358,
+   "sha256": "fd8b143ab5cc080e50e5fb55dc4c6a1c0986e9ded55a5f88f577e833d721776e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/divan.jpg",
+   "bytes": 48762,
+   "sha256": "2dc2412169b76141d215d8d5ca2b5aed80bd661f4cb3ce58d04c800d207ce48f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/faq-parfyum-zametnee.webp",
+   "bytes": 163214,
+   "sha256": "65a9808b30b89575119a3c92d4521260e2a562b38cce49e5cb40d744a5cd40c4"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/faq-telo-ili-mebel.webp",
+   "bytes": 122386,
+   "sha256": "ddbff5d5a290ea113de59165a8a2cbbb12c88d12958d00eda7debcb8f4aaa8f1"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/faq-vozvrat-zapaha.webp",
+   "bytes": 137152,
+   "sha256": "debf2e33451604db65064079298f51bbddcb9939d0b6704121282326a6e90594"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/favicon.png",
+   "bytes": 1581,
+   "sha256": "d7c9c2af747c171c92155818c6161e95e2021fd0a8e6d3e18083ef93f6c610fb"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/glavnaya-3-shaga.webp",
+   "bytes": 156416,
+   "sha256": "6d7fd25ea94a29bf44a485de4dea9fbd6ced855b4cd23f39f19362485dbcb893"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/glavnaya-molekula-portret.webp",
+   "bytes": 103924,
+   "sha256": "9bd8fea49e9390cfd17d305693e68673ca54251e5fc885503e7f25997279428a"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/glavnaya-svezhest-doma.webp",
+   "bytes": 100768,
+   "sha256": "183c7733d319c1f2679cc294ed9ef8fea20cdfb970ead08f49c06d7a69e996f1"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/gov-chetyre-barera.webp",
+   "bytes": 147264,
+   "sha256": "04fc1965d07fe51a5d9b4bdfb10f895de0d65ae5c84d753f0933e3ae6fbecd8b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/gov-pomosh-deystviem.webp",
+   "bytes": 140148,
+   "sha256": "f7b925c73a9f3bbd0daad2f6c00a9dcec8043b58e60af8aa5031ba63f1b3bd85"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/gov-tretiy-obekt.webp",
+   "bytes": 167550,
+   "sha256": "36f57a5ee4a8d413a6e205f5003f54b06a8e795cc47011086fa8b7a3a2d1d3ea"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/hero-blue.jpg",
+   "bytes": 23220,
+   "sha256": "cbf959777790b65ddc10ada18d9fc6341c7962318821701367c3a0ad5e9e0de7"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/hero-light.jpg",
+   "bytes": 113865,
+   "sha256": "7bdf9407e1d0f6302c6f95c525d2275718035f882414f4cf212a99ebbaf57b0a"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/hero.jpg",
+   "bytes": 38491,
+   "sha256": "d52a13b94aaa6ce6dbebcdb6ee880980eb21e75690122db6a23321e044fc8d69"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/icon-180.png",
+   "bytes": 8676,
+   "sha256": "04b2dca5ba82cd6261a845d4649608c4d376b1ae8243362fc968dd088fc77533"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/icon-512.png",
+   "bytes": 30260,
+   "sha256": "3696359ffc58b7291a8c5385b37aef5cef5783c9206161398ea2db031e82cad1"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/icon.svg",
+   "bytes": 162612,
+   "sha256": "f0c52f2fd89416de8acec979801c62e6ed135568ff2352752d53a6438a442b15"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/img-20260830-1407.jpg",
+   "bytes": 9362,
+   "sha256": "de5d1da2b62561de2bf96284987fb730e9d43bbd4ed5a926379edaeed7b332f9"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/img-20260830-1408.jpg",
+   "bytes": 184799,
+   "sha256": "42e6c944f32c642f89191b7f72e598ec091eb2ff26c02434e7789ab5d0f8203e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/img-20260830-1527.jpg",
+   "bytes": 19691,
+   "sha256": "c66df293a5b702bf11a8c23ed1f8baca7d1185430aa0f528770b9db636e2d824"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/img-20260830-1528.jpg",
+   "bytes": 19691,
+   "sha256": "c66df293a5b702bf11a8c23ed1f8baca7d1185430aa0f528770b9db636e2d824"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/img-20260830-1529.jpg",
+   "bytes": 51188,
+   "sha256": "e4f4ca4c08e23f76c62435e3bf40ee43e238f3ad5107f70f6d84639f5626583c"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/img-20260830-1602.jpg",
+   "bytes": 109688,
+   "sha256": "b8a46d81945795b21795465393fce897e8853702b8d6a52a1f552f982683c079"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/istochnik-khlopok-protiv-poliestra.webp",
+   "bytes": 157930,
+   "sha256": "4266cc197e412dbd9204ca0349949bf5541e0c081872abfcfb2bbe1d5cf529ec"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/istochnik-nos-ne-slyshit.webp",
+   "bytes": 132340,
+   "sha256": "0e0de0c1381d0c1f586f1c3dc58a2962fce723e62346c90b712da42ff9125da2"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/istochnik-paradoks-slepoy-pyatna.webp",
+   "bytes": 142728,
+   "sha256": "c9e17b80cac0bafd60bdadc923e0e2f6968fd05ad53aa86a618fae7fe9ae3ea2"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/karta-blue.jpg",
+   "bytes": 14678,
+   "sha256": "b39165fb19d13c195e80855403263c89b5b4f2d3093ba2dbe4486f86ad772c0f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/karta-kukhonnye-tryapki.webp",
+   "bytes": 179086,
+   "sha256": "a8e8ae2c160c693b7985f645eaff30af9921bbcd0036b9034fe702da31e2868f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/karta-perevaya-podushka.webp",
+   "bytes": 124564,
+   "sha256": "6ec203606b058f1a353c7fd36ca3b2eed18105b527d18bbd588f4ff1f92658bb"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/karta-test-zakrytye-dveri.webp",
+   "bytes": 155016,
+   "sha256": "acf27adbe7aee2997e6886f0651e7bab212aec05d65661107013d3bc082e0711"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kora-blue.jpg",
+   "bytes": 34718,
+   "sha256": "7be6cef4e6fe85a6375bde727bd7ce5728ef60e728e925996d481f304767856e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kora-duba.jpg",
+   "bytes": 73946,
+   "sha256": "7e36442c18b1e159392c8f8994945f756005d64f3dc3e9b2f38666a23595d6a6"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kora-light.jpg",
+   "bytes": 208945,
+   "sha256": "01cd63e779ab3f06266942df60f2d16f6892e359e46c0d6a721496631c2353e0"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kvartira-ne-za-odin-den.webp",
+   "bytes": 147778,
+   "sha256": "2ef6d799ddd382baf6fd5c045c711f7c2a22454d4430ef33f2f05bc5b390deff"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kvartira-ozonator.webp",
+   "bytes": 184426,
+   "sha256": "6a9e15089a04caa6079b4949e2fc916a6eb1bc0e477a8b57db0e7ba156fe8478"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kvartira-shtory-filtr.webp",
+   "bytes": 144670,
+   "sha256": "61e43e15e162580929385189dee356dfcf476fe87deb5661e8cdfbdc0094813f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kviz-devyat-shagov.webp",
+   "bytes": 121772,
+   "sha256": "e6d85705cbc41951a3b13f73932e7edeae8b7636bdfdeb98a8851abf13fcc316"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kviz-olfaktornyy-sbros.webp",
+   "bytes": 164140,
+   "sha256": "828cc7c4313cba58f1fabc82731844a453a111afc09d1efa3de9e50ae3bf5076"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/kviz-sem-testov.webp",
+   "bytes": 190752,
+   "sha256": "ed60ead45ff51a62cca47297693251fea8a31204ce9627e939f7bf26ef4f3252"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/lekarstva-korvalol.webp",
+   "bytes": 198560,
+   "sha256": "416a1b1131d432cad0311cb077fcda0bcdf2928a6974e94cd1112602486245d0"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/lekarstva-mazi.webp",
+   "bytes": 155406,
+   "sha256": "7615d99d2ebc1fd9fd553d11396b0a909ff78d869e218509578afc83b52f238d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/lekarstva-ne-otmenyat.webp",
+   "bytes": 188212,
+   "sha256": "b8baef4739efb4aaf7fb1ef2e85f262e80be693dd99c2b559663337b4703b7c1"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/mater-kislorod-enzimy.webp",
+   "bytes": 114208,
+   "sha256": "8a2797e93fb4deab5ac905568dac2c14aad499f5134dc217a7e3ed75c7bc0fcc"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/mater-termogidroliz-dsp.webp",
+   "bytes": 172410,
+   "sha256": "47ccdf8aaab43b97e79ffea1813486577753a2c4dd36aa5c909b8dff0823c189"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/mater-test-skrytyy-uchastok.webp",
+   "bytes": 151318,
+   "sha256": "49d1435f0804c9e9439f7a84a50b96045652f2116e6cb063b349076ce914d415"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/matras-blue.jpg",
+   "bytes": 42144,
+   "sha256": "710f4b304e965ed48403fc92f698fe7cc6ee9162b4ced63b3e1206ca6548ca78"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/matras-protokol-5-etapov.webp",
+   "bytes": 154618,
+   "sha256": "7fb3465f54e62e4947a847e74c7fce3147ba4a74479efe48d105322b4eb9c74a"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/matras-teplovoy-ispritel.webp",
+   "bytes": 108860,
+   "sha256": "5e6df4a6872b3a82e01bda3cec32a4b05c5a0bc7ddd02ef0e0552cbbaa21c186"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/matras-tri-narodnykh-soveta.webp",
+   "bytes": 140232,
+   "sha256": "d76c8c754150ef04fe5098f95d6877d75ea8ce9fe0e46d22753e4a5bad7cef9b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/matras.jpg",
+   "bytes": 59155,
+   "sha256": "66e9c2bfaf3558a7f6d9c71738207099a243d75b3aefd82f6f63414057d5faba"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/molecula-blue.jpg",
+   "bytes": 20557,
+   "sha256": "d49455d5369f61450417f7ab94aa44502bd81aa6839df8555af22640b044e06c"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/molecula.jpg",
+   "bytes": 70444,
+   "sha256": "0a8b49f61c6d30c0ddeed594c69cc2dd2c7fcee3c0a1b1800a2c4ed715ce1fa1"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/nonenal-dub-taniny.webp",
+   "bytes": 198170,
+   "sha256": "13cc3de54638752e8cc39e1c7a6eab0d7de838d589c893408c6c37aa315e5541"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/nonenal-haze-2001.webp",
+   "bytes": 161860,
+   "sha256": "a015cf0d7781470c654d0b3629dfe138db98f6d5946ce22935f091d4fa5f2b5f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/nonenal-molekula-portret.webp",
+   "bytes": 87718,
+   "sha256": "2f3b0ca9443e6850e95d281973edc403267399adeaf6a29ab26a7bf07fb21dda"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/nonenal-natyurmort.webp",
+   "bytes": 121744,
+   "sha256": "089644069dc2ff5a28ed204f13fc433185bbc1d0e1770e67281209e1ec93ba6d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/nonenal-nelzya-kozhe.webp",
+   "bytes": 132202,
+   "sha256": "565613aa64d08bc462646c1a4d6064d74f9491456c5dd82e4b45c4ecbfb2abaa"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/nonenal-ochered.webp",
+   "bytes": 180430,
+   "sha256": "cb73dc0a94ea995f2c69ed868c143adaec36801d55c3759e97701bf3a8b1762e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/ochistitel-obratnaya-desorbtsiya.webp",
+   "bytes": 195900,
+   "sha256": "a9c67ead483877bcc3532435f1602ecdd52faa9a5deb7266ca901d37dc6facb6"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/ochistitel-razmer-molekuly.webp",
+   "bytes": 151764,
+   "sha256": "63e630f7ce16d296757ab565d210f5136c958e68a550afdfe23759859b683e61"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/ochistitel-ugolnyy-porolon.webp",
+   "bytes": 183078,
+   "sha256": "e310b9d357fc8c1f94f52d1b24a085e4eee07f2b8ea57ee204b1f4ed108fc70f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/chto-takoe-2-nonenal.jpg",
+   "bytes": 70598,
+   "sha256": "edc76c5b3baca8ca301439dd67655dbc0ba5ab7eaf8086e2a933e3fb35c9a182"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/faq.jpg",
+   "bytes": 69436,
+   "sha256": "7c476466947b4dc7d4b88e2d9a55732f617ab3d65cd724022804d191bb1a46d7"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/home.jpg",
+   "bytes": 71793,
+   "sha256": "a1148df8754afca1633af91bca8684c4e96a7a955e50aca42b826022ef4fc725"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-otlichit-istochnik-zapakha.jpg",
+   "bytes": 74288,
+   "sha256": "af52f1e379c26d75bca484f32245db0c4356b54ab3e62dcf6a81a6fa9569245d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-pogovorit-s-blizkim.jpg",
+   "bytes": 68609,
+   "sha256": "b573d8c5c843bb6abd6e130d1b966b37914a49c48844999807b0dc5f0db012a5"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-iz-shkafa.jpg",
+   "bytes": 71805,
+   "sha256": "6fee0a7001e65627fcdba550efd9bfbe013b9d6a9f69f30e3c882b5ec0b020d3"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-s-divana.jpg",
+   "bytes": 72983,
+   "sha256": "ec4f25b9b23730cef7cfd07d6337944ff1e28002764c84cf649c80a9b253f3bb"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-s-matrasa.jpg",
+   "bytes": 75207,
+   "sha256": "0c394fc71daf14f32840d0b672782320261445360c94c47bb931009ea458dbe9"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-v-sanuzle.jpg",
+   "bytes": 62706,
+   "sha256": "b260f18dae53bfb42668f0cbebf11fcffa188b8fedbdca45749fce465df7be44"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-v-stiralnoj-mashine.jpg",
+   "bytes": 72360,
+   "sha256": "59bcb7e4b5fbacae6f231074e28bc3aee3d3371c9c071d97cb44da47b0068302"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/karta-kvartiry.jpg",
+   "bytes": 73446,
+   "sha256": "7920e57369ee5ca09c26179d3448a87a5dbd4b7942822d5fc8d80f66b5c88d19"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/karta-osetii.jpg",
+   "bytes": 72158,
+   "sha256": "19933058114002bf884469d122faf677c255a7ddcb59704afbf577070efe41f3"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kogda-k-vrachu.jpg",
+   "bytes": 60785,
+   "sha256": "f67b297b86239c47cb7ef1a9c85fcf391d7ca1c0480a771881afa15c6e6dcf61"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/kviz.jpg",
+   "bytes": 55549,
+   "sha256": "a7d9fe06f23a274ad7d3d9d4d8583e2206d716d0ba65b7021965c342332ecc2c"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/lekarstva-i-zapah.jpg",
+   "bytes": 65910,
+   "sha256": "6111c60f584801e3344a249068d23cd8697d6f2a1581b7a9656cff89fb828b07"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/material-metod.jpg",
+   "bytes": 66447,
+   "sha256": "05a59c693faf3a229bae6585c738af86af8c91271513572b0994b9360e912cd3"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/nabor.jpg",
+   "bytes": 63921,
+   "sha256": "37817ad0bb16c65cfeb565cd863804c1f179976ac0472045b52262af72fbeedd"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/o-proekte.jpg",
+   "bytes": 56911,
+   "sha256": "fdbcc314bbde57ceba8321b068e260b809fc4ef39e9368abf8c296fb9c245288"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/ochistitel-vozduha.jpg",
+   "bytes": 71246,
+   "sha256": "8b7bcbafb17a95f6b96e4e3f8885c4a994a01d94c1aab1dbb936d4791f5eb34b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/odezhda-i-tekstil.jpg",
+   "bytes": 64509,
+   "sha256": "eb40991ccb06a85c086ff27994cf3c0cda01d92b94a56cfc6b5d1f7a3ea14b5f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/poroshok-dlya-tekstila.jpg",
+   "bytes": 67280,
+   "sha256": "de677389c839a1cc2a22d6bb169b6b692184d59c8456a92345f021c30819e9c2"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/sredstva-ot-zapaha.jpg",
+   "bytes": 74085,
+   "sha256": "7998608ad9627b1f6d133da694c67767a92f669c5a9f928b16d6f74a42b9c148"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/tonik-protirka.jpg",
+   "bytes": 64090,
+   "sha256": "e570a88f420d49858cd7f9e7ad62140353654e6996d55b273a3310ddf09541af"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/ubrat-zapah.jpg",
+   "bytes": 65268,
+   "sha256": "ecd5d8879dd1f185500b464f16c390aa8a4bd1452b3da8193f2f18fe607fd595"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/ventilyatsiya-i-vlazhnost.jpg",
+   "bytes": 67334,
+   "sha256": "6eab750341e564ec0319343f04cbbe718c7a93377ff1a353ee1fd0b46c9a7656"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/og/zapah-v-kvartire.jpg",
+   "bytes": 73719,
+   "sha256": "89b42192c479aef172e021dea8e2ba9ad95968dba292cfcacc5d5267c5ba359c"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/osetiya-dub-skalnyy.webp",
+   "bytes": 195928,
+   "sha256": "cd13e2ed0d76599ab427939c08a96a097e98cdc4641a7ceb5b431d526686991c"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/osetiya-karta-expeditsiy.webp",
+   "bytes": 192354,
+   "sha256": "f1724541f15889a1d8d9129deeeda89decf38a54a8e3e4df24aacecca0ad3b1b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/osetiya-sushka-v-teni.webp",
+   "bytes": 206334,
+   "sha256": "07d36d1397a9253c02ca692487d09a5c9404f91ee79e20fcf2fc3a01027e2683"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/poroshok-opticheskiy-otbelivatel.webp",
+   "bytes": 160644,
+   "sha256": "0152fd840cdfff501e5cebfb7debe228c01ec73eb98500e57fcdc72688ceae08"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/poroshok-taed.webp",
+   "bytes": 170194,
+   "sha256": "687ad5fb1ceefbcfcdc4bdc36d5a1b3a46b75c8b6931fa81bfc0f2fdfef8b6af"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/poroshok-zhyostkost-vody.webp",
+   "bytes": 158994,
+   "sha256": "901c145f72324900e2d9d9ea59f694de49f2c6a6d7e93000d3367cf963252e05"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/proekt-dubina-pyat-sredstv.webp",
+   "bytes": 151508,
+   "sha256": "9dfc333439112d2f76eb71a7a84c5ec2de8a9ae663e027354f731d978e910bfa"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/proekt-odna-granitsa.webp",
+   "bytes": 130756,
+   "sha256": "7cf0e4ead9c8b92ed84220c842ab98f2e5e00bc854315aaa18c7e55cb39aa767"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/proekt-s-chego-nachalos.webp",
+   "bytes": 105768,
+   "sha256": "c74c13d5a71c859f4eb7dd0190bd1fa71d1506b52c02cf9cb0c981dea24fd068"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sanuzel-donnyy-kamen.webp",
+   "bytes": 134408,
+   "sha256": "d0e69ac5677c3d8479126010d491cd94515e69fab0ef7103b39a4fda6a8f088e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sanuzel-evakuatsiya-vody.webp",
+   "bytes": 137216,
+   "sha256": "30438d4e3dee9bc5e82ab49e4b58c468d06c35670364033594bfa17f6a5c675e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sanuzel-khimicheskaya-nesovmestimost.webp",
+   "bytes": 149790,
+   "sha256": "d132535657b8260115113dbaaad7cfa7b1cca0af6f85b90b87a9e9274a2e1c7b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/shkaf-blue.jpg",
+   "bytes": 26355,
+   "sha256": "2e485497a22f9aa7a9a71a77c5adc4a08d07d244286a880203eeed8756cdaff7"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/shkaf-naftalin.webp",
+   "bytes": 169906,
+   "sha256": "a0452306102e8aee9011be50df51a36babdc17d322f9e780309702d0e7a8dc65"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/shkaf-protokol-5-shagov.webp",
+   "bytes": 179920,
+   "sha256": "344f9332f86401b2cf8b2e89710a52d7997ccbc52c5da9be1173cd94ce0f23ff"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/shkaf-zakon-odnoy-noshenoy-veshchi.webp",
+   "bytes": 150024,
+   "sha256": "9783f76a4b1bfa10a06d2f56fa812d6f3a26e66691e31698b1ae3a22b50db027"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/shkaf.jpg",
+   "bytes": 58475,
+   "sha256": "96cde428f6c725eabb6ea8fe5a87767f84a3512413a6654e7e3f20f3bab86469"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sredstva-inci-etiketka.webp",
+   "bytes": 192630,
+   "sha256": "767e1a7ea60dbb62772b38f270b9d09d7880be38ee715fd92896aa6ffbb1a02b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sredstva-polka-magazina.webp",
+   "bytes": 177170,
+   "sha256": "36b9eee5bde2d5b0557fe28662e6069f231b7f93d37c74e2ca3e42979ead7052"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sredstva-taniny-dub.webp",
+   "bytes": 137396,
+   "sha256": "5ab14c58bfe5f7b6d698588bf264e1b629bfe2df5a3ac5ba9fc20c609ed76524"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/sredstva-taniny-persimon.webp",
+   "bytes": 140438,
+   "sha256": "bd63cb8309072f51aef5516964703f79b37d25d2ae5e2a17b289ddff6ed41733"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/stiralka-chernyy-potolok.webp",
+   "bytes": 130240,
+   "sha256": "911fa920f8d8439f83418c25158f176e4018a21b636b22009b4c855c94242965"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/stiralka-effekt-sifona.webp",
+   "bytes": 137806,
+   "sha256": "eec5150bf9caa7c65ff722a68382ba22cb53e3d86c6e0eccf941770655d0588d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/stiralka-limonnaya-kislota.webp",
+   "bytes": 175588,
+   "sha256": "23f9ca5f13e616c8d7f79994a0c8981efe7a3872b4b61b0c025c043f44484420"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/tekstil-proverka-kapley.webp",
+   "bytes": 153866,
+   "sha256": "8a27a25f4a23487325cdcbcc59ecb08aaa4da91ca4abfec44e2fcf0004d40f71"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/tekstil-sinteticheskiy-pled.webp",
+   "bytes": 195936,
+   "sha256": "f814aa9995cb42cab1f90ba1d696283fe1627f396f09e1720c7e9f9f5e56e649"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/tekstil-utyug.webp",
+   "bytes": 169562,
+   "sha256": "afb4a905e8bb0737f1c2c60b63ecf365aa7230568a6b886b9554e25722e4ff8e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/telo-chetyre-pravila.webp",
+   "bytes": 154230,
+   "sha256": "bf38acb2dfdd2ce9e3d2927e9cee5070e54be2145ff1c45652e95c21e2cadd22"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/telo-goryachiy-dush.webp",
+   "bytes": 141530,
+   "sha256": "96f0258b89f5d362a97fa84185f0bd8ea1d92b6658974f4a9ce8116d1940f3cb"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/telo-test-banka.webp",
+   "bytes": 149868,
+   "sha256": "f74ae70f8d4e3e63203f53346e92c686aec4b913eded6b9e5b69345cde5b8cd7"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/tonik-spirtovye-losony.webp",
+   "bytes": 137080,
+   "sha256": "0d7aa8090eaa310b4def9ee079246ecf7b5ebe22e4b8685c2a3ca4794d3f1f98"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/tonik-taniny-bez-smyvaniya.webp",
+   "bytes": 157320,
+   "sha256": "6a4e3b48474d51b8760490bb0a060d688516df8d4539330ad4907fabc4fe18e4"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/tonik-tochki-nakopleniya.webp",
+   "bytes": 131088,
+   "sha256": "1f18caf2367bda3f2ff9bb707040dc9f15848951541085cf4ddad9e21d8ec579"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/vent-moyka-vozdukha.webp",
+   "bytes": 155664,
+   "sha256": "bec60a0a4d73cadf7eb1b2e6933bd11e71901be13bb90aa6da385a1ca7043a01"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/vent-oprokinutyvanie-tyagi.webp",
+   "bytes": 163312,
+   "sha256": "35a015897a7ced865d7753cd399ae2ad0d480ada904d0f3c10a3bfa85968d891"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/vent-zalpovoe-provetrivanie.webp",
+   "bytes": 157740,
+   "sha256": "c5aac2c09ab837565980ac0744a1b99e63f58c4ed45d5435d14d721b9feff5f4"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/vrach-odontogennyy.webp",
+   "bytes": 146740,
+   "sha256": "46df2573a07116945367eadb3d1d9de288acb4c43d882d4baa5ebd1869546d6f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/vrach-prolezhni.webp",
+   "bytes": 167762,
+   "sha256": "05e29895a3f3e969dcf5207c2e72dd958f76fa3fd2d724c727f700aa3a4dbd01"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/images/vrach-skrytyy-diabet.webp",
+   "bytes": 167618,
+   "sha256": "1d86c2c953d4ea8ce4bd35b73bae187e53aca5cc010afee9a1c00f9ce09c7e48"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/index.html",
+   "bytes": 23803,
+   "sha256": "da578748d034aa2935ce99640334489bfdd1df64fc2fd8910db0a6275db366df"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-otlichit-istochnik-zapakha/index.html",
+   "bytes": 40388,
+   "sha256": "4a6ca265b5b04440d203efb5969d1567e8d7a20dbfcaf2a25320de9ba2df0357"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-pogovorit-s-blizkim/index.html",
+   "bytes": 33067,
+   "sha256": "14cbec03e966813ba4ecd7dd4ec21d951d56b21ee0972a8418d26ad5896ec258"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-iz-shkafa/index.html",
+   "bytes": 43287,
+   "sha256": "22d8836203644a52a3bd46c6791c38141a7ca470f7613f5ed158b4eaf90707fd"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-s-divana/index.html",
+   "bytes": 38675,
+   "sha256": "6930769713025ae1f1026182345960950f236d406651cc8f4cb1d5381ff220e3"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-s-matrasa/index.html",
+   "bytes": 38616,
+   "sha256": "03b1e6e5490565a41a45d0581888a397a54478059ec97f82c47d7f107a597108"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-v-sanuzle/index.html",
+   "bytes": 36734,
+   "sha256": "6ee3ba920a62f26d6474b5d3b1d28681fc380aa7c5c9ca98d1ea9b7b49a953ac"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-v-stiralnoj-mashine/index.html",
+   "bytes": 36561,
+   "sha256": "bd55476f0b17dad898540316bb217f61d77224d5dc6ce78d82f16438bff21eba"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/karta-kvartiry/index.html",
+   "bytes": 27146,
+   "sha256": "338e0ce6c9295dd4c1ce1f28b1ca271057c4fc200ecb7ea8c3100d82c7aadc0f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/karta-osetii/index.html",
+   "bytes": 23748,
+   "sha256": "6f86cad8b97d29e10d48900102572a0bb072f9a325e157efb8c253c9d0c88778"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kogda-k-vrachu/index.html",
+   "bytes": 29665,
+   "sha256": "ee891c3c71aa5131b70a92884d1e93d930cd941fff96f5fb479fedf6d9203f5b"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/kviz/index.html",
+   "bytes": 41734,
+   "sha256": "6af94795024470e91cc263c71ec856d8a183d10d22f6a0213bbb1eddcdbcb1e7"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/lekarstva-i-zapah/index.html",
+   "bytes": 31794,
+   "sha256": "698a1a7400c992561b48a84efeec4b88d5dd915d689777253f8bb7cd12b2fa23"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/material-metod/index.html",
+   "bytes": 40340,
+   "sha256": "4dce4ebaf304aff2efb1d241e58a34c35251da5450e8a6ca6d3edf733d54dc8a"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/nabor/index.html",
+   "bytes": 15937,
+   "sha256": "bdd9463fc066b8f7fde7da3e6521b019e5413c380c0155c8d93321aedad8f54e"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/o-proekte/index.html",
+   "bytes": 27197,
+   "sha256": "be3a322176d95c2a7bee14aaf012e1600a9f851e08fc94186f0cf171d0a92f53"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/ochistitel-vozduha/index.html",
+   "bytes": 35356,
+   "sha256": "bf51d8e4a0e997106dc150e2779ac8f9eac3008933ae1184e60b24350a7a8489"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/odezhda-i-tekstil/index.html",
+   "bytes": 36955,
+   "sha256": "cdb3b61272496756f1b6fe2e951f20011bdc8156b06826952dc2dfdd0ff2201f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/politika-konfidencialnosti/index.html",
+   "bytes": 18769,
+   "sha256": "2197bb06e80420251d834cae795a13224a1e6c4cbe0922fcfb1f8567cf229bc4"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/poroshok-dlya-tekstila/index.html",
+   "bytes": 31923,
+   "sha256": "bc466012357046634169be64019559ee7cc0390325bb7e01619abba4eadd8cf9"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/robots.txt",
+   "bytes": 117,
+   "sha256": "f22ebe22099130f43e7e1e8750c87232264c1dbfe203267b11fc46b474996090"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/sitemap-full.xml",
+   "bytes": 2419,
+   "sha256": "374c22515d99e1d055dddaaa20f0b7bedc8a78f0a560c2d76e4b66484d69b3f2"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/sitemap.xml",
+   "bytes": 4494,
+   "sha256": "9f829d69396238acf705ca41171b3fc8fc88c867cc45e2359754000d07af7e87"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/soglasie-na-obrabotku/index.html",
+   "bytes": 14642,
+   "sha256": "cbb44154e91c1c35ce7f6d5a957d1c9c8a49c2c5e9d858cc5119472923e80eac"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/sredstva-ot-zapaha/index.html",
+   "bytes": 34290,
+   "sha256": "9f082011b53857ee6115916db7b477a12687c863dcfa6b3c414e5c28adba998f"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/style.css",
+   "bytes": 11656,
+   "sha256": "9c7ad21cf833c1485d182d34cfa440e2a8326e1f8abd582998b2951a357eb134"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/tonik-protirka/index.html",
+   "bytes": 30160,
+   "sha256": "c506dda72fedee53d511b95b10a4c4245b984ff89d4e689216bdb29839ae3662"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/ubrat-zapah/index.html",
+   "bytes": 36132,
+   "sha256": "767fe2a5ea0fe7543ad616a71da2c5dc6a851c2c870d5b725459a831446c1582"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/ventilyatsiya-i-vlazhnost/index.html",
+   "bytes": 33318,
+   "sha256": "b954b6392b3feb9bb34235fdbed5bff4aec4077f511e05063e7da45b9c4c8593"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/yandex_e3e7231de3258122.html",
+   "bytes": 162,
+   "sha256": "056618b23d0d003925526dde826d4f3d86f0b4be3b5ce28a62ff610018c45279"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/zapah-v-kvartire/index.html",
+   "bytes": 36535,
+   "sha256": "71dc064c4d8676b5d9780e9e0c37d666f5f481143ae6971e8e41553bf1e1114d"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/КОНСТРУКТОР_как_устроен.md",
+   "bytes": 9412,
+   "sha256": "962399a37a7c964c364f75f69c2169be29a404a411fdc06509ea885ec471a331"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/ОПИСЬ.md",
+   "bytes": 4149,
+   "sha256": "c331af15c8074533f5fcc0507c6a54464e51483eacc754847325bfca41265274"
+  },
+  {
+   "path": "03-сайт/сайт_текущий/ТЕХРЕГЛАМЕНТ_СТРАНИЦЫ.md",
+   "bytes": 12623,
+   "sha256": "116f8ee267ebb27dda40c67d9944287cd7608ce24118df900031aac4a82509cb"
+  },
+  {
+   "path": "04_упаковка/ОПИСЬ.md",
+   "bytes": 8122,
+   "sha256": "f000ec10a72c0e72c26743ef23450d45fcd4b8f2e1d2b01bdaa9a87a85cb67ee"
+  },
+  {
+   "path": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_корешки_оба.png",
+   "bytes": 50142,
+   "sha256": "fc8e68e7d6e16a29a51ee6f796fedb629dd5f82eadbbf14d206eaf1141cc9f12"
+  },
+  {
+   "path": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_порошок_цветной_40plus_лицо.png",
+   "bytes": 2017887,
+   "sha256": "bdd5dd8407face808fe089b9252d23799efd5951011e69555738e86f05fcdbb0"
+  },
+  {
+   "path": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_спина_v3-4_насыщенность.png",
+   "bytes": 1970633,
+   "sha256": "ceaccf5aecf8e15f6e8456c9897e1c5cd361f44ed18702fcca7a37f4ca579875"
+  },
+  {
+   "path": "04_упаковка/исходники_дизайнера/знак_v2_A_для_скрипта.png",
+   "bytes": 352746,
+   "sha256": "46a552b4b08734eb573268edad42d4455760e91989a95741a87daf959f6a4f7d"
+  },
+  {
+   "path": "04_упаковка/исходники_дизайнера/мыло_лицо_основа_для_скрипта.png",
+   "bytes": 1774480,
+   "sha256": "fd139649a21f6ed15003a8015de3d51663b7f2bc869001bb559511b92279a95f"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/add_gel_legal.py",
+   "bytes": 2856,
+   "sha256": "11b1f9b578e23ce30d15dc1155b715e477c73bea44dc031af284602a6d2eab46"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/build_logo2.py",
+   "bytes": 4864,
+   "sha256": "be130cb1a83c9d93be7d7ce4ac4c94f2cbcd69834ad7f4b8a57093d9b5f82016"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/build_mark_v2.py",
+   "bytes": 4008,
+   "sha256": "fe55778b6303a7d2b7fcb83466675aa17440fe982babe9d5e1189291d25a1a20"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/logo_dubina.py",
+   "bytes": 1341,
+   "sha256": "bb272e9ad2e005e4ec9879d776d0b7d8ac4d9d0e690d51aa435e0bcb3386afbf"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/logo_on_bg.py",
+   "bytes": 1181,
+   "sha256": "d1ab26e5ad35b3bdcc170ba317f68923145677ed88491df24189fd94aa5a10c7"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/make_spines.py",
+   "bytes": 4445,
+   "sha256": "7ff93d15aee698a835dbe186cee9587c1d4b0b8cb8ad9470a0a85b8fb48b96ee"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/make_spines_light.py",
+   "bytes": 1846,
+   "sha256": "776184b9de1c5fc1fd4eaa22e528b55cd223560fddc422524bc4555fd5c0a5f7"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/soap_face.py",
+   "bytes": 2597,
+   "sha256": "8c631cf226e4f849d3585f8060086cadfc19f0d8deef514f2f70b9571eeacf28"
+  },
+  {
+   "path": "04_упаковка/скрипты_генерации/swap_logo.py",
+   "bytes": 1787,
+   "sha256": "9514d107e86052b270086784207603d6f67ad199aa40232ba40166851014885e"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/ДУБИНА_знак.png",
+   "bytes": 328113,
+   "sha256": "01d3151c3e77e02a358797f89396f8113722acca0c0e638084e0b1cb1d19032d"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/ДУБИНА_знак_на_белом.png",
+   "bytes": 269132,
+   "sha256": "a5d2be28aa58b6e1cdce9eb3e28234e4bdb78025b161c22c1fd743d9e70994a5"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/ДУБИНА_логотип.png",
+   "bytes": 374200,
+   "sha256": "7afd39ce3158cf2d92f8261b78538c39ebebe95c61bb576172e3b7a68617b9bf"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/ДУБИНА_логотип_на_белом.png",
+   "bytes": 355077,
+   "sha256": "cff344751bf2e8048624dfe058713cf2f1df22aafb7b5ce845bbe4dfc9746567"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/ДУБИНА_мыло_лицо.png",
+   "bytes": 1392763,
+   "sha256": "e7f44132984a7d2dda77586ad0081a9394aceaff8e35fb3a00228a28059e87b7"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_светлый.png",
+   "bytes": 203259,
+   "sha256": "2da7a25abc77cf7df18b76683c9de4a4aa3dcd03077d4dee7d985de2b99c3926"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_цветной.png",
+   "bytes": 185556,
+   "sha256": "ad5ad96bf91aef4d1ccbeb1d94747a1ada9b2ae822cd59724e28f0267f16646b"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип.png",
+   "bytes": 208773,
+   "sha256": "235148e02f763e6617d155239386675428aaf8156c8eaa10cf47aab51cebc3ae"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне.png",
+   "bytes": 272355,
+   "sha256": "3ba48d1307d0f1e151c8a415c710dbaadb8cd86dcce7671fd6ef439aba6140c6"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне@2x.png",
+   "bytes": 913503,
+   "sha256": "904a3ece98626f41e7c33fe1894b17383289384e680d3c571355a90e18f6c8bd"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_светлый_белая_плашка_v1.png",
+   "bytes": 2226273,
+   "sha256": "18d67d5af1b3afbd4ab4235f76d558e185e72b227263be86878f88249febfbfd"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_цветной_плашка_v8.png",
+   "bytes": 2202294,
+   "sha256": "dca9b97625bafdf00c64f7e31af82d82a97fd8447888b9a71304308aa4e2fd07"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_гель_v3.png",
+   "bytes": 1931719,
+   "sha256": "1d0af920e1185a01bad3c31fb70f29ead6e7704d52ed449a10e500480500a218"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v4.png",
+   "bytes": 2071773,
+   "sha256": "586253e718adf303e305b55dc6027d221d14dfc58f8ed0490d087f53036ec98b"
+  },
+  {
+   "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v5.png",
+   "bytes": 1444634,
+   "sha256": "6f2bb89e9414475af154f41f6e6db278b7aeb1d80c6705323fac3210608fd1c2"
+  },
+  {
+   "path": "05_приложение/app/icon-180.png",
+   "bytes": 27006,
+   "sha256": "e84f92e5ff8f53d060a58a1b6070942c6b486a2e2c9321b5aae1063aea67575c"
+  },
+  {
+   "path": "05_приложение/app/icon-192.png",
+   "bytes": 29113,
+   "sha256": "a79ff84560cef5174a263d461d804292fb6840c141a7fc2f02fee24130492377"
+  },
+  {
+   "path": "05_приложение/app/icon-512.png",
+   "bytes": 79607,
+   "sha256": "9947ae6ebfbd5397805db048f508ee42c39db252f1046ce7c07e45afba089d2d"
+  },
+  {
+   "path": "05_приложение/app/index.html",
+   "bytes": 80817,
+   "sha256": "219eae74165175b03e8ce143dc2c0feb9b45d713a61d60f97ad0bfd13af8f29c"
+  },
+  {
+   "path": "05_приложение/app/manifest.webmanifest",
+   "bytes": 712,
+   "sha256": "5f81278d83d6ab9f6bef43e796479ddf6df7ab4936ebe00d196d56cf06a58010"
+  },
+  {
+   "path": "05_приложение/app/sw.js",
+   "bytes": 832,
+   "sha256": "b73c6108622fe9cc6556881d90a92461f6cae405ab396fab4e4c840f76faf1c9"
+  },
+  {
+   "path": "05_приложение/МЕЧТА_автономная_копия.html",
+   "bytes": 80817,
+   "sha256": "219eae74165175b03e8ce143dc2c0feb9b45d713a61d60f97ad0bfd13af8f29c"
+  },
+  {
+   "path": "05_приложение/ОПИСЬ.md",
+   "bytes": 4546,
+   "sha256": "0cae419e0e4afba2642a7cd001709db5c80d28f66329595dfbf1fda5b74da7f1"
+  },
+  {
+   "path": "05_приложение/ПРИЛОЖЕНИЕ_как_устроено.md",
+   "bytes": 13158,
+   "sha256": "0d912ed1a8622112e7bb23391191e75f15e55df67bc6665fda0f1d2c398d4504"
+  },
+  {
+   "path": "05_приложение/УСТАНОВКА_приложения.md",
+   "bytes": 9658,
+   "sha256": "7d8655bf55f89b4a80350f68947c206f32ea7db8ea961a9cb4a2c6c4a1f9a38b"
+  },
+  {
+   "path": "06_справочные/GMB_CRUSH_фреймворк_англ.txt",
+   "bytes": 70915,
+   "sha256": "c009073baa4ef8b2c13623aa79d83184d5db98843520d4c3f93d6d878796ecc8"
+  },
+  {
+   "path": "06_справочные/актуализация_снимка.py",
+   "bytes": 8968,
+   "sha256": "463bb98fc2bb13bb56c6f1cdc5f8e15f0be4dacdd877329a19b951fbd3e3c908"
+  },
+  {
+   "path": "06_справочные/манифест_целостности.py",
+   "bytes": 6017,
+   "sha256": "1ada259bb9e599ed05ea23c4f6d237239d7bad22e37d5e93be8384fab5077e8b"
+  },
+  {
+   "path": "06_справочные/подсказки_яндекса_24-09-2026.csv",
+   "bytes": 105356,
+   "sha256": "d11da2f6387384796856b2198c20f6d565f3635cb3f7de4ae517630f7c3170fe"
+  },
+  {
+   "path": "06_справочные/проверить_архив.py",
+   "bytes": 8708,
+   "sha256": "dfeab757f05c716c8f8c977aaa792cf3305375de7410f67995680c7e2018724f"
+  },
+  {
+   "path": "README.md",
+   "bytes": 11179,
+   "sha256": "3382057365ef154a8b5ed22082502d4f374c2f9f85d8fdc0208fe1fc738901cc"
+  },
+  {
+   "path": "КАК_ЗАЛИТЬ_В_РЕПОЗИТОРИЙ.md",
+   "bytes": 7565,
+   "sha256": "95abb48e133fec8336ce7d98b55b5bd85d05f6dbb7e5c49a651c40418ad2a7de"
+  }
+ ],
+ "protected_unchanged_files": [
+  "04_упаковка/ОПИСЬ.md",
+  "04_упаковка/исходники_дизайнера/УСТАРЕЛО_корешки_оба.png",
+  "04_упаковка/исходники_дизайнера/УСТАРЕЛО_порошок_цветной_40plus_лицо.png",
+  "04_упаковка/исходники_дизайнера/УСТАРЕЛО_спина_v3-4_насыщенность.png",
+  "04_упаковка/исходники_дизайнера/знак_v2_A_для_скрипта.png",
+  "04_упаковка/исходники_дизайнера/мыло_лицо_основа_для_скрипта.png",
+  "04_упаковка/скрипты_генерации/add_gel_legal.py",
+  "04_упаковка/скрипты_генерации/build_logo2.py",
+  "04_упаковка/скрипты_генерации/build_mark_v2.py",
+  "04_упаковка/скрипты_генерации/logo_dubina.py",
+  "04_упаковка/скрипты_генерации/logo_on_bg.py",
+  "04_упаковка/скрипты_генерации/make_spines.py",
+  "04_упаковка/скрипты_генерации/make_spines_light.py",
+  "04_упаковка/скрипты_генерации/soap_face.py",
+  "04_упаковка/скрипты_генерации/swap_logo.py",
+  "04_упаковка/финальные_макеты/ДУБИНА_знак.png",
+  "04_упаковка/финальные_макеты/ДУБИНА_знак_на_белом.png",
+  "04_упаковка/финальные_макеты/ДУБИНА_логотип.png",
+  "04_упаковка/финальные_макеты/ДУБИНА_логотип_на_белом.png",
+  "04_упаковка/финальные_макеты/ДУБИНА_мыло_лицо.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_светлый.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_цветной.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне@2x.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_светлый_белая_плашка_v1.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_цветной_плашка_v8.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_гель_v3.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v4.png",
+  "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v5.png",
+  "05_приложение/app/icon-180.png",
+  "05_приложение/app/icon-192.png",
+  "05_приложение/app/icon-512.png",
+  "05_приложение/app/index.html",
+  "05_приложение/app/manifest.webmanifest",
+  "05_приложение/app/sw.js",
+  "05_приложение/МЕЧТА_автономная_копия.html",
+  "05_приложение/ОПИСЬ.md",
+  "05_приложение/ПРИЛОЖЕНИЕ_как_устроено.md",
+  "05_приложение/УСТАНОВКА_приложения.md"
+ ],
+ "previous_baselines": [
+  {
+   "date": "2026-09-19",
+   "generated_at_utc": "2026-09-21T20:55:31+00:00",
+   "base_commit": "006572c7fd9da15bd68a8bc0c626f9b5846af68e",
+   "files": 145,
+   "counts": {
+    "original_files": 145,
+    "original_files_preserved": 145,
+    "modified": 58,
+    "unchanged": 87,
+    "added": 3,
+    "total_after": 148,
+    "deleted": 0
+   },
+   "note": "Baseline 19–21.09.2026 перестал сопровождаться: документы и PWA правились, макеты упаковки переименованы решением автора. Его содержимое сохранено в истории Git (01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json на коммите c048368)."
+  },
+  {
+   "date": "2026-09-27",
+   "generated_at_utc": "2026-09-27T19:50:00+00:00",
+   "base_commit": "c048368cd23ed3bc6aacf7ee80422162eb1a2b2f",
+   "files": 252,
+   "counts": {
     "files": 252,
     "previous_baseline_files": 145,
     "added_since_previous_baseline": 120,
     "renamed": 13,
     "deleted": 0
-  },
-  "deleted_files": [],
-  "renames_acknowledged": [
-    {
-      "from": "04_упаковка/исходники_дизайнера/DUBRAVA_корешки_оба.png",
-      "to": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_корешки_оба.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/исходники_дизайнера/DUBRAVA_порошок_цветной_40plus_лицо.png",
-      "to": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_порошок_цветной_40plus_лицо.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/исходники_дизайнера/DUBRAVA_спина_v3-4_насыщенность.png",
-      "to": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_спина_v3-4_насыщенность.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_корешки_порошок_светлый.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_светлый.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_корешки_порошок_цветной.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_цветной.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_логотип.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_логотип_на_фоне.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_логотип_на_фоне@2x.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне@2x.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_порошок_светлый_белая_плашка_v1.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_светлый_белая_плашка_v1.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_порошок_цветной_плашка_v8.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_цветной_плашка_v8.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_спина_гель_v3.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_гель_v3.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_спина_порошок_v4.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v4.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    },
-    {
-      "from": "04_упаковка/финальные_макеты/DUBRAVA_спина_порошок_v5.png",
-      "to": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v5.png",
-      "reason": "префикс DUBRAVA_ → УСТАРЕЛО_ по решению автора 26.09.2026",
-      "commit": "9d54695"
-    }
-  ],
-  "files": [
-    {
-      "path": "01_НАЧНИ_ОТСЮДА/ЗАПРЕТЫ_И_ГРАНИЦЫ.md",
-      "bytes": 16166,
-      "sha256": "f4355ff106c52cdd4e03cb3120ea4df27e5843ff08e953b4e3f7e082704ccaeb"
-    },
-    {
-      "path": "01_НАЧНИ_ОТСЮДА/ИСТОРИЯ_РЕШЕНИЙ.md",
-      "bytes": 59228,
-      "sha256": "99d52a0351b16621dd84340e38549956fb943dfe36a3bcd4ef25d1166e63cf42"
-    },
-    {
-      "path": "01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json",
-      "bytes": 61919,
-      "sha256": "2377f7e411512ea45d0d0b3be126476229d882a737fa85cd2dbb807d38745b32"
-    },
-    {
-      "path": "01_НАЧНИ_ОТСЮДА/ПОЛНОЕ_ДОСЬЕ.md",
-      "bytes": 30870,
-      "sha256": "c81f908e1625cc3f937530335a14f655a5d515d081d2c0fe5b18229e34b37785"
-    },
-    {
-      "path": "01_НАЧНИ_ОТСЮДА/ПРОЧТИ_ПЕРВЫМ.md",
-      "bytes": 12483,
-      "sha256": "af1a75bd7a6a4742cdd30ad847fc7af4aba57d41a9cf0bd8e31a87e9cc2e04d3"
-    },
-    {
-      "path": "02_документы_проекта/AUDIO_чеклист.md",
-      "bytes": 17895,
-      "sha256": "fb53a4ffb1d8464edce38c585164a4137712c1b929690ede647896cc279ff1c3"
-    },
-    {
-      "path": "02_документы_проекта/og_generate.py",
-      "bytes": 6641,
-      "sha256": "c81c9269976c4af1f940dbf479862ba568ba4bce2927ada308af2bb7253cac41"
-    },
-    {
-      "path": "02_документы_проекта/АУДИТ_КОНТЕНТА_БЕЗОПАСНОСТЬ.md",
-      "bytes": 33621,
-      "sha256": "ef16995597ff9b40ab8f984d609a4cd6a4dd82bbe2a215708f14b43988b863c1"
-    },
-    {
-      "path": "02_документы_проекта/АУДИТ_САЙТА.md",
-      "bytes": 25001,
-      "sha256": "8dffd67f47ffaab59b9a0ef18336d1fe1fe3f9634f3ae3bd75d861a9c9a00765"
-    },
-    {
-      "path": "02_документы_проекта/АУДИТ_СЕМАНТИКА.md",
-      "bytes": 23548,
-      "sha256": "a5d6d469e782c803f8b97d0f001967775f2f94624db6dbc4cfa40416706faa66"
-    },
-    {
-      "path": "02_документы_проекта/АУДИТ_ЮРИДИЧЕСКИЙ.md",
-      "bytes": 14132,
-      "sha256": "ecb7af2c02b1fbfe938bbe789c662e59d1a6d44d56a3ca2f7eb2a5ecd9ab70d7"
-    },
-    {
-      "path": "02_документы_проекта/ГРАНТЫ_оценка.md",
-      "bytes": 13783,
-      "sha256": "c636d6125cb20dbe68d4f900e57e3fc565e1fdd804a131566cd030c2d3249513"
-    },
-    {
-      "path": "02_документы_проекта/ИНСТРУКЦИЯ_открыть_страницы.md",
-      "bytes": 11772,
-      "sha256": "e8f6ac152af3ff6d42ead67edebb33e7b7c8983ad53280039bf4b845eb04c32b"
-    },
-    {
-      "path": "02_документы_проекта/КАРТА_КОНТЕНТА.md",
-      "bytes": 24684,
-      "sha256": "55dfac9aa0c36138ef1af07deef61911fa30429547041716f3a14ec3987162a9"
-    },
-    {
-      "path": "02_документы_проекта/МЕТОДЫ_СТРАТЕГИИ.md",
-      "bytes": 24470,
-      "sha256": "c75dbfa8b85bf12d3d10a01de3b81308b54a01c809473a8bc680db270ec2aa1f"
-    },
-    {
-      "path": "02_документы_проекта/ОПИСЬ.md",
-      "bytes": 5358,
-      "sha256": "0feffc529480ac0eb127b25d0828662d5a42813cf9dc5e26359b1eada6707825"
-    },
-    {
-      "path": "02_документы_проекта/ПЛАН_РАБОТ.md",
-      "bytes": 15790,
-      "sha256": "dc18e51f0b0cd14a008fd42dfb77615aac223353b088cab81141e607c800ceea"
-    },
-    {
-      "path": "02_документы_проекта/ПЛАН_СТАТЕЙ_AUDIO.md",
-      "bytes": 7342,
-      "sha256": "6a90a166bfbf80723e63360a497543a5213cd66900597e77df0dbca8fa9c9323"
-    },
-    {
-      "path": "02_документы_проекта/РАЗБОР_SEO_ФРЕЙМВОРКА.md",
-      "bytes": 16813,
-      "sha256": "8319c47784e57e371b7d74e89c7111fe450fc68c9ff0ab997f2129837f6e527e"
-    },
-    {
-      "path": "02_документы_проекта/РАСЧЁТ_СТОИМОСТИ.md",
-      "bytes": 16607,
-      "sha256": "3a2bf644e8e5f621a0de33a49b587b42a1514d485d8f09f67ce82b66c3660e68"
-    },
-    {
-      "path": "02_документы_проекта/РЕЗЮМЕ_ПРОЕКТА.md",
-      "bytes": 74318,
-      "sha256": "763a2b873d8335f74446168e651d2a3d366993780a84a8140b03b8e5e420d351"
-    },
-    {
-      "path": "02_документы_проекта/РЕЦЕПТУРЫ_ЗАМЕЧАНИЯ.md",
-      "bytes": 6829,
-      "sha256": "ad22b3aa187aa43aaa16b6f4e78c1d81f274c26b14fc3b2d1ae2802dff64aa47"
-    },
-    {
-      "path": "02_документы_проекта/УВЕДОМЛЕНИЕ_РКН_черновик.md",
-      "bytes": 3700,
-      "sha256": "7fc5bb6e13921705a250e2fe58dc0de814cdb72b784922433c44fb5867a92844"
-    },
-    {
-      "path": "03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json",
-      "bytes": 121380,
-      "sha256": "8a90a6b92942dcb3f95f5f92cf0d93897830c75896b0fcee7dddc0d8e118cb40"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/CNAME",
-      "bytes": 16,
-      "sha256": "1dbb014c4f3e807d0df4d4ffcdbabc8d1aa548b8ee7f9e263e2a9096d639acef"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/README.md",
-      "bytes": 15,
-      "sha256": "def52c78004b0029bc0232bd9ff2c404a508b0368f57a52517569e88ae9c8ca5"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/app/icon-180.png",
-      "bytes": 27006,
-      "sha256": "e84f92e5ff8f53d060a58a1b6070942c6b486a2e2c9321b5aae1063aea67575c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/app/icon-192.png",
-      "bytes": 29113,
-      "sha256": "a79ff84560cef5174a263d461d804292fb6840c141a7fc2f02fee24130492377"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/app/icon-512.png",
-      "bytes": 79607,
-      "sha256": "9947ae6ebfbd5397805db048f508ee42c39db252f1046ce7c07e45afba089d2d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/app/index.html",
-      "bytes": 66174,
-      "sha256": "0666036c75204458acf1fd084c24d81e08a3102766a661d2269563bcb4a043b8"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/app/manifest.webmanifest",
-      "bytes": 712,
-      "sha256": "5f81278d83d6ab9f6bef43e796479ddf6df7ab4936ebe00d196d56cf06a58010"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/app/sw.js",
-      "bytes": 832,
-      "sha256": "58ef763ee05c4993c3c6e7bb3d5a3225eb89cef564e57f42fad42d615f819668"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/chto-takoe-2-nonenal/index.html",
-      "bytes": 47182,
-      "sha256": "bc8bbad9ed92d5d8e4e0a2be221ec571f33a14a0053b548c4188682e2d0a26a9"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/constructor-v5.html",
-      "bytes": 58756,
-      "sha256": "73ac789e08bfb4301e6a80c4db7c5743c88417b1b4da83e7ed683317a59798a9"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/faq/index.html",
-      "bytes": 37568,
-      "sha256": "6339efcf3bb79d00c9582fbae1dd20a144c8a0122c57ef2ce73094a614a58824"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/favicon.ico",
-      "bytes": 3469,
-      "sha256": "c8660b1542b914f67f34803c181395344985092c3ab3a71a2f299dac697bac8b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/googlebfe090009deb22b8.html",
-      "bytes": 53,
-      "sha256": "680662b0d59d2d629d531a4c0c9185d039402e8b13ff379519636a5f668df2cb"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/diagnostika-blue.jpg",
-      "bytes": 21143,
-      "sha256": "9f781606b41b12bc0d92fbcb0c6d397ba03605a6ede9e968c3aee0b295b72703"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/diagnostika-light.jpg",
-      "bytes": 147975,
-      "sha256": "4f4fedf0b1bc0e65f86a63374f78c69e28d4304cbb6891db25f3bcdaeb1637f5"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/diagnostika.jpg",
-      "bytes": 29681,
-      "sha256": "0a31f2ece845a647c55501c45d633129a2ad3d320ef483cf5e82924fb268ee2d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/divan-blue.jpg",
-      "bytes": 37531,
-      "sha256": "3a907c1997426b03c14c6c66a62e04d921c292d1f2970ef9c0266664db620f73"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/divan-chetyre-obivki.webp",
-      "bytes": 171998,
-      "sha256": "e0385af73b9a156d3d5230ba6cc21be375e77242553d25f87a661348ee0910e1"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/divan-lovushka-pylesosa.webp",
-      "bytes": 156078,
-      "sha256": "86eb15a4b40cba2c4720e7edca5b4514d93a39d761c55d46ac31d444e03565da"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/divan-portret-gostinaya.webp",
-      "bytes": 157274,
-      "sha256": "dee1a6a0d49d85a32e2ff92e7444c7137fc75cb30e42ab4e114947b48d574187"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/divan-protokol-5-shagov.webp",
-      "bytes": 169358,
-      "sha256": "fd8b143ab5cc080e50e5fb55dc4c6a1c0986e9ded55a5f88f577e833d721776e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/divan.jpg",
-      "bytes": 48762,
-      "sha256": "2dc2412169b76141d215d8d5ca2b5aed80bd661f4cb3ce58d04c800d207ce48f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/faq-parfyum-zametnee.webp",
-      "bytes": 163214,
-      "sha256": "65a9808b30b89575119a3c92d4521260e2a562b38cce49e5cb40d744a5cd40c4"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/faq-telo-ili-mebel.webp",
-      "bytes": 122386,
-      "sha256": "ddbff5d5a290ea113de59165a8a2cbbb12c88d12958d00eda7debcb8f4aaa8f1"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/faq-vozvrat-zapaha.webp",
-      "bytes": 137152,
-      "sha256": "debf2e33451604db65064079298f51bbddcb9939d0b6704121282326a6e90594"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/favicon.png",
-      "bytes": 1581,
-      "sha256": "d7c9c2af747c171c92155818c6161e95e2021fd0a8e6d3e18083ef93f6c610fb"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/glavnaya-3-shaga.webp",
-      "bytes": 156416,
-      "sha256": "6d7fd25ea94a29bf44a485de4dea9fbd6ced855b4cd23f39f19362485dbcb893"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/glavnaya-molekula-portret.webp",
-      "bytes": 103924,
-      "sha256": "9bd8fea49e9390cfd17d305693e68673ca54251e5fc885503e7f25997279428a"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/glavnaya-svezhest-doma.webp",
-      "bytes": 100768,
-      "sha256": "183c7733d319c1f2679cc294ed9ef8fea20cdfb970ead08f49c06d7a69e996f1"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/gov-chetyre-barera.webp",
-      "bytes": 147264,
-      "sha256": "04fc1965d07fe51a5d9b4bdfb10f895de0d65ae5c84d753f0933e3ae6fbecd8b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/gov-pomosh-deystviem.webp",
-      "bytes": 140148,
-      "sha256": "f7b925c73a9f3bbd0daad2f6c00a9dcec8043b58e60af8aa5031ba63f1b3bd85"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/gov-tretiy-obekt.webp",
-      "bytes": 167550,
-      "sha256": "36f57a5ee4a8d413a6e205f5003f54b06a8e795cc47011086fa8b7a3a2d1d3ea"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/hero-blue.jpg",
-      "bytes": 23220,
-      "sha256": "cbf959777790b65ddc10ada18d9fc6341c7962318821701367c3a0ad5e9e0de7"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/hero-light.jpg",
-      "bytes": 113865,
-      "sha256": "7bdf9407e1d0f6302c6f95c525d2275718035f882414f4cf212a99ebbaf57b0a"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/hero.jpg",
-      "bytes": 38491,
-      "sha256": "d52a13b94aaa6ce6dbebcdb6ee880980eb21e75690122db6a23321e044fc8d69"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/icon-180.png",
-      "bytes": 8676,
-      "sha256": "04b2dca5ba82cd6261a845d4649608c4d376b1ae8243362fc968dd088fc77533"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/icon-512.png",
-      "bytes": 30260,
-      "sha256": "3696359ffc58b7291a8c5385b37aef5cef5783c9206161398ea2db031e82cad1"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/icon.svg",
-      "bytes": 162612,
-      "sha256": "f0c52f2fd89416de8acec979801c62e6ed135568ff2352752d53a6438a442b15"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/img-20260830-1407.jpg",
-      "bytes": 9362,
-      "sha256": "de5d1da2b62561de2bf96284987fb730e9d43bbd4ed5a926379edaeed7b332f9"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/img-20260830-1408.jpg",
-      "bytes": 184799,
-      "sha256": "42e6c944f32c642f89191b7f72e598ec091eb2ff26c02434e7789ab5d0f8203e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/img-20260830-1527.jpg",
-      "bytes": 19691,
-      "sha256": "c66df293a5b702bf11a8c23ed1f8baca7d1185430aa0f528770b9db636e2d824"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/img-20260830-1528.jpg",
-      "bytes": 19691,
-      "sha256": "c66df293a5b702bf11a8c23ed1f8baca7d1185430aa0f528770b9db636e2d824"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/img-20260830-1529.jpg",
-      "bytes": 51188,
-      "sha256": "e4f4ca4c08e23f76c62435e3bf40ee43e238f3ad5107f70f6d84639f5626583c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/img-20260830-1602.jpg",
-      "bytes": 109688,
-      "sha256": "b8a46d81945795b21795465393fce897e8853702b8d6a52a1f552f982683c079"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/istochnik-khlopok-protiv-poliestra.webp",
-      "bytes": 157930,
-      "sha256": "4266cc197e412dbd9204ca0349949bf5541e0c081872abfcfb2bbe1d5cf529ec"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/istochnik-nos-ne-slyshit.webp",
-      "bytes": 132340,
-      "sha256": "0e0de0c1381d0c1f586f1c3dc58a2962fce723e62346c90b712da42ff9125da2"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/istochnik-paradoks-slepoy-pyatna.webp",
-      "bytes": 142728,
-      "sha256": "c9e17b80cac0bafd60bdadc923e0e2f6968fd05ad53aa86a618fae7fe9ae3ea2"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/karta-blue.jpg",
-      "bytes": 14678,
-      "sha256": "b39165fb19d13c195e80855403263c89b5b4f2d3093ba2dbe4486f86ad772c0f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/karta-kukhonnye-tryapki.webp",
-      "bytes": 179086,
-      "sha256": "a8e8ae2c160c693b7985f645eaff30af9921bbcd0036b9034fe702da31e2868f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/karta-perevaya-podushka.webp",
-      "bytes": 124564,
-      "sha256": "6ec203606b058f1a353c7fd36ca3b2eed18105b527d18bbd588f4ff1f92658bb"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/karta-test-zakrytye-dveri.webp",
-      "bytes": 155016,
-      "sha256": "acf27adbe7aee2997e6886f0651e7bab212aec05d65661107013d3bc082e0711"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kora-blue.jpg",
-      "bytes": 34718,
-      "sha256": "7be6cef4e6fe85a6375bde727bd7ce5728ef60e728e925996d481f304767856e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kora-duba.jpg",
-      "bytes": 73946,
-      "sha256": "7e36442c18b1e159392c8f8994945f756005d64f3dc3e9b2f38666a23595d6a6"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kora-light.jpg",
-      "bytes": 208945,
-      "sha256": "01cd63e779ab3f06266942df60f2d16f6892e359e46c0d6a721496631c2353e0"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kvartira-ne-za-odin-den.webp",
-      "bytes": 147778,
-      "sha256": "2ef6d799ddd382baf6fd5c045c711f7c2a22454d4430ef33f2f05bc5b390deff"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kvartira-ozonator.webp",
-      "bytes": 184426,
-      "sha256": "6a9e15089a04caa6079b4949e2fc916a6eb1bc0e477a8b57db0e7ba156fe8478"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kvartira-shtory-filtr.webp",
-      "bytes": 144670,
-      "sha256": "61e43e15e162580929385189dee356dfcf476fe87deb5661e8cdfbdc0094813f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kviz-devyat-shagov.webp",
-      "bytes": 121772,
-      "sha256": "e6d85705cbc41951a3b13f73932e7edeae8b7636bdfdeb98a8851abf13fcc316"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kviz-olfaktornyy-sbros.webp",
-      "bytes": 164140,
-      "sha256": "828cc7c4313cba58f1fabc82731844a453a111afc09d1efa3de9e50ae3bf5076"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/kviz-sem-testov.webp",
-      "bytes": 190752,
-      "sha256": "ed60ead45ff51a62cca47297693251fea8a31204ce9627e939f7bf26ef4f3252"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/lekarstva-korvalol.webp",
-      "bytes": 198560,
-      "sha256": "416a1b1131d432cad0311cb077fcda0bcdf2928a6974e94cd1112602486245d0"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/lekarstva-mazi.webp",
-      "bytes": 155406,
-      "sha256": "7615d99d2ebc1fd9fd553d11396b0a909ff78d869e218509578afc83b52f238d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/lekarstva-ne-otmenyat.webp",
-      "bytes": 188212,
-      "sha256": "b8baef4739efb4aaf7fb1ef2e85f262e80be693dd99c2b559663337b4703b7c1"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/mater-kislorod-enzimy.webp",
-      "bytes": 114208,
-      "sha256": "8a2797e93fb4deab5ac905568dac2c14aad499f5134dc217a7e3ed75c7bc0fcc"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/mater-termogidroliz-dsp.webp",
-      "bytes": 172410,
-      "sha256": "47ccdf8aaab43b97e79ffea1813486577753a2c4dd36aa5c909b8dff0823c189"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/mater-test-skrytyy-uchastok.webp",
-      "bytes": 151318,
-      "sha256": "49d1435f0804c9e9439f7a84a50b96045652f2116e6cb063b349076ce914d415"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/matras-blue.jpg",
-      "bytes": 42144,
-      "sha256": "710f4b304e965ed48403fc92f698fe7cc6ee9162b4ced63b3e1206ca6548ca78"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/matras-protokol-5-etapov.webp",
-      "bytes": 154618,
-      "sha256": "7fb3465f54e62e4947a847e74c7fce3147ba4a74479efe48d105322b4eb9c74a"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/matras-teplovoy-ispritel.webp",
-      "bytes": 108860,
-      "sha256": "5e6df4a6872b3a82e01bda3cec32a4b05c5a0bc7ddd02ef0e0552cbbaa21c186"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/matras-tri-narodnykh-soveta.webp",
-      "bytes": 140232,
-      "sha256": "d76c8c754150ef04fe5098f95d6877d75ea8ce9fe0e46d22753e4a5bad7cef9b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/matras.jpg",
-      "bytes": 59155,
-      "sha256": "66e9c2bfaf3558a7f6d9c71738207099a243d75b3aefd82f6f63414057d5faba"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/molecula-blue.jpg",
-      "bytes": 20557,
-      "sha256": "d49455d5369f61450417f7ab94aa44502bd81aa6839df8555af22640b044e06c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/molecula.jpg",
-      "bytes": 70444,
-      "sha256": "0a8b49f61c6d30c0ddeed594c69cc2dd2c7fcee3c0a1b1800a2c4ed715ce1fa1"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/nonenal-dub-taniny.webp",
-      "bytes": 198170,
-      "sha256": "13cc3de54638752e8cc39e1c7a6eab0d7de838d589c893408c6c37aa315e5541"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/nonenal-haze-2001.webp",
-      "bytes": 161860,
-      "sha256": "a015cf0d7781470c654d0b3629dfe138db98f6d5946ce22935f091d4fa5f2b5f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/nonenal-molekula-portret.webp",
-      "bytes": 87718,
-      "sha256": "2f3b0ca9443e6850e95d281973edc403267399adeaf6a29ab26a7bf07fb21dda"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/nonenal-natyurmort.webp",
-      "bytes": 121744,
-      "sha256": "089644069dc2ff5a28ed204f13fc433185bbc1d0e1770e67281209e1ec93ba6d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/nonenal-nelzya-kozhe.webp",
-      "bytes": 132202,
-      "sha256": "565613aa64d08bc462646c1a4d6064d74f9491456c5dd82e4b45c4ecbfb2abaa"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/nonenal-ochered.webp",
-      "bytes": 180430,
-      "sha256": "cb73dc0a94ea995f2c69ed868c143adaec36801d55c3759e97701bf3a8b1762e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/ochistitel-obratnaya-desorbtsiya.webp",
-      "bytes": 195900,
-      "sha256": "a9c67ead483877bcc3532435f1602ecdd52faa9a5deb7266ca901d37dc6facb6"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/ochistitel-razmer-molekuly.webp",
-      "bytes": 151764,
-      "sha256": "63e630f7ce16d296757ab565d210f5136c958e68a550afdfe23759859b683e61"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/ochistitel-ugolnyy-porolon.webp",
-      "bytes": 183078,
-      "sha256": "e310b9d357fc8c1f94f52d1b24a085e4eee07f2b8ea57ee204b1f4ed108fc70f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/chto-takoe-2-nonenal.jpg",
-      "bytes": 70598,
-      "sha256": "edc76c5b3baca8ca301439dd67655dbc0ba5ab7eaf8086e2a933e3fb35c9a182"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/faq.jpg",
-      "bytes": 69436,
-      "sha256": "7c476466947b4dc7d4b88e2d9a55732f617ab3d65cd724022804d191bb1a46d7"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/home.jpg",
-      "bytes": 71793,
-      "sha256": "a1148df8754afca1633af91bca8684c4e96a7a955e50aca42b826022ef4fc725"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-otlichit-istochnik-zapakha.jpg",
-      "bytes": 74288,
-      "sha256": "af52f1e379c26d75bca484f32245db0c4356b54ab3e62dcf6a81a6fa9569245d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-pogovorit-s-blizkim.jpg",
-      "bytes": 68609,
-      "sha256": "b573d8c5c843bb6abd6e130d1b966b37914a49c48844999807b0dc5f0db012a5"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-iz-shkafa.jpg",
-      "bytes": 71805,
-      "sha256": "6fee0a7001e65627fcdba550efd9bfbe013b9d6a9f69f30e3c882b5ec0b020d3"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-s-divana.jpg",
-      "bytes": 72983,
-      "sha256": "ec4f25b9b23730cef7cfd07d6337944ff1e28002764c84cf649c80a9b253f3bb"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-s-matrasa.jpg",
-      "bytes": 75207,
-      "sha256": "0c394fc71daf14f32840d0b672782320261445360c94c47bb931009ea458dbe9"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-v-sanuzle.jpg",
-      "bytes": 62706,
-      "sha256": "b260f18dae53bfb42668f0cbebf11fcffa188b8fedbdca45749fce465df7be44"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kak-ubrat-zapah-v-stiralnoj-mashine.jpg",
-      "bytes": 72360,
-      "sha256": "59bcb7e4b5fbacae6f231074e28bc3aee3d3371c9c071d97cb44da47b0068302"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/karta-kvartiry.jpg",
-      "bytes": 73446,
-      "sha256": "7920e57369ee5ca09c26179d3448a87a5dbd4b7942822d5fc8d80f66b5c88d19"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/karta-osetii.jpg",
-      "bytes": 72158,
-      "sha256": "19933058114002bf884469d122faf677c255a7ddcb59704afbf577070efe41f3"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kogda-k-vrachu.jpg",
-      "bytes": 60785,
-      "sha256": "f67b297b86239c47cb7ef1a9c85fcf391d7ca1c0480a771881afa15c6e6dcf61"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/kviz.jpg",
-      "bytes": 55549,
-      "sha256": "a7d9fe06f23a274ad7d3d9d4d8583e2206d716d0ba65b7021965c342332ecc2c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/lekarstva-i-zapah.jpg",
-      "bytes": 65910,
-      "sha256": "6111c60f584801e3344a249068d23cd8697d6f2a1581b7a9656cff89fb828b07"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/material-metod.jpg",
-      "bytes": 66447,
-      "sha256": "05a59c693faf3a229bae6585c738af86af8c91271513572b0994b9360e912cd3"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/nabor.jpg",
-      "bytes": 63921,
-      "sha256": "37817ad0bb16c65cfeb565cd863804c1f179976ac0472045b52262af72fbeedd"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/o-proekte.jpg",
-      "bytes": 56911,
-      "sha256": "fdbcc314bbde57ceba8321b068e260b809fc4ef39e9368abf8c296fb9c245288"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/ochistitel-vozduha.jpg",
-      "bytes": 71246,
-      "sha256": "8b7bcbafb17a95f6b96e4e3f8885c4a994a01d94c1aab1dbb936d4791f5eb34b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/odezhda-i-tekstil.jpg",
-      "bytes": 64509,
-      "sha256": "eb40991ccb06a85c086ff27994cf3c0cda01d92b94a56cfc6b5d1f7a3ea14b5f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/poroshok-dlya-tekstila.jpg",
-      "bytes": 67280,
-      "sha256": "de677389c839a1cc2a22d6bb169b6b692184d59c8456a92345f021c30819e9c2"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/sredstva-ot-zapaha.jpg",
-      "bytes": 74085,
-      "sha256": "7998608ad9627b1f6d133da694c67767a92f669c5a9f928b16d6f74a42b9c148"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/tonik-protirka.jpg",
-      "bytes": 64090,
-      "sha256": "e570a88f420d49858cd7f9e7ad62140353654e6996d55b273a3310ddf09541af"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/ubrat-zapah.jpg",
-      "bytes": 65268,
-      "sha256": "ecd5d8879dd1f185500b464f16c390aa8a4bd1452b3da8193f2f18fe607fd595"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/ventilyatsiya-i-vlazhnost.jpg",
-      "bytes": 67334,
-      "sha256": "6eab750341e564ec0319343f04cbbe718c7a93377ff1a353ee1fd0b46c9a7656"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/og/zapah-v-kvartire.jpg",
-      "bytes": 73719,
-      "sha256": "89b42192c479aef172e021dea8e2ba9ad95968dba292cfcacc5d5267c5ba359c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/osetiya-dub-skalnyy.webp",
-      "bytes": 195928,
-      "sha256": "cd13e2ed0d76599ab427939c08a96a097e98cdc4641a7ceb5b431d526686991c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/osetiya-karta-expeditsiy.webp",
-      "bytes": 192354,
-      "sha256": "f1724541f15889a1d8d9129deeeda89decf38a54a8e3e4df24aacecca0ad3b1b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/osetiya-sushka-v-teni.webp",
-      "bytes": 206334,
-      "sha256": "07d36d1397a9253c02ca692487d09a5c9404f91ee79e20fcf2fc3a01027e2683"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/poroshok-opticheskiy-otbelivatel.webp",
-      "bytes": 160644,
-      "sha256": "0152fd840cdfff501e5cebfb7debe228c01ec73eb98500e57fcdc72688ceae08"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/poroshok-taed.webp",
-      "bytes": 170194,
-      "sha256": "687ad5fb1ceefbcfcdc4bdc36d5a1b3a46b75c8b6931fa81bfc0f2fdfef8b6af"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/poroshok-zhyostkost-vody.webp",
-      "bytes": 158994,
-      "sha256": "901c145f72324900e2d9d9ea59f694de49f2c6a6d7e93000d3367cf963252e05"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/proekt-dubina-pyat-sredstv.webp",
-      "bytes": 151508,
-      "sha256": "9dfc333439112d2f76eb71a7a84c5ec2de8a9ae663e027354f731d978e910bfa"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/proekt-odna-granitsa.webp",
-      "bytes": 130756,
-      "sha256": "7cf0e4ead9c8b92ed84220c842ab98f2e5e00bc854315aaa18c7e55cb39aa767"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/proekt-s-chego-nachalos.webp",
-      "bytes": 105768,
-      "sha256": "c74c13d5a71c859f4eb7dd0190bd1fa71d1506b52c02cf9cb0c981dea24fd068"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sanuzel-donnyy-kamen.webp",
-      "bytes": 134408,
-      "sha256": "d0e69ac5677c3d8479126010d491cd94515e69fab0ef7103b39a4fda6a8f088e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sanuzel-evakuatsiya-vody.webp",
-      "bytes": 137216,
-      "sha256": "30438d4e3dee9bc5e82ab49e4b58c468d06c35670364033594bfa17f6a5c675e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sanuzel-khimicheskaya-nesovmestimost.webp",
-      "bytes": 149790,
-      "sha256": "d132535657b8260115113dbaaad7cfa7b1cca0af6f85b90b87a9e9274a2e1c7b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/shkaf-blue.jpg",
-      "bytes": 26355,
-      "sha256": "2e485497a22f9aa7a9a71a77c5adc4a08d07d244286a880203eeed8756cdaff7"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/shkaf-naftalin.webp",
-      "bytes": 169906,
-      "sha256": "a0452306102e8aee9011be50df51a36babdc17d322f9e780309702d0e7a8dc65"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/shkaf-protokol-5-shagov.webp",
-      "bytes": 179920,
-      "sha256": "344f9332f86401b2cf8b2e89710a52d7997ccbc52c5da9be1173cd94ce0f23ff"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/shkaf-zakon-odnoy-noshenoy-veshchi.webp",
-      "bytes": 150024,
-      "sha256": "9783f76a4b1bfa10a06d2f56fa812d6f3a26e66691e31698b1ae3a22b50db027"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/shkaf.jpg",
-      "bytes": 58475,
-      "sha256": "96cde428f6c725eabb6ea8fe5a87767f84a3512413a6654e7e3f20f3bab86469"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sredstva-inci-etiketka.webp",
-      "bytes": 192630,
-      "sha256": "767e1a7ea60dbb62772b38f270b9d09d7880be38ee715fd92896aa6ffbb1a02b"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sredstva-polka-magazina.webp",
-      "bytes": 177170,
-      "sha256": "36b9eee5bde2d5b0557fe28662e6069f231b7f93d37c74e2ca3e42979ead7052"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sredstva-taniny-dub.webp",
-      "bytes": 137396,
-      "sha256": "5ab14c58bfe5f7b6d698588bf264e1b629bfe2df5a3ac5ba9fc20c609ed76524"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/sredstva-taniny-persimon.webp",
-      "bytes": 140438,
-      "sha256": "bd63cb8309072f51aef5516964703f79b37d25d2ae5e2a17b289ddff6ed41733"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/stiralka-chernyy-potolok.webp",
-      "bytes": 130240,
-      "sha256": "911fa920f8d8439f83418c25158f176e4018a21b636b22009b4c855c94242965"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/stiralka-effekt-sifona.webp",
-      "bytes": 137806,
-      "sha256": "eec5150bf9caa7c65ff722a68382ba22cb53e3d86c6e0eccf941770655d0588d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/stiralka-limonnaya-kislota.webp",
-      "bytes": 175588,
-      "sha256": "23f9ca5f13e616c8d7f79994a0c8981efe7a3872b4b61b0c025c043f44484420"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/tekstil-proverka-kapley.webp",
-      "bytes": 153866,
-      "sha256": "8a27a25f4a23487325cdcbcc59ecb08aaa4da91ca4abfec44e2fcf0004d40f71"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/tekstil-sinteticheskiy-pled.webp",
-      "bytes": 195936,
-      "sha256": "f814aa9995cb42cab1f90ba1d696283fe1627f396f09e1720c7e9f9f5e56e649"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/tekstil-utyug.webp",
-      "bytes": 169562,
-      "sha256": "afb4a905e8bb0737f1c2c60b63ecf365aa7230568a6b886b9554e25722e4ff8e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/telo-chetyre-pravila.webp",
-      "bytes": 154230,
-      "sha256": "bf38acb2dfdd2ce9e3d2927e9cee5070e54be2145ff1c45652e95c21e2cadd22"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/telo-goryachiy-dush.webp",
-      "bytes": 141530,
-      "sha256": "96f0258b89f5d362a97fa84185f0bd8ea1d92b6658974f4a9ce8116d1940f3cb"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/telo-test-banka.webp",
-      "bytes": 149868,
-      "sha256": "f74ae70f8d4e3e63203f53346e92c686aec4b913eded6b9e5b69345cde5b8cd7"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/tonik-spirtovye-losony.webp",
-      "bytes": 137080,
-      "sha256": "0d7aa8090eaa310b4def9ee079246ecf7b5ebe22e4b8685c2a3ca4794d3f1f98"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/tonik-taniny-bez-smyvaniya.webp",
-      "bytes": 157320,
-      "sha256": "6a4e3b48474d51b8760490bb0a060d688516df8d4539330ad4907fabc4fe18e4"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/tonik-tochki-nakopleniya.webp",
-      "bytes": 131088,
-      "sha256": "1f18caf2367bda3f2ff9bb707040dc9f15848951541085cf4ddad9e21d8ec579"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/vent-moyka-vozdukha.webp",
-      "bytes": 155664,
-      "sha256": "bec60a0a4d73cadf7eb1b2e6933bd11e71901be13bb90aa6da385a1ca7043a01"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/vent-oprokinutyvanie-tyagi.webp",
-      "bytes": 163312,
-      "sha256": "35a015897a7ced865d7753cd399ae2ad0d480ada904d0f3c10a3bfa85968d891"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/vent-zalpovoe-provetrivanie.webp",
-      "bytes": 157740,
-      "sha256": "c5aac2c09ab837565980ac0744a1b99e63f58c4ed45d5435d14d721b9feff5f4"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/vrach-odontogennyy.webp",
-      "bytes": 146740,
-      "sha256": "46df2573a07116945367eadb3d1d9de288acb4c43d882d4baa5ebd1869546d6f"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/vrach-prolezhni.webp",
-      "bytes": 167762,
-      "sha256": "05e29895a3f3e969dcf5207c2e72dd958f76fa3fd2d724c727f700aa3a4dbd01"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/images/vrach-skrytyy-diabet.webp",
-      "bytes": 167618,
-      "sha256": "1d86c2c953d4ea8ce4bd35b73bae187e53aca5cc010afee9a1c00f9ce09c7e48"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/index.html",
-      "bytes": 24472,
-      "sha256": "47a1921e17e9f2bf6abaa17d016da46ba31301086c4c197188f1119102ceca2c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-otlichit-istochnik-zapakha/index.html",
-      "bytes": 40180,
-      "sha256": "bf74be07709f5d944ffe50f925fa034cf10aa427926be778b5d306aa41a2ada6"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-pogovorit-s-blizkim/index.html",
-      "bytes": 33005,
-      "sha256": "f7f96b4c284b8cc11c8feacb55f61bf50d308cd4a4cf999a886a3591be56841a"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-iz-shkafa/index.html",
-      "bytes": 38820,
-      "sha256": "bedb53d822f017d0be9e4ab7cf976d8346d16ba9dd084e5fd452b5b5a2265f23"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-s-divana/index.html",
-      "bytes": 38658,
-      "sha256": "cf962e358a16ded8b36f4a568c4bfdb2a5551511d8856af71803002055f2e952"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-s-matrasa/index.html",
-      "bytes": 38488,
-      "sha256": "03027510162d2a0aa63d8fb4c2f8c1f934c33b3bd36aac994f7210fb63983049"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-v-sanuzle/index.html",
-      "bytes": 36711,
-      "sha256": "37cc09d6130116d362817ab03eb0845d428476690084797619fe0bc51f8d3153"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kak-ubrat-zapah-v-stiralnoj-mashine/index.html",
-      "bytes": 36318,
-      "sha256": "593e82eda74c9d437726fe0f852d40b289ff575868f897b91df8c73767626552"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/karta-kvartiry/index.html",
-      "bytes": 27134,
-      "sha256": "3efdc19f73472b7e0bd54665b8ae5afb56dbb9fcbd45f7963f8e2c2ffcfe366d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/karta-osetii/index.html",
-      "bytes": 23704,
-      "sha256": "c7371dd7355cdb32d0c471708a09326bd4b2cb77e36e115be8d8a6b746ed4b14"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kogda-k-vrachu/index.html",
-      "bytes": 29749,
-      "sha256": "cf1da4c2a38f239707810c23b885448fa42df2f49f4ed53ab7bd70c59f864315"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/kviz/index.html",
-      "bytes": 41716,
-      "sha256": "c33826e72f72b4c46c7034e2780dc6cae4031c749e515289477ba284d7cb087a"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/lekarstva-i-zapah/index.html",
-      "bytes": 31514,
-      "sha256": "fd11a648679161e7175adf62c126c68b2cf9573d7192834c24207f1882201cf6"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/material-metod/index.html",
-      "bytes": 40264,
-      "sha256": "0ecb49644893cca2463c5ccd8dccad4c1e441e1dd7965cf639a510fac258b3b2"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/nabor/index.html",
-      "bytes": 15924,
-      "sha256": "1872edb80da0bd916d2caecec1fc35d96a0ae4d623333f03bc44bc355d5a1725"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/o-proekte/index.html",
-      "bytes": 27185,
-      "sha256": "b18ff0c8db80204e1833ffef4031ade7d7df9842b1a7f9bba70bc3d200fa968c"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/ochistitel-vozduha/index.html",
-      "bytes": 35282,
-      "sha256": "773482855117e9ef733559df1f0d1d84ca199412e0ab4b47c2834a2f69aaec2e"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/odezhda-i-tekstil/index.html",
-      "bytes": 36901,
-      "sha256": "a253a6ad141d19d2d54be6caa1ad033a9eb7a847ce70f9f009b480c352de6d6d"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/politika-konfidencialnosti/index.html",
-      "bytes": 17803,
-      "sha256": "f96b27eb5a15dbd2c4a0fddd7e26c020a294a9ba94a46b0de22cc330974ada9a"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/poroshok-dlya-tekstila/index.html",
-      "bytes": 31890,
-      "sha256": "174b4a48df007e0a9028caf78bb83092769e32deccbd3f98c3f2f76d318e6d92"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/robots.txt",
-      "bytes": 101,
-      "sha256": "9cd4702e523c0f3709b55a921e18d5887593d2432fcd9af41a5b0d78b2c79fc6"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/sitemap-full.xml",
-      "bytes": 2419,
-      "sha256": "374c22515d99e1d055dddaaa20f0b7bedc8a78f0a560c2d76e4b66484d69b3f2"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/sitemap.xml",
-      "bytes": 4494,
-      "sha256": "9f829d69396238acf705ca41171b3fc8fc88c867cc45e2359754000d07af7e87"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/soglasie-na-obrabotku/index.html",
-      "bytes": 13728,
-      "sha256": "c184ac9c88119a4310afa5242f4233ff286a2e3682904ba9110db53e5ede2241"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/sredstva-ot-zapaha/index.html",
-      "bytes": 33985,
-      "sha256": "c9b35b0f23bb8a247c7fca871b901dfe0b81ecdbf677037769ddbcacea1d94dc"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/style.css",
-      "bytes": 11151,
-      "sha256": "deec41fc85ca2c65534434dfbce71242f061c2fb65162f7ea9fa5d95a50180ac"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/tonik-protirka/index.html",
-      "bytes": 30080,
-      "sha256": "de5a276356313bbeff7e93ca0fb6e0f98d8b57b8cf60fce2c3732d15a34e49ff"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/ubrat-zapah/index.html",
-      "bytes": 36034,
-      "sha256": "d2ff8ded8d7e81376352dcdd6814139fbcaa3b7e3258b85952587ca3edf5e1a8"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/ventilyatsiya-i-vlazhnost/index.html",
-      "bytes": 32949,
-      "sha256": "9aea4f152088e60121bf5cdd6150e5127c6b82732ea7e2b4752d780d67e09015"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/yandex_e3e7231de3258122.html",
-      "bytes": 162,
-      "sha256": "056618b23d0d003925526dde826d4f3d86f0b4be3b5ce28a62ff610018c45279"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/zapah-v-kvartire/index.html",
-      "bytes": 36170,
-      "sha256": "64127cba2cdf4b5dcb22e61f075de95c3821f85f32b83d6f2363a74718313ee5"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/КОНСТРУКТОР_как_устроен.md",
-      "bytes": 9412,
-      "sha256": "962399a37a7c964c364f75f69c2169be29a404a411fdc06509ea885ec471a331"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/ОПИСЬ.md",
-      "bytes": 3732,
-      "sha256": "fb5f4c2d747459fb5f9f477bb83fb6bd86147a96599c2867164295bedc4af109"
-    },
-    {
-      "path": "03-сайт/сайт_текущий/ТЕХРЕГЛАМЕНТ_СТРАНИЦЫ.md",
-      "bytes": 12623,
-      "sha256": "116f8ee267ebb27dda40c67d9944287cd7608ce24118df900031aac4a82509cb"
-    },
-    {
-      "path": "04_упаковка/ОПИСЬ.md",
-      "bytes": 8122,
-      "sha256": "f000ec10a72c0e72c26743ef23450d45fcd4b8f2e1d2b01bdaa9a87a85cb67ee"
-    },
-    {
-      "path": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_корешки_оба.png",
-      "bytes": 50142,
-      "sha256": "fc8e68e7d6e16a29a51ee6f796fedb629dd5f82eadbbf14d206eaf1141cc9f12"
-    },
-    {
-      "path": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_порошок_цветной_40plus_лицо.png",
-      "bytes": 2017887,
-      "sha256": "bdd5dd8407face808fe089b9252d23799efd5951011e69555738e86f05fcdbb0"
-    },
-    {
-      "path": "04_упаковка/исходники_дизайнера/УСТАРЕЛО_спина_v3-4_насыщенность.png",
-      "bytes": 1970633,
-      "sha256": "ceaccf5aecf8e15f6e8456c9897e1c5cd361f44ed18702fcca7a37f4ca579875"
-    },
-    {
-      "path": "04_упаковка/исходники_дизайнера/знак_v2_A_для_скрипта.png",
-      "bytes": 352746,
-      "sha256": "46a552b4b08734eb573268edad42d4455760e91989a95741a87daf959f6a4f7d"
-    },
-    {
-      "path": "04_упаковка/исходники_дизайнера/мыло_лицо_основа_для_скрипта.png",
-      "bytes": 1774480,
-      "sha256": "fd139649a21f6ed15003a8015de3d51663b7f2bc869001bb559511b92279a95f"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/add_gel_legal.py",
-      "bytes": 2856,
-      "sha256": "11b1f9b578e23ce30d15dc1155b715e477c73bea44dc031af284602a6d2eab46"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/build_logo2.py",
-      "bytes": 4864,
-      "sha256": "be130cb1a83c9d93be7d7ce4ac4c94f2cbcd69834ad7f4b8a57093d9b5f82016"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/build_mark_v2.py",
-      "bytes": 4008,
-      "sha256": "fe55778b6303a7d2b7fcb83466675aa17440fe982babe9d5e1189291d25a1a20"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/logo_dubina.py",
-      "bytes": 1341,
-      "sha256": "bb272e9ad2e005e4ec9879d776d0b7d8ac4d9d0e690d51aa435e0bcb3386afbf"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/logo_on_bg.py",
-      "bytes": 1181,
-      "sha256": "d1ab26e5ad35b3bdcc170ba317f68923145677ed88491df24189fd94aa5a10c7"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/make_spines.py",
-      "bytes": 4445,
-      "sha256": "7ff93d15aee698a835dbe186cee9587c1d4b0b8cb8ad9470a0a85b8fb48b96ee"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/make_spines_light.py",
-      "bytes": 1846,
-      "sha256": "776184b9de1c5fc1fd4eaa22e528b55cd223560fddc422524bc4555fd5c0a5f7"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/soap_face.py",
-      "bytes": 2597,
-      "sha256": "8c631cf226e4f849d3585f8060086cadfc19f0d8deef514f2f70b9571eeacf28"
-    },
-    {
-      "path": "04_упаковка/скрипты_генерации/swap_logo.py",
-      "bytes": 1787,
-      "sha256": "9514d107e86052b270086784207603d6f67ad199aa40232ba40166851014885e"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/ДУБИНА_знак.png",
-      "bytes": 328113,
-      "sha256": "01d3151c3e77e02a358797f89396f8113722acca0c0e638084e0b1cb1d19032d"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/ДУБИНА_знак_на_белом.png",
-      "bytes": 269132,
-      "sha256": "a5d2be28aa58b6e1cdce9eb3e28234e4bdb78025b161c22c1fd743d9e70994a5"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/ДУБИНА_логотип.png",
-      "bytes": 374200,
-      "sha256": "7afd39ce3158cf2d92f8261b78538c39ebebe95c61bb576172e3b7a68617b9bf"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/ДУБИНА_логотип_на_белом.png",
-      "bytes": 355077,
-      "sha256": "cff344751bf2e8048624dfe058713cf2f1df22aafb7b5ce845bbe4dfc9746567"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/ДУБИНА_мыло_лицо.png",
-      "bytes": 1392763,
-      "sha256": "e7f44132984a7d2dda77586ad0081a9394aceaff8e35fb3a00228a28059e87b7"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_светлый.png",
-      "bytes": 203259,
-      "sha256": "2da7a25abc77cf7df18b76683c9de4a4aa3dcd03077d4dee7d985de2b99c3926"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_цветной.png",
-      "bytes": 185556,
-      "sha256": "ad5ad96bf91aef4d1ccbeb1d94747a1ada9b2ae822cd59724e28f0267f16646b"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип.png",
-      "bytes": 208773,
-      "sha256": "235148e02f763e6617d155239386675428aaf8156c8eaa10cf47aab51cebc3ae"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне.png",
-      "bytes": 272355,
-      "sha256": "3ba48d1307d0f1e151c8a415c710dbaadb8cd86dcce7671fd6ef439aba6140c6"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне@2x.png",
-      "bytes": 913503,
-      "sha256": "904a3ece98626f41e7c33fe1894b17383289384e680d3c571355a90e18f6c8bd"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_светлый_белая_плашка_v1.png",
-      "bytes": 2226273,
-      "sha256": "18d67d5af1b3afbd4ab4235f76d558e185e72b227263be86878f88249febfbfd"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_цветной_плашка_v8.png",
-      "bytes": 2202294,
-      "sha256": "dca9b97625bafdf00c64f7e31af82d82a97fd8447888b9a71304308aa4e2fd07"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_гель_v3.png",
-      "bytes": 1931719,
-      "sha256": "1d0af920e1185a01bad3c31fb70f29ead6e7704d52ed449a10e500480500a218"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v4.png",
-      "bytes": 2071773,
-      "sha256": "586253e718adf303e305b55dc6027d221d14dfc58f8ed0490d087f53036ec98b"
-    },
-    {
-      "path": "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v5.png",
-      "bytes": 1444634,
-      "sha256": "6f2bb89e9414475af154f41f6e6db278b7aeb1d80c6705323fac3210608fd1c2"
-    },
-    {
-      "path": "05_приложение/app/icon-180.png",
-      "bytes": 27006,
-      "sha256": "e84f92e5ff8f53d060a58a1b6070942c6b486a2e2c9321b5aae1063aea67575c"
-    },
-    {
-      "path": "05_приложение/app/icon-192.png",
-      "bytes": 29113,
-      "sha256": "a79ff84560cef5174a263d461d804292fb6840c141a7fc2f02fee24130492377"
-    },
-    {
-      "path": "05_приложение/app/icon-512.png",
-      "bytes": 79607,
-      "sha256": "9947ae6ebfbd5397805db048f508ee42c39db252f1046ce7c07e45afba089d2d"
-    },
-    {
-      "path": "05_приложение/app/index.html",
-      "bytes": 80817,
-      "sha256": "219eae74165175b03e8ce143dc2c0feb9b45d713a61d60f97ad0bfd13af8f29c"
-    },
-    {
-      "path": "05_приложение/app/manifest.webmanifest",
-      "bytes": 712,
-      "sha256": "5f81278d83d6ab9f6bef43e796479ddf6df7ab4936ebe00d196d56cf06a58010"
-    },
-    {
-      "path": "05_приложение/app/sw.js",
-      "bytes": 832,
-      "sha256": "b73c6108622fe9cc6556881d90a92461f6cae405ab396fab4e4c840f76faf1c9"
-    },
-    {
-      "path": "05_приложение/МЕЧТА_автономная_копия.html",
-      "bytes": 80817,
-      "sha256": "219eae74165175b03e8ce143dc2c0feb9b45d713a61d60f97ad0bfd13af8f29c"
-    },
-    {
-      "path": "05_приложение/ОПИСЬ.md",
-      "bytes": 4546,
-      "sha256": "0cae419e0e4afba2642a7cd001709db5c80d28f66329595dfbf1fda5b74da7f1"
-    },
-    {
-      "path": "05_приложение/ПРИЛОЖЕНИЕ_как_устроено.md",
-      "bytes": 13158,
-      "sha256": "0d912ed1a8622112e7bb23391191e75f15e55df67bc6665fda0f1d2c398d4504"
-    },
-    {
-      "path": "05_приложение/УСТАНОВКА_приложения.md",
-      "bytes": 9658,
-      "sha256": "7d8655bf55f89b4a80350f68947c206f32ea7db8ea961a9cb4a2c6c4a1f9a38b"
-    },
-    {
-      "path": "06_справочные/GMB_CRUSH_фреймворк_англ.txt",
-      "bytes": 70915,
-      "sha256": "c009073baa4ef8b2c13623aa79d83184d5db98843520d4c3f93d6d878796ecc8"
-    },
-    {
-      "path": "06_справочные/актуализация_снимка.py",
-      "bytes": 8968,
-      "sha256": "463bb98fc2bb13bb56c6f1cdc5f8e15f0be4dacdd877329a19b951fbd3e3c908"
-    },
-    {
-      "path": "06_справочные/манифест_целостности.py",
-      "bytes": 6017,
-      "sha256": "1ada259bb9e599ed05ea23c4f6d237239d7bad22e37d5e93be8384fab5077e8b"
-    },
-    {
-      "path": "06_справочные/подсказки_яндекса_24-09-2026.csv",
-      "bytes": 105356,
-      "sha256": "d11da2f6387384796856b2198c20f6d565f3635cb3f7de4ae517630f7c3170fe"
-    },
-    {
-      "path": "06_справочные/проверить_архив.py",
-      "bytes": 8708,
-      "sha256": "dfeab757f05c716c8f8c977aaa792cf3305375de7410f67995680c7e2018724f"
-    },
-    {
-      "path": "README.md",
-      "bytes": 10459,
-      "sha256": "036f2fde60a07d8e0bec4fb2183bc6b5e9b464baad0caf228482ae7dd25a6072"
-    },
-    {
-      "path": "КАК_ЗАЛИТЬ_В_РЕПОЗИТОРИЙ.md",
-      "bytes": 7565,
-      "sha256": "95abb48e133fec8336ce7d98b55b5bd85d05f6dbb7e5c49a651c40418ad2a7de"
-    }
-  ],
-  "protected_unchanged_files": [
-    "04_упаковка/ОПИСЬ.md",
-    "04_упаковка/исходники_дизайнера/УСТАРЕЛО_корешки_оба.png",
-    "04_упаковка/исходники_дизайнера/УСТАРЕЛО_порошок_цветной_40plus_лицо.png",
-    "04_упаковка/исходники_дизайнера/УСТАРЕЛО_спина_v3-4_насыщенность.png",
-    "04_упаковка/исходники_дизайнера/знак_v2_A_для_скрипта.png",
-    "04_упаковка/исходники_дизайнера/мыло_лицо_основа_для_скрипта.png",
-    "04_упаковка/скрипты_генерации/add_gel_legal.py",
-    "04_упаковка/скрипты_генерации/build_logo2.py",
-    "04_упаковка/скрипты_генерации/build_mark_v2.py",
-    "04_упаковка/скрипты_генерации/logo_dubina.py",
-    "04_упаковка/скрипты_генерации/logo_on_bg.py",
-    "04_упаковка/скрипты_генерации/make_spines.py",
-    "04_упаковка/скрипты_генерации/make_spines_light.py",
-    "04_упаковка/скрипты_генерации/soap_face.py",
-    "04_упаковка/скрипты_генерации/swap_logo.py",
-    "04_упаковка/финальные_макеты/ДУБИНА_знак.png",
-    "04_упаковка/финальные_макеты/ДУБИНА_знак_на_белом.png",
-    "04_упаковка/финальные_макеты/ДУБИНА_логотип.png",
-    "04_упаковка/финальные_макеты/ДУБИНА_логотип_на_белом.png",
-    "04_упаковка/финальные_макеты/ДУБИНА_мыло_лицо.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_светлый.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_корешки_порошок_цветной.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_логотип_на_фоне@2x.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_светлый_белая_плашка_v1.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_порошок_цветной_плашка_v8.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_гель_v3.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v4.png",
-    "04_упаковка/финальные_макеты/УСТАРЕЛО_спина_порошок_v5.png",
-    "05_приложение/app/icon-180.png",
-    "05_приложение/app/icon-192.png",
-    "05_приложение/app/icon-512.png",
-    "05_приложение/app/index.html",
-    "05_приложение/app/manifest.webmanifest",
-    "05_приложение/app/sw.js",
-    "05_приложение/МЕЧТА_автономная_копия.html",
-    "05_приложение/ОПИСЬ.md",
-    "05_приложение/ПРИЛОЖЕНИЕ_как_устроено.md",
-    "05_приложение/УСТАНОВКА_приложения.md"
-  ],
-  "previous_baselines": [
-    {
-      "date": "2026-09-19",
-      "generated_at_utc": "2026-09-21T20:55:31+00:00",
-      "base_commit": "006572c7fd9da15bd68a8bc0c626f9b5846af68e",
-      "files": 145,
-      "counts": {
-        "original_files": 145,
-        "original_files_preserved": 145,
-        "modified": 58,
-        "unchanged": 87,
-        "added": 3,
-        "total_after": 148,
-        "deleted": 0
-      },
-      "note": "Baseline 19–21.09.2026 перестал сопровождаться: документы и PWA правились, макеты упаковки переименованы решением автора. Его содержимое сохранено в истории Git (01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json на коммите c048368)."
-    }
-  ],
-  "validation": {
-    "snapshot_matches_publication": true,
-    "publication_snapshot": "03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json",
-    "packaging_png_and_scripts_preserved": true,
-    "newer_tracker_and_standalone_unchanged": true,
-    "functional_bugs_fixed": false
-  },
-  "limitations": "Контрольные суммы описывают эту редакцию. Последующие согласованные изменения потребуют обновления манифеста. Это не испытание продукции и не утверждение об отсутствии ошибок на опубликованном сайте."
+   },
+   "note": "Baseline 27.09.2026 (снимок сайта fe44617) перестал сопровождаться: снимок приведён к коммиту 74151d0, документы архива актуализированы. Его содержимое сохранено в истории Git."
+  }
+ ],
+ "validation": {
+  "snapshot_matches_publication": true,
+  "publication_snapshot": "03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json",
+  "packaging_png_and_scripts_preserved": true,
+  "newer_tracker_and_standalone_unchanged": true,
+  "functional_bugs_fixed": false
+ },
+ "limitations": "Контрольные суммы описывают эту редакцию. Последующие согласованные изменения потребуют обновления манифеста. Это не испытание продукции и не утверждение об отсутствии ошибок на опубликованном сайте."
 }
