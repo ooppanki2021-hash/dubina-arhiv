@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Актуализация снимка сайта в архиве dubrava.
+"""Актуализация снимка сайта в архиве dubina-arhiv.
 
 Что делает:
 1. Берёт список файлов из репозитория сайта (только чтение).
@@ -104,7 +104,7 @@ def locs(name):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Актуализация снимка сайта в архиве dubrava")
+    ap = argparse.ArgumentParser(description="Актуализация снимка сайта в архиве dubina-arhiv")
     ap.add_argument("--site-repo", type=Path, default=DEFAULT_SITE_REPO,
                     help=f"репозиторий сайта (по умолчанию {DEFAULT_SITE_REPO})")
     ap.add_argument("--record", help="имя записи о задаче, например task41_2026_09_29")

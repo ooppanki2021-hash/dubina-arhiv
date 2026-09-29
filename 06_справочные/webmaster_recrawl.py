@@ -56,7 +56,7 @@ def load_token():
 TOKEN = load_token()
 API = "https://api.webmaster.yandex.net"
 # карта берётся из снимка архива: он всегда на месте и сверен с живым сайтом
-SITEMAP = "/home/user/dubrava/03-сайт/сайт_текущий/sitemap.xml"
+SITEMAP = "/home/user/dubina-arhiv/03-сайт/сайт_текущий/sitemap.xml"
 HOST = "https:zapahstarosti.ru:443"
 NS = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 VERSIONS = ["v4.2", "v4.1", "v4"]  # в порядке предпочтения; мёртвые отсекаются сами

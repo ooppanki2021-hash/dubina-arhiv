@@ -1,14 +1,14 @@
 {
  "schema_version": 2,
  "date": "2026-09-29",
- "generated_at_utc": "2026-09-29T07:50:17+00:00",
- "base_commit": "cc1d284f93c6dae248b3a8490d3caa5409913f60",
- "repository": "https://github.com/ooppanki2021-hash/dubrava",
- "purpose": "Инвентарь архива и описание согласованной актуализации без удаления. Обычный коммит с сохранением родителя; видимость репозитория не меняется. Снимок сайта см. 03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json. Актуализация 2026-09-29: добавлено файлов 2, удалений нет.",
+ "generated_at_utc": "2026-09-29T08:32:37+00:00",
+ "base_commit": "9cabb2d67882422e15c7a7840d27764eb455c8b9",
+ "repository": "https://github.com/ooppanki2021-hash/dubina-arhiv",
+ "purpose": "Инвентарь архива и описание согласованной актуализации без удаления. Обычный коммит с сохранением родителя; видимость репозитория не меняется. Снимок сайта см. 03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json. Актуализация 2026-09-29: добавлено файлов 0, удалений нет.",
  "counts": {
   "files": 263,
-  "previous_baseline_files": 261,
-  "added_since_previous_baseline": 2,
+  "previous_baseline_files": 263,
+  "added_since_previous_baseline": 0,
   "renamed": 13,
   "deleted": 0
  },
@@ -96,18 +96,18 @@
  "files": [
   {
    "path": "01_НАЧНИ_ОТСЮДА/ЗАПРЕТЫ_И_ГРАНИЦЫ.md",
-   "bytes": 16166,
-   "sha256": "f4355ff106c52cdd4e03cb3120ea4df27e5843ff08e953b4e3f7e082704ccaeb"
+   "bytes": 16171,
+   "sha256": "5351e49972be5aa2a950f9c1addf32d89ceb2a58dfc225fed2120b9d7db0e4ec"
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/ИСТОРИЯ_РЕШЕНИЙ.md",
-   "bytes": 66952,
-   "sha256": "7a926ae6064a1a5eedc3365aeeecf547ea2d4e477c22ce2b40cfda5a67793134"
+   "bytes": 69675,
+   "sha256": "c92ea9e5d34182e71b4bf6e5458924d12f23336d4252c8af4f0e6605566dcb55"
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json",
-   "bytes": 63363,
-   "sha256": "449a088ce9f1c754aa6b6bc74a822b6167eabb6b4ed3f99623c3d7e6aa15ada4"
+   "bytes": 63368,
+   "sha256": "e387dc796f2611a22af879863392a919fd1ff83d4525a051d5407c831b855537"
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/ПОЛНОЕ_ДОСЬЕ.md",
@@ -116,8 +116,8 @@
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/ПРОЧТИ_ПЕРВЫМ.md",
-   "bytes": 25981,
-   "sha256": "ac8f8dce8143c94e744b3e9e0ea19c99e727cbe620a225111d9543033e7bdf0d"
+   "bytes": 26001,
+   "sha256": "423c0400b1c9db9adda44a6f44c3214eeb48d65943207018a8bf7045e1a9c7d4"
   },
   {
    "path": "02_документы_проекта/AUDIO_чеклист.md",
@@ -216,8 +216,8 @@
   },
   {
    "path": "02_документы_проекта/РЕЗЮМЕ_ПРОЕКТА.md",
-   "bytes": 74756,
-   "sha256": "1c795a4709bed477ddc74a0779214d5ec1c2c3b14f256b22b03ba4760f90c523"
+   "bytes": 74761,
+   "sha256": "c5617b36ed694ac7d360634444d06f6e7ea69d6c89643c627aeb4960d5003f8d"
   },
   {
    "path": "02_документы_проекта/РЕЦЕПТУРЫ_ЗАМЕЧАНИЯ.md",
@@ -1136,8 +1136,8 @@
   },
   {
    "path": "03-сайт/сайт_текущий/ОПИСЬ.md",
-   "bytes": 4149,
-   "sha256": "c331af15c8074533f5fcc0507c6a54464e51483eacc754847325bfca41265274"
+   "bytes": 4154,
+   "sha256": "e6d862cdc6fff02c2fbbcad22f6950ffcd9dae801aada0e468b0da9228cffd79"
   },
   {
    "path": "03-сайт/сайт_текущий/ТЕХРЕГЛАМЕНТ_СТРАНИЦЫ.md",
@@ -1351,8 +1351,8 @@
   },
   {
    "path": "06_справочные/webmaster_recrawl.py",
-   "bytes": 10884,
-   "sha256": "a7d37431c862b7f6df6412b694aa94bfd8209a4f13c857bf544f080a6cec7e78"
+   "bytes": 10889,
+   "sha256": "456d776fadc0b3b30ed8ade222622acd527b332eaa1503817f953bf0c290c2a2"
   },
   {
    "path": "06_справочные/wordstat_результат_29-09-2026.json",
@@ -1366,13 +1366,13 @@
   },
   {
    "path": "06_справочные/актуализация_снимка.py",
-   "bytes": 13426,
-   "sha256": "b957ba621d78f5b75b60d561177fb5e8f46e253428b2a22b2baa1413f2a8c453"
+   "bytes": 13436,
+   "sha256": "2091a58f8c6f08a0f01a7feeff960746711d22d8fdc44291742a48dabe6f7508"
   },
   {
    "path": "06_справочные/манифест_целостности.py",
-   "bytes": 10272,
-   "sha256": "03fce0dfeabc7d174032552a8e4196ad08af92b5ab6f32b8004cf2329761ccc1"
+   "bytes": 10282,
+   "sha256": "7b780c837103cb7b0c77884b8738a26757ac2320d3433763e673e1236e1757a4"
   },
   {
    "path": "06_справочные/метрика_отчёт.py",
@@ -1391,8 +1391,8 @@
   },
   {
    "path": "06_справочные/проверить_архив.py",
-   "bytes": 8708,
-   "sha256": "dfeab757f05c716c8f8c977aaa792cf3305375de7410f67995680c7e2018724f"
+   "bytes": 8713,
+   "sha256": "9b22a4d4cb1406418955fcda66c2d9c598dfb3a5c8f2cec32f8fdd9ffd8edb71"
   },
   {
    "path": "06_справочные/числа_readme.py",
@@ -1401,13 +1401,13 @@
   },
   {
    "path": "README.md",
-   "bytes": 11770,
-   "sha256": "67f00727cded984bd4db3575112601a2ef533c6ac61b6763dd89d9e41cd44920"
+   "bytes": 11780,
+   "sha256": "f15377104909e6372676675e36e7564a058ce7b70f8f06033e813aeecee72bc4"
   },
   {
    "path": "КАК_ЗАЛИТЬ_В_РЕПОЗИТОРИЙ.md",
-   "bytes": 7565,
-   "sha256": "95abb48e133fec8336ce7d98b55b5bd85d05f6dbb7e5c49a651c40418ad2a7de"
+   "bytes": 7585,
+   "sha256": "07026a38b20dc741cfce6a37cf6db84396e2c92e0bf2dd11de72be3db7c05d7a"
   }
  ],
  "protected_unchanged_files": [
@@ -1513,17 +1513,17 @@
   },
   {
    "date": "2026-09-29",
-   "generated_at_utc": "2026-09-29T06:16:51+00:00",
-   "base_commit": "e0eb8d945103c827a05dc1c6636414e2a832ea21",
-   "files": 261,
+   "generated_at_utc": "2026-09-29T07:50:17+00:00",
+   "base_commit": "cc1d284f93c6dae248b3a8490d3caa5409913f60",
+   "files": 263,
    "counts": {
-    "files": 261,
-    "previous_baseline_files": 260,
-    "added_since_previous_baseline": 1,
+    "files": 263,
+    "previous_baseline_files": 261,
+    "added_since_previous_baseline": 2,
     "renamed": 13,
     "deleted": 0
    },
-   "note": "Baseline 2026-09-29 перестал сопровождаться: снимок сайта и документы архива актуализированы. Его содержимое сохранено в истории Git (01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json на коммите e0eb8d9)."
+   "note": "Baseline 2026-09-29 перестал сопровождаться: снимок сайта и документы архива актуализированы. Его содержимое сохранено в истории Git (01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json на коммите cc1d284)."
   }
  ],
  "validation": {

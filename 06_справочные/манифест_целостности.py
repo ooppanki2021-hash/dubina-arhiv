@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Пересборка манифеста целостности архива dubrava.
+"""Пересборка манифеста целостности архива dubina-arhiv.
 
 Описывает фактическое состояние архива: какие файлы есть, их размеры и SHA-256,
 что добавлено с прежней базы и что переименовано. Удалений не фиксирует — архив
@@ -139,7 +139,7 @@ def main():
         "date": stamp,
         "generated_at_utc": now.strftime("%Y-%m-%dT%H:%M:%S+00:00"),
         "base_commit": git("rev-parse", "HEAD"),
-        "repository": "https://github.com/ooppanki2021-hash/dubrava",
+        "repository": "https://github.com/ooppanki2021-hash/dubina-arhiv",
         "purpose": purpose,
         "counts": {
             "files": len(tracked),

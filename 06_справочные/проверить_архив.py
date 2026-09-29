@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only, offline integrity check for the Dubrava archive.
+"""Read-only, offline integrity check for the dubina-arhiv archive.
 
 Uses only the Python 3 standard library. Does not edit files or access the network.
 
