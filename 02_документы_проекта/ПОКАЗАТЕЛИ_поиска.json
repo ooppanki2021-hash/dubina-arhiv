@@ -1,0 +1,44 @@
+{
+ "schema_version": 1,
+ "date": "28.09.2026",
+ "taken_from": [
+  "Яндекс.Вебмастер, API zapahstarosti.ru: /search-urls/in-search/samples, /search-urls/events/samples, /indexing/samples, /recrawl/quota, /recrawl/queue",
+  "Яндекс.Метрика, счётчик 111871686, 60 дней"
+ ],
+ "written_to_report": "02_документы_проекта/АНАЛИТИКА_отчёт_28-09-2026.md",
+ "note": "Машинный снимок показателей для README и отчётов. Числа сняты из API, не из памяти. Обновлять только новым снятием из API и с новой датой — прежние значения сохранять в истории Git.",
+ "search": {
+  "hosts": 1,
+  "pages_in_search": 3,
+  "pages_in_search_list": [
+   "/",
+   "/chto-takoe-2-nonenal/",
+   "/o-proekte/"
+  ],
+  "versions_from": "22.09.2026",
+  "indexing_allowed": 25,
+  "sitemap_urls": 25,
+  "excluded_low_quality": 4,
+  "excluded_date": "09.09.2026",
+  "still_excluded": 3,
+  "still_excluded_list": [
+   "/kak-otlichit-istochnik-zapakha/",
+   "/karta-osetii/",
+   "/ubrat-zapah/"
+  ],
+  "http_host_removed": "28.09.2026 — запись http:zapahstarosti.ru:80 удалена по согласию автора, на главное зеркало не влияет",
+  "recrawl_quota_left": 142,
+  "recrawl_queue_done": 50
+ },
+ "metrika": {
+  "visits_60d": 98,
+  "visits_from_search": 8,
+  "visits_direct": 64,
+  "visits_referral": 21,
+  "visits_internal": 3,
+  "views_60d": 505,
+  "visitors_60d": 56,
+  "bounce_rate_percent": 54.1
+ },
+ "main_conclusion": "Узкое место — доверие к страницам, а не индексация: переобход исключённые как LOW_QUALITY страницы не возвращает."
+}

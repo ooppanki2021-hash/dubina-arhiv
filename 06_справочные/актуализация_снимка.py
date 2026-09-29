@@ -232,6 +232,14 @@ def main():
             cmd += ["--note", args.note]
         subprocess.run(cmd, check=True)
 
+    # --- 6. числа README: чтобы не отстали от нового снимка -------------------
+    # числа в README не правятся вручную: они считаются отсюда же (СВЕРКА, снимок,
+    # манифест, показатели). Иначе README снова разойдётся с фактом — это уже было 28.09.
+    cmd = [sys.executable, str(Path(__file__).with_name("числа_readme.py")), "--применить"]
+    if subprocess.run(cmd).returncode != 0:
+        print("!! числа README требуют внимания — смотрите сообщения выше "
+              "(скрипт числа_readme.py). Архив не тронут, снимок уже обновлён.")
+
 
 if __name__ == "__main__":
     main()
