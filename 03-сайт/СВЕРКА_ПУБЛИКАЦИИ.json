@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "checked_at_utc": "2026-09-27T23:34:09+00:00",
- "archive_base_commit": "da6bfbdda20cb4005905e70c19ab5a7891a29de0",
+ "checked_at_utc": "2026-10-02T19:05:50+00:00",
+ "archive_base_commit": "a72a94bb330e4108418a0d6215ca83909976cf98",
  "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
- "source_commit": "74151d0f305952ed4701b330fc11724791420b14",
+ "source_commit": "aa745f752e14f11bc182f047f547be5f1f62b352",
  "destination": "03-сайт/сайт_текущий",
- "note": "Скрипты синхронизации архива приведены в рабочее состояние: путь к репозиторию сайта параметром, даты и числа трекера считаются из файлов, история и переименования не затираются, сверка с живым сайтом идёт до записи в архив.",
+ "note": "Актуализация снимка 02.10.2026: приведено к коммиту aa745f7. Это 9 коммитов трекера «Шаги к мечте», сделанных после прошлой сверки 28.09: переход на АУСН и регистрация ИП, очередь производства гель→мыло→салфетки→дезодорант→порошок, первый список пансионатов, гель на первом месте. Фактически изменены два файла — app/index.html и app/sw.js. Сверено с живым сайтом: 178 адресов, HTTP 200 и SHA-256 совпадают. Прежние записи сохранены.",
  "source_files": [
   {
    "path": "404.html",
@@ -39,8 +39,8 @@
   },
   {
    "path": "app/index.html",
-   "bytes": 66208,
-   "sha256": "accea4c9fdff8bd33f701ff7caabd484a04604b310b93630ad827da76a57f05b"
+   "bytes": 76878,
+   "sha256": "10158654d990b835565ea1728f2be4e82a11950dbb228ddd8508649f5494bc36"
   },
   {
    "path": "app/manifest.webmanifest",
@@ -49,8 +49,8 @@
   },
   {
    "path": "app/sw.js",
-   "bytes": 832,
-   "sha256": "58ef763ee05c4993c3c6e7bb3d5a3225eb89cef564e57f42fad42d615f819668"
+   "bytes": 833,
+   "sha256": "69d5b3ab87258ff212e3ce8f1179594cf2d907eae3e109ad289a92aed17bb086"
   },
   {
    "path": "chto-takoe-2-nonenal/index.html",
@@ -954,8 +954,8 @@
    "url": "https://zapahstarosti.ru/app/",
    "final_url": "https://zapahstarosti.ru/app/",
    "status": 200,
-   "bytes": 66208,
-   "sha256": "accea4c9fdff8bd33f701ff7caabd484a04604b310b93630ad827da76a57f05b",
+   "bytes": 76878,
+   "sha256": "10158654d990b835565ea1728f2be4e82a11950dbb228ddd8508649f5494bc36",
    "matches_source": true
   },
   {
@@ -972,8 +972,8 @@
    "url": "https://zapahstarosti.ru/app/sw.js",
    "final_url": "https://zapahstarosti.ru/app/sw.js",
    "status": 200,
-   "bytes": 832,
-   "sha256": "58ef763ee05c4993c3c6e7bb3d5a3225eb89cef564e57f42fad42d615f819668",
+   "bytes": 833,
+   "sha256": "69d5b3ab87258ff212e3ce8f1179594cf2d907eae3e109ad289a92aed17bb086",
    "matches_source": true
   },
   {
@@ -2516,8 +2516,8 @@
  "tracker_versions": {
   "published": {
    "path": "03-сайт/сайт_текущий/app/index.html",
-   "bytes": 66208,
-   "sha256": "accea4c9fdff8bd33f701ff7caabd484a04604b310b93630ad827da76a57f05b"
+   "bytes": 76878,
+   "sha256": "10158654d990b835565ea1728f2be4e82a11950dbb228ddd8508649f5494bc36"
   },
   "newer_unpublished": {
    "path": "05_приложение/app/index.html",
@@ -2530,34 +2530,8 @@
   "standalone": "05_приложение/МЕЧТА_автономная_копия.html"
  },
  "changed_site_files": [
-  "404.html",
   "app/index.html",
-  "chto-takoe-2-nonenal/index.html",
-  "faq/index.html",
-  "index.html",
-  "kak-otlichit-istochnik-zapakha/index.html",
-  "kak-pogovorit-s-blizkim/index.html",
-  "kak-ubrat-zapah-iz-shkafa/index.html",
-  "kak-ubrat-zapah-s-divana/index.html",
-  "kak-ubrat-zapah-s-matrasa/index.html",
-  "kak-ubrat-zapah-v-sanuzle/index.html",
-  "kak-ubrat-zapah-v-stiralnoj-mashine/index.html",
-  "karta-kvartiry/index.html",
-  "kviz/index.html",
-  "lekarstva-i-zapah/index.html",
-  "material-metod/index.html",
-  "nabor/index.html",
-  "ochistitel-vozduha/index.html",
-  "odezhda-i-tekstil/index.html",
-  "politika-konfidencialnosti/index.html",
-  "poroshok-dlya-tekstila/index.html",
-  "robots.txt",
-  "soglasie-na-obrabotku/index.html",
-  "sredstva-ot-zapaha/index.html",
-  "tonik-protirka/index.html",
-  "ubrat-zapah/index.html",
-  "ventilyatsiya-i-vlazhnost/index.html",
-  "zapah-v-kvartire/index.html"
+  "app/sw.js"
  ],
  "production_writes": false,
  "site_fix_2026_09_19": {
@@ -3131,6 +3105,16 @@
    "ubrat-zapah/index.html",
    "ventilyatsiya-i-vlazhnost/index.html",
    "zapah-v-kvartire/index.html"
+  ],
+  "http_verified": "178 адресов, статус 200 и SHA-256 совпадают (CNAME не публикуется GitHub Pages)"
+ },
+ "task42_2026_10_02": {
+  "what": "Актуализация снимка 02.10.2026: приведено к коммиту aa745f7. Это 9 коммитов трекера «Шаги к мечте», сделанных после прошлой сверки 28.09: переход на АУСН и регистрация ИП, очередь производства гель→мыло→салфетки→дезодорант→порошок, первый список пансионатов, гель на первом месте. Фактически изменены два файла — app/index.html и app/sw.js. Сверено с живым сайтом: 178 адресов, HTTP 200 и SHA-256 совпадают. Прежние записи сохранены.",
+  "date": "2026-10-02",
+  "source_commit_range": "74151d0..aa745f7",
+  "changed_site_files": [
+   "app/index.html",
+   "app/sw.js"
   ],
   "http_verified": "178 адресов, статус 200 и SHA-256 совпадают (CNAME не публикуется GitHub Pages)"
  }
