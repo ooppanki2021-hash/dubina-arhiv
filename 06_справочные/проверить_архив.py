@@ -35,8 +35,23 @@ def file_at(relative):
     return path
 
 
+_DIGEST_CACHE = {}
+
+
 def digest(path):
-    return sha256(path.read_bytes()).hexdigest()
+    """SHA-256 файла с запоминанием результата.
+
+    Без кэша один прогон хешировал 39 МБ трижды: 284 файла в инвентаре, затем
+    те же 36 защищённых, затем те же 179 файлов снимка — 499 хешей вместо 284.
+    Кэш безопасен, потому что этот скрипт ничего не записывает: содержимое
+    файлов за один прогон не меняется.
+    """
+    key = str(Path(path).resolve())
+    cached = _DIGEST_CACHE.get(key)
+    if cached is None:
+        cached = sha256(Path(path).read_bytes()).hexdigest()
+        _DIGEST_CACHE[key] = cached
+    return cached
 
 
 class Page(HTMLParser):

@@ -73,7 +73,7 @@ def run_step(title, cmd):
     return p.returncode, out, dt
 
 
-def preflight(suho, need_identity):
+def preflight(сухо, need_identity):
     """Шаг 0. Возвращает список замечаний; падает, если продолжать нельзя."""
     print(f"{'─' * 72}\n[·] Предпроверка")
     problems = []

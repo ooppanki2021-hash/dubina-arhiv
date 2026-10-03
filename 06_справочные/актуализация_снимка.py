@@ -46,6 +46,12 @@ from datetime import datetime, timezone
 from hashlib import sha256
 from pathlib import Path
 
+# Общая логика подсчёта трекера: одна на этот скрипт и на числа_readme.py.
+# Раньше здесь лежала вторая копия, и расхождение между ними ничем не ловилось.
+# Вставка ниже импорта pathlib: Path нужен для вычисления каталога.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from общее import tracker_stats
+
 try:                                    # даты записей ведём по времени автора
     from zoneinfo import ZoneInfo
     LOCAL = ZoneInfo("Europe/Moscow")
@@ -96,14 +102,6 @@ def fetch(url):
         return e.code, url, b""
     except Exception as e:
         return "ошибка: " + str(e), url, b""
-
-
-def tracker_stats(path):
-    """Число этапов и поддействий трекера прямо из разметки, без ручных констант."""
-    text = path.read_text(encoding="utf-8")
-    steps = len(re.findall(r"\{n:'", text))
-    actions = len(re.findall(r"\{\s*t:'[^']*'\s*,\s*done:(?:true|false)\s*\}", text))
-    return steps, actions
 
 
 def locs(name):
