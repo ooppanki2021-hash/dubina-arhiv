@@ -70,7 +70,10 @@ SECTIONS = {
     'zapah-v-kvartire': 'ДОМ И ВОЗДУХ',
 }
 
-SITE = '/home/user/zapahstarosti'
+# Путь к рабочему репозиторию сайта. В архиве сайта нет — он живёт отдельно.
+# Задаётся переменной окружения SITE_REPO; значение по умолчанию сохранено
+# для совместимости с прежней рабочей средой автора.
+SITE = os.environ.get('SITE_REPO', '/home/user/zapahstarosti')
 
 
 def background():

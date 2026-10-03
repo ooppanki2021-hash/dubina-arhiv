@@ -37,6 +37,11 @@ CONTROL = ROOT / "01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОС
 METRICS = ROOT / "02_документы_проекта/ПОКАЗАТЕЛИ_поиска.json"
 RESUME = ROOT / "02_документы_проекта/РЕЗЮМЕ_ПРОЕКТА.md"
 README = ROOT / "README.md"
+# Документ передачи тоже содержит числа, которые устаревают после синхронизации
+# снимка: дата актуализации, коммит сайта, размер опубликованного трекера и число
+# поддействий. До 03.10.2026 он не был покрыт правилами и отстал от факта на одну
+# синхронизацию: 66 208 байт и 164 поддействия против фактических 76 878 и 153.
+PROCHTI = ROOT / "01_НАЧНИ_ОТСЮДА/ПРОЧТИ_ПЕРВЫМ.md"
 
 BAK = README.with_suffix(README.suffix + ".bak")
 
@@ -54,6 +59,18 @@ def count_files(path, pattern=None):
             continue
         n += 1
     return n
+
+
+def tracker_stats(path):
+    """Число этапов и поддействий трекера прямо из разметки, без ручных констант.
+
+    Логика та же, что в актуализация_снимка.py: иначе числа в документах и числа
+    в СВЕРКЕ считались бы разными способами и могли разойтись.
+    """
+    text = path.read_text(encoding="utf-8")
+    steps = len(re.findall(r"\{n:'", text))
+    actions = len(re.findall(r"\{\s*t:'[^']*'\s*,\s*done:(?:true|false)\s*\}", text))
+    return steps, actions
 
 
 def html_files(path):
@@ -92,6 +109,13 @@ def facts():
         "indexing_allowed": pub.get("indexing_allowed"),
         "sitemap_urls": pub.get("sitemap_urls"),
         "app_bytes": (SNAPSHOT / "app/index.html").stat().st_size,
+        # Опубликованная версия трекера — отдельное число: в ПРОЧТИ_ПЕРВЫМ.md оба
+        # сравниваются в одной строке. В СВЕРКЕ для published хранятся только bytes
+        # и sha256, этапы с поддействиями туда не пишутся, поэтому считаем прямо из
+        # разметки. Факт на 03.10.2026 — 173 поддействия, тогда как в документе
+        # стояло 164: число отстало дважды, от синхронизации снимка и от разметки.
+        "pub_steps": tracker_stats(SNAPSHOT / "app/index.html")[0],
+        "pub_actions": tracker_stats(SNAPSHOT / "app/index.html")[1],
         "new_app_bytes": (ROOT / "05_приложение/app/index.html").stat().st_size,
         "webp": count_files(SNAPSHOT / "images", lambda n: n.endswith(".webp")),
         "webp_used": len(webp),
@@ -133,6 +157,16 @@ def human(n):
 # --------------------------------------------------------------------------- #
 
 RULES = [
+    # Шапка README устаревала отдельно от тела: правила правили строки
+    # «коммит `X` (актуализация Y)» и «сверка Y, коммит сайта `X`», а верхний
+    # жирный абзац «Обновлён …: снимок сайта приведён к коммиту `X`» оставался
+    # на прежнем коммите. Отсюда расхождение 74151d0/aa745f7 внутри одного файла.
+    dict(id="шапка README: дата и коммит актуализации",
+         mode="replace",
+         find=r'''\*\*Обновлён \d{2}\.\d{2}\.\d{4}: снимок сайта приведён к коммиту `[0-9a-f]{7,40}''',
+         repl=r'''**Обновлён @sync_date@: снимок сайта приведён к коммиту `@commit8@''',
+         done=r'''\*\*Обновлён \d{2}\.\d{2}\.\d{4}: снимок сайта приведён к коммиту `[0-9a-f]{7,40}'''),
+
     dict(id="коммит снимка (раздел «Сайт и приложение»)",
          mode="replace",
          find=r"коммит `[0-9a-f]{7,40}` \(актуализация \d{2}\.\d{2}\.\d{4}\)",
@@ -217,6 +251,35 @@ RULES = [
          value="new_app_bytes_h"),
 ]
 
+# --------------------------------------------------------------------------- #
+# правила для ПРОЧТИ_ПЕРВЫМ.md — те же факты, другой документ
+# --------------------------------------------------------------------------- #
+
+RULES_PROCHTI = [
+    dict(id="ПРОЧТИ: дата актуализации",
+         mode="replace",
+         find=r'''\*\*Актуализация: \d{2}\.\d{2}\.\d{4}\*\*''',
+         repl=r'''**Актуализация: @sync_date@**'''),
+    dict(id="ПРОЧТИ: коммит публикации снимка",
+         mode="replace",
+         find=r'''приведён к публикации `[0-9a-f]{7,40}` от \d{2}\.\d{2}\.\d{4} \(сверено с живым сайтом побайтово, (\d+) файлов\)''',
+         repl=r'''приведён к публикации `@commit8@` от @sync_date@ (сверено с живым сайтом побайтово, @http_files@ файлов)'''),
+    dict(id="ПРОЧТИ: размер опубликованного трекера",
+         mode="replace",
+         find=r'''(\d{2} \d{3}) байт \(\*\*опубликованная\*\* версия трекера\)''',
+         repl=r'''@app_bytes_h@ байт (**опубликованная** версия трекера)'''),
+    dict(id="ПРОЧТИ: поддействия в строке «Не перепутать»",
+         mode="replace",
+         find=r'''поддействий \d+ в опубликованной и \d+ в новой''',
+         repl=r'''поддействий @pub_actions@ в опубликованной и @tracker_actions@ в новой'''),
+    dict(id="ПРОЧТИ: поддействия в строке «В трекере 20 этапов»",
+         mode="replace",
+         find=r'''поддействий \d+ в новой и \d+ в опубликованной''',
+         repl=r'''поддействий @tracker_actions@ в новой и @pub_actions@ в опубликованной'''),
+]
+
+TARGETS = [(README, RULES, "README"), (PROCHTI, RULES_PROCHTI, "ПРОЧТИ_ПЕРВЫМ.md")]
+
 
 def expand(repl, f):
     """@имя@ → значение из факта."""
@@ -246,77 +309,100 @@ def main():
         sys.exit("Нет данных для чисел: " + ", ".join(missing) +
                  "\nСначала актуализируйте снимок и показатели поиска.")
 
-    text = README.read_text(encoding="utf-8")
+    targets_changed = []
     print("ФАКТ (из файлов архива, не из памяти):")
     for k in ("commit8", "sync_date", "pub_files", "http_files", "snap_files",
               "content_pages", "indexing_allowed", "app_bytes_h", "new_app_bytes_h",
               "webp", "webp_used", "pages_fig", "png", "src_files", "scripts",
-              "tracker_steps", "tracker_actions", "manifest_files",
+              "tracker_steps", "tracker_actions", "pub_steps", "pub_actions",
+              "manifest_files",
               "metrics_date", "in_search", "visits", "from_search"):
         print(f"  {k:20} {f.get(k)}")
     print()
 
-    changed, ok, problems = 0, 0, []
-    for rule in RULES:
-        pat = re.compile(rule["find"])
-        hits = list(pat.finditer(text))
-        if rule["mode"] == "check":
-            want = f.get(rule["value"])
-            if want is None:
-                problems.append(f"{rule['id']}: нет факта для сверки ({rule['value']})")
-                continue
-            found = False
-            for m in hits:
-                nums = [g.replace(" ", "") for g in m.groups() if g]
-                if str(want).replace(" ", "") in nums:
-                    found = True
-            if found:
-                ok += 1
-                print(f"  сходится  {rule['id']}")
-            else:
-                problems.append(f"{rule['id']}: в README {hits and [m.group(0)[:60] for m in hits] or 'нет такого места'}, а факт {want}")
+    problems = []
+    for target, rules, name in TARGETS:
+        if not target.is_file():
+            problems.append(f"{name}: файл не найден — правило не применить")
             continue
+        text = target.read_text(encoding="utf-8")
+        bak = target.with_suffix(target.suffix + ".bak")
+        changed, ok = 0, 0
+        print(f"--- {name} ---")
+        for rule in rules:
+            pat = re.compile(rule["find"])
+            hits = list(pat.finditer(text))
+            if rule["mode"] == "check":
+                want = f.get(rule["value"])
+                if want is None:
+                    problems.append(f"{rule['id']}: нет факта для сверки ({rule['value']})")
+                    continue
+                found = False
+                for m in hits:
+                    nums = [g.replace(" ", "") for g in m.groups() if g]
+                    if str(want).replace(" ", "") in nums:
+                        found = True
+                if found:
+                    ok += 1
+                    print(f"  сходится  {rule['id']}")
+                else:
+                    problems.append(f"{rule['id']}: в {name} {hits and [m.group(0)[:60] for m in hits] or 'нет такого места'}, а факт {want}")
+                continue
 
-        if len(hits) != 1 and rule.get("done"):
-            # правка могла быть внесена раньше: ищем уже применённый текст
-            done_hits = list(re.finditer(rule["done"], text))
-            if len(done_hits) == 1:
+            if len(hits) != 1 and rule.get("done"):
+                # правка могла быть внесена раньше: ищем уже применённый текст
+                done_hits = list(re.finditer(rule["done"], text))
+                if len(done_hits) == 1:
+                    ok += 1
+                    print(f"  уже верно {rule['id']}")
+                    continue
+            if len(hits) != 1:
+                problems.append(f"{rule['id']}: найдено {len(hits)} совпадений, жду ровно одно. "
+                                "Правило устарело или текст правлен вручную — сверьте правило с README.")
+                continue
+            new_text = pat.sub(lambda m: expand(rule["repl"], f).replace("\\", "\\\\"), text, count=1)
+            if new_text == text:
                 ok += 1
                 print(f"  уже верно {rule['id']}")
                 continue
-        if len(hits) != 1:
-            problems.append(f"{rule['id']}: найдено {len(hits)} совпадений, жду ровно одно. "
-                            "Правило устарело или текст правлен вручную — сверьте правило с README.")
-            continue
-        new_text = pat.sub(lambda m: expand(rule["repl"], f).replace("\\", "\\\\"), text, count=1)
-        if new_text == text:
-            ok += 1
-            print(f"  уже верно {rule['id']}")
-            continue
-        if not apply:
-            print(f"  расходится {rule['id']}")
-            print(f"      было:  {hits[0].group(0)[:100]}")
-            print(f"      стало: {expand(rule['repl'], f)[:100]}")
-            continue
-        # страховка: копия, правка, проверка, откат при провале
-        if not BAK.exists():
-            BAK.write_text(text, encoding="utf-8")
-        text = new_text
-        changed += 1
-        print(f"  исправлено {rule['id']}")
+            if not apply:
+                print(f"  расходится {rule['id']}")
+                print(f"      было:  {hits[0].group(0)[:100]}")
+                print(f"      стало: {expand(rule['repl'], f)[:100]}")
+                continue
+            # страховка: копия, правка, проверка, откат при провале
+            # страховка пишется рядом с тем файлом, который правим: до 03.10.2026
+            # здесь стояла глобальная BAK (= README.md.bak), и для второго документа
+            # резервная копия уехала бы в чужой файл
+            if not bak.exists():
+                bak.write_text(text, encoding="utf-8")
+            text = new_text
+            changed += 1
+            print(f"  исправлено {rule['id']}")
 
-    if apply and changed:
-        README.write_text(text, encoding="utf-8")
-        err = verify(README)
-        if err:
-            README.write_text(BAK.read_text(encoding="utf-8"), encoding="utf-8")
-            sys.exit(f"!!! ПРОВЕРКА ПОСЛЕ ПРАВКИ НЕ ПРОЙДЕНА: {err}\n"
-                     f"README восстановлен из {BAK.name}")
-        # правка подтверждена и покрыта историей Git — резервная копия больше не нужна
-        BAK.unlink()
-        print(f"\nREADME приведён к факту: правок {changed}. Проверка после правки пройдена.")
+        if apply and changed:
+            target.write_text(text, encoding="utf-8")
+            err = verify(target)
+            if err:
+                if bak.exists():
+                    target.write_text(bak.read_text(encoding="utf-8"), encoding="utf-8")
+                    sys.exit(f"!!! ПРОВЕРКА ПОСЛЕ ПРАВКИ НЕ ПРОЙДЕНА в {name}: {err}\n"
+                             f"Файл восстановлен из {bak.name}")
+                sys.exit(f"!!! ПРОВЕРКА ПОСЛЕ ПРАВКИ НЕ ПРОЙДЕНА в {name}: {err}")
+            # правка подтверждена и покрыта историей Git — копия больше не нужна
+            if bak.exists():
+                bak.unlink()
+            targets_changed.append((name, changed))
+            print(f"{name}: приведён к факту, правок {changed}. Проверка пройдена.")
+        elif apply:
+            print(f"{name}: уже совпадает с фактом — правок не потребовалось.")
+        print(f"  сверок сходится: {ok}\n")
+
+    if apply and targets_changed:
+        print("Приведены к факту: "
+              + ", ".join(f"{n} ({c})" for n, c in targets_changed) + ".")
     elif apply:
-        print("\nREADME уже совпадает с фактом — правок не потребовалось.")
+        print("Все документы уже совпадают с фактом — правок не потребовалось.")
 
     if problems:
         print("\nТРЕБУЕТ ВНИМАНИЯ:")
@@ -324,7 +410,7 @@ def main():
             print("  !!", p)
         return 1
     if not apply:
-        print(f"\nСверок сходится: {ok}. Для правки: --применить")
+        print("Для правки: --применить")
     return 0
 
 

@@ -53,10 +53,26 @@ def load_token():
              "или положите рядом файл token.txt с одной строкой — самим токеном.")
 
 
-TOKEN = load_token()
+# Токен загружается при первом обращении, а не при импорте модуля: иначе скрипт
+# падал на строке импорта и не давал даже --help. Ошибка остаётся той же.
+TOKEN = ""
+
+
+def token():
+    global TOKEN
+    if not TOKEN:
+        TOKEN = load_token()
+    return TOKEN
+
+
 API = "https://api.webmaster.yandex.net"
 # карта берётся из снимка архива: он всегда на месте и сверен с живым сайтом
-SITEMAP = "/home/user/dubina-arhiv/03-сайт/сайт_текущий/sitemap.xml"
+# Карта берётся из снимка архива. Путь считаем от расположения самого скрипта,
+# а не от жёстко прописанной папки: архив может лежать где угодно.
+# Переопределяется переменной окружения SITEMAP.
+_HERE = Path(__file__).resolve().parent
+SITEMAP = Path(os.environ.get(
+    "SITEMAP", _HERE.parent / "03-сайт/сайт_текущий/sitemap.xml"))
 HOST = "https:zapahstarosti.ru:443"
 NS = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 VERSIONS = ["v4.2", "v4.1", "v4"]  # в порядке предпочтения; мёртвые отсекаются сами
@@ -65,7 +81,7 @@ VERSIONS = ["v4.2", "v4.1", "v4"]  # в порядке предпочтения;
 def api(version, path, method="GET", body=None):
     """Запрос к API. Возвращает (http_code, dict)."""
     req = urllib.request.Request(f"{API}/{version}{path}", method=method)
-    req.add_header("Authorization", "OAuth " + TOKEN)
+    req.add_header("Authorization", "OAuth " + token())
     data = None
     if body is not None:
         data = json.dumps(body).encode()

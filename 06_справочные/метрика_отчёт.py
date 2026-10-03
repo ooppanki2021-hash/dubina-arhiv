@@ -31,9 +31,11 @@ def load_token():
     if env:
         return env
     here = Path(__file__).resolve().parent
+    # Кандидаты считаем от расположения скрипта: жёстко прописанная папка
+    # /home/user/ убрана — в архиве она не воспроизводится.
     for cand in (here / "webmaster_recrawl.py",
                  here.parent / "webmaster_recrawl.py",
-                 Path("/home/user/webmaster_recrawl.py")):
+                 Path(os.environ.get("WEBMASTER_SCRIPT", "/dev/null"))):
         try:
             m = re.search(r'TOKEN\s*=\s*"([^"]+)"', cand.read_text(encoding="utf-8"))
             if m:
@@ -44,7 +46,18 @@ def load_token():
              "или положите рядом файл webmaster_recrawl.py со строкой TOKEN = \"...\".")
 
 
-TOKEN = load_token()
+# Токен загружается при первом обращении, а не при импорте модуля: иначе скрипт
+# падал на строке импорта и не давал даже --help. Ошибка остаётся той же.
+TOKEN = ''
+
+
+def token():
+    global TOKEN
+    if not TOKEN:
+        TOKEN = load_token()
+    return TOKEN
+
+
 CID = '111871686'          # счётчик Метрики
 UID = '1773537030'         # user_id Вебмастера
 HOST = 'https:zapahstarosti.ru:443'
@@ -54,7 +67,7 @@ API_W = 'https://api.webmaster.yandex.net'
 
 def call(url):
     req = urllib.request.Request(url, method='GET')
-    req.add_header('Authorization', 'OAuth ' + TOKEN)
+    req.add_header('Authorization', 'OAuth ' + token())
     req.add_header('User-Agent', 'otchet/1.0')
     try:
         with urllib.request.urlopen(req, timeout=90) as r:

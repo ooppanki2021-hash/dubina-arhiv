@@ -151,8 +151,12 @@ def main():
             print(' - ' + message)
         return 1
     print('Проверка пройдена.')
-    print(f'В инвентаре {len(inventory)} файлов, удалений нет; '
-          f'{len(control["protected_unchanged_files"])} защищённых файлов на месте.')
+    # len(inventory) на единицу меньше counts['files']: сам манифест исключён из
+    # списка, чтобы не сверять его хеш с самим собой. Раньше строка печаталась как
+    # «в инвентаре N файлов» и расходилась с manifest_files на единицу — выглядело
+    # как расхождение, которого на самом деле нет.
+    print(f'В инвентаре {len(inventory)} файлов + сам манифест = {control["counts"]["files"]}; '
+          f'удалений нет; {len(control["protected_unchanged_files"])} защищённых файлов на месте.')
     print(f'Снимок сверен с {len(publication["source_files"])} файлами публикации '
           f'(сайт, коммит {publication["source_commit"][:7]}).')
     print(f'{len(publication["http_checks"])} HTTP-сопоставлений относятся к дате журнала; '
