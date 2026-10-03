@@ -23,7 +23,9 @@
    лежал бы вечно и мешал пересборке манифеста.
 1. числа_readme.py --применить — приводит числа в документах к факту.
 2. git add -A — чтобы манифест увидел новые файлы: он берёт их из индекса.
-3. манифест_целостности.py — пересобирается ПОСЛЕДНИМ из содержательных шагов.
+3. манифест_целостности.py — пересобирается ПОСЛЕДНИМ из содержательных шагов,
+   и только если изменилось что-то кроме самого манифеста: он вшивает метку
+   времени, поэтому холостая пересборка оставила бы ложный diff.
 4. git add -A ещё раз — манифест сам изменился.
 5. проверить_архив.py — итоговая самопроверка.
 6. Коммит, если передан --коммит.
@@ -49,6 +51,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TOOLS = ROOT / "06_справочные"
+MANIFEST_REL = "01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json"
 
 
 def git(*args, check=True, capture=True):
@@ -144,28 +147,39 @@ def main():
         print("\n--сухо: дальше ничего не выполняется.")
         return 0
 
-    steps = []
-    if not args.пропуск_чисел:
-        steps.append(("Шаг 1. Числа в документах приводятся к факту",
-                      [sys.executable, str(TOOLS / "числа_readme.py"), "--применить"]))
-    steps.append(("Шаг 2. git add -A — манифест берёт файлы из индекса",
-                  ["git", "-c", "core.quotepath=false", "add", "-A"]))
-
-    man = [sys.executable, str(TOOLS / "манифест_целостности.py")]
-    if args.note:
-        man += ["--note", args.note]
-    steps.append(("Шаг 3. Манифест пересобирается последним", man))
-    steps.append(("Шаг 4. git add -A — манифест сам изменился",
-                  ["git", "-c", "core.quotepath=false", "add", "-A"]))
-    steps.append(("Шаг 5. Итоговая самопроверка",
-                  [sys.executable, str(TOOLS / "проверить_архив.py")]))
-
-    for title, cmd in steps:
-        code, out, _dt = run_step(title, cmd)
+    def step(title, cmd):
+        code, _out, _dt = run_step(title, cmd)
         if code != 0:
             print(f"\nОСТАНОВЛЕНО НА: {title}")
             print("Порядок нарушать нельзя: следующий шаг опирается на результат этого.")
-            return code
+            sys.exit(code)
+
+    if not args.пропуск_чисел:
+        step("Шаг 1. Числа в документах приводятся к факту",
+             [sys.executable, str(TOOLS / "числа_readme.py"), "--применить"])
+
+    step("Шаг 2. git add -A — манифест берёт файлы из индекса",
+         ["git", "-c", "core.quotepath=false", "add", "-A"])
+
+    # Манифест вшивает generated_at_utc, поэтому его пересборка всегда меняет
+    # файл и оставляет ложный diff, даже если по существу ничего не изменилось.
+    # Пересобираем только когда изменилось что-то кроме самого манифеста:
+    # иначе шаг лишний, а рабочая копия перестаёт быть чистой после проверки.
+    staged = [x for x in git("diff", "--cached", "--name-only").stdout.splitlines() if x]
+    changed = [x for x in staged if x != MANIFEST_REL]
+    if changed:
+        man = [sys.executable, str(TOOLS / "манифест_целостности.py")]
+        if args.note:
+            man += ["--note", args.note]
+        step(f"Шаг 3. Манифест пересобирается последним (изменилось файлов: {len(changed)})", man)
+        step("Шаг 4. git add -A — манифест сам изменился",
+             ["git", "-c", "core.quotepath=false", "add", "-A"])
+    else:
+        print(f"\n{'─' * 72}\n[–] Шаг 3–4 пропущены: кроме самого манифеста ничего не изменилось.")
+        print("      Пересборка оставила бы ложный diff из-за метки времени.")
+
+    step("Шаг 5. Итоговая самопроверка",
+         [sys.executable, str(TOOLS / "проверить_архив.py")])
 
     # --- сводка -----------------------------------------------------------
     print(f"\n{'=' * 72}\nСВОДКА")
