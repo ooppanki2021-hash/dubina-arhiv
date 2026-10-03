@@ -77,6 +77,9 @@ def previous_manifest():
 def main():
     ap = argparse.ArgumentParser(description="Пересборка манифеста целостности архива")
     ap.add_argument("--note", help="что изменилось с прежней базы — попадёт в purpose")
+    ap.add_argument("--разрешить-исчезновение", dest="allow_gone", default="",
+                    help="причина, по которой исчезновение файлов допустимо; "
+                         "без неё пересборка останавливается")
     args = ap.parse_args()
 
     tracked = git("ls-files").splitlines()
@@ -131,11 +134,24 @@ def main():
     baselines.sort(key=lambda b: b.get("date") or "")
 
     added = len(new_paths - old_paths)
-    gone = len(old_paths - new_paths)
-    if gone:
+    gone_paths = sorted(old_paths - new_paths)
+    gone = len(gone_paths)
+    approved_removals = {}
+    if gone and not args.allow_gone:
         sys.exit(f"В архиве исчезло файлов с прежней базы: {gone}. "
                  f"Архив пополняется и правится, но не сокращается — проверьте, "
-                 f"что удаление не случайное, прежде чем продолжать.")
+                 f"что удаление не случайное, прежде чем продолжать.\n"
+                 f"Исчезли: {', '.join(gone_paths)}\n"
+                 f"Если удаление намеренное, повторите с явной причиной:\n"
+                 f'  манифест_целостности.py --разрешить-исчезновение "почему можно" …')
+    if gone:
+        # Правило остаётся в силе: исчезновение возможно только с явно названной
+        # причиной, и причина записывается в сам манифест, а не теряется в логе.
+        approved_removals = {
+            "причина": args.allow_gone,
+            "файлов": gone,
+            "список": gone_paths,
+        }
 
     if args.note:
         purpose = ("Инвентарь архива и описание согласованной актуализации без удаления. "
@@ -159,9 +175,14 @@ def main():
             "previous_baseline_files": len(old_paths),
             "added_since_previous_baseline": added,
             "renamed": len(renames),
+            # deleted_files ниже — это НЕЗАРЕГИСТРИРОВАННЫЕ исчезновения, и
+            # проверить_архив.py требует, чтобы список был пуст. Разрешённые
+            # автором удаления учитываются отдельно в approved_removals.
             "deleted": 0,
+            "removed_with_author_approval": gone,
         },
         "deleted_files": [],
+        "approved_removals": approved_removals,
         "renames_acknowledged": renames,
         "files": files,
         "protected_unchanged_files": protected,

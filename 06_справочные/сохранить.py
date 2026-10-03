@@ -73,6 +73,35 @@ def run_step(title, cmd):
     return p.returncode, out, dt
 
 
+def clean_junk(сухо, quiet=False):
+    """Убирает мусор, который создают сами инструменты архива.
+
+    Вызывается дважды: до шагов и после шага 1. Второй вызов обязателен —
+    числа_readme.py импортирует общее.py, и Python создаёт __pycache__ заново
+    уже после предпроверки; git add -A подхватил бы его. Так в архив однажды
+    попал .pyc, и .gitignore теперь прикрывает это со своей стороны.
+
+    Возвращает число убранных объектов.
+    """
+    pycache = [p for p in ROOT.rglob("__pycache__") if ".git" not in p.parts and p.is_dir()]
+    baks = sorted(p for p in ROOT.rglob("*.bak") if ".git" not in p.parts)
+    if not pycache and not baks:
+        if not quiet:
+            print("      мусора от инструментов нет")
+        return 0
+
+    print(f"      __pycache__: {len(pycache)}, .bak: {len(baks)}"
+          + (" — убраны" if not сухо else " — были бы убраны"))
+    for p in baks:
+        print(f"        {p.relative_to(ROOT)}")
+    if not сухо:
+        for p in pycache:
+            shutil.rmtree(p, ignore_errors=True)
+        for p in baks:
+            p.unlink(missing_ok=True)
+    return len(pycache) + len(baks)
+
+
 def preflight(сухо, need_identity):
     """Шаг 0. Возвращает список замечаний; падает, если продолжать нельзя."""
     print(f"{'─' * 72}\n[·] Предпроверка")
@@ -98,25 +127,7 @@ def preflight(сухо, need_identity):
     else:
         print(f"      git-идентичность: {ident}")
 
-    # мусор от инструментов
-    pycache = [p for p in ROOT.rglob("__pycache__") if ".git" not in p.parts and p.is_dir()]
-    baks = sorted(p for p in ROOT.rglob("*.bak") if ".git" not in p.parts)
-
-    if pycache:
-        print(f"      __pycache__: {len(pycache)} каталогов"
-              + (" — убраны" if not сухо else " — были бы убраны"))
-        if not сухо:
-            for p in pycache:
-                shutil.rmtree(p, ignore_errors=True)
-    if baks:
-        print(f"      .bak: {len(baks)}" + (" — удалены" if not сухо else " — были бы удалены"))
-        for p in baks:
-            print(f"        {p.relative_to(ROOT)}")
-        if not сухо:
-            for p in baks:
-                p.unlink(missing_ok=True)
-    if not pycache and not baks:
-        print("      мусора от инструментов нет")
+    clean_junk(сухо, quiet=True)
 
     dirty = git("status", "--porcelain").stdout.strip()
     print(f"      незакоммиченных изменений: {len(dirty.splitlines()) if dirty else 0}")
@@ -128,6 +139,8 @@ def main():
     ap.add_argument("--note", default="", help="пояснение для манифеста")
     ap.add_argument("--коммит", dest="commit", default="", help="сообщение коммита")
     ap.add_argument("--сухо", action="store_true", help="только отчёт, ничего не менять")
+    ap.add_argument("--разрешить-удаление", dest="allow_delete", default="",
+                    help="причина, по которой удаление допустимо; без неё удаления блокируются")
     ap.add_argument("--пропуск-чисел", action="store_true",
                     help="не запускать числа_readme.py (если правка его не касается)")
     # флаг --справка для единообразия с остальными скриптами архива
@@ -158,6 +171,10 @@ def main():
         step("Шаг 1. Числа в документах приводятся к факту",
              [sys.executable, str(TOOLS / "числа_readme.py"), "--применить"])
 
+    # Шаг 1 импортирует общее.py, и Python снова создаёт __pycache__. Убираем
+    # повторно, ДО git add -A, иначе служебный байткод уедет в коммит.
+    clean_junk(args.сухо, quiet=True)
+
     step("Шаг 2. git add -A — манифест берёт файлы из индекса",
          ["git", "-c", "core.quotepath=false", "add", "-A"])
 
@@ -171,6 +188,9 @@ def main():
         man = [sys.executable, str(TOOLS / "манифест_целостности.py")]
         if args.note:
             man += ["--note", args.note]
+        if args.allow_delete:
+            # причина пробрасывается в манифест и записывается там, а не теряется
+            man += ["--разрешить-исчезновение", args.allow_delete]
         step(f"Шаг 3. Манифест пересобирается последним (изменилось файлов: {len(changed)})", man)
         step("Шаг 4. git add -A — манифест сам изменился",
              ["git", "-c", "core.quotepath=false", "add", "-A"])
@@ -191,9 +211,15 @@ def main():
     print(f"  к коммиту подготовлено: новых {len(adds)}, изменённых {len(mods)}, "
           f"переименований {len(rens)}, удалений {len(dels)}")
     if dels:
-        print("  ⚠ УДАЛЕНИЯ. Правило архива — пополняется и правится, но не сокращается.")
-        print("    Коммит не создан: сначала убедитесь, что удаление намеренное.")
-        return 3
+        for d in dels:
+            print(f"    {d}")
+        if not args.allow_delete:
+            print("  ⚠ УДАЛЕНИЯ. Правило архива — пополняется и правится, но не сокращается.")
+            print("    Коммит не создан. Если удаление действительно намеренное,")
+            print("    повторите с явной причиной:")
+            print('    сохранить.py --разрешить-удаление "почему это можно удалить" ...')
+            return 3
+        print(f"  ⚠ удаления разрешены явно, причина: {args.allow_delete}")
 
     if args.commit:
         git("commit", "-q", "-m", args.commit)
