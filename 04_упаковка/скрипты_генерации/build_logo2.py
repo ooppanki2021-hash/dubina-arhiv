@@ -7,9 +7,26 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import numpy as np, math
 from scipy import ndimage
+# Пути считаются от расположения самого файла, поэтому запускать можно из любой
+# папки (правлено 03.10.2026). Раньше часть скриптов работала только из
+# финальные_макеты/, а make_spines_light.py — только из скрипты_генерации/.
+# Каталог шрифтов задаётся переменными FONTS_DIR и DEJAVU_DIR; значения по
+# умолчанию — прежние пути. Логика, тексты, координаты, цвета и сиды не менялись.
+import os, tempfile
+from pathlib import Path
+_HERE = Path(__file__).resolve().parent; _PACK = _HERE.parent
+IN_DIR = _PACK / 'исходники_дизайнера'; OUT_DIR = _PACK / 'финальные_макеты'
+# Montserrat лежит в архиве (04_упаковка/шрифты/Montserrat, лицензия OFL 1.1).
+# Переменная FONTS_DIR переопределяет каталог; прежний путь /home/user/tools/fonts
+# больше не требуется.
+FONTS = (os.environ.get('FONTS_DIR') or str(_PACK / 'шрифты' / 'Montserrat')).rstrip('/')
+DEJAVU = os.environ.get('DEJAVU_DIR', '/usr/share/fonts/truetype/dejavu').rstrip('/')
 
 OCHRE=(197,135,49); INK=(43,30,24); LEAF=(30,62,40)
-face=Image.open('uploads/УСТАРЕЛО_порошок_цветной_40plus_лицо.png').convert('RGB')
+# Папка uploads/ в архиве не сохранена. Файл того же имени лежит в
+# исходники_дизайнера/; подстановка проверена побайтовым воспроизведением
+# архивного УСТАРЕЛО_логотип_на_фоне.png — совпало, значит файл тот же.
+face=Image.open(IN_DIR / 'УСТАРЕЛО_порошок_цветной_40plus_лицо.png').convert('RGB')
 
 # ---------- 1. слово ДУБРАВА с лица (чистое, без колец и 40+) ----------
 w=face.crop((258,314,416,360))
@@ -83,7 +100,7 @@ ring=ring.resize((D,D),Image.LANCZOS)
 
 # ---------- 4. 40+ узкое, охра ----------
 size=int(WH*0.82)
-fnt=ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",size)
+fnt=ImageFont.truetype(DEJAVU + "/DejaVuSans.ttf",size)
 tmp=Image.new('L',(size*3,size*2),0)
 ImageDraw.Draw(tmp).text((0,0),"40+",font=fnt,fill=255)
 tmp=tmp.crop(tmp.getbbox())
@@ -102,6 +119,6 @@ out.paste(ring,(M,M+(Ht-D)//2),ring)
 out.paste(word,(M+D+GAP1,base),word)
 out.paste(plus,(M+D+GAP1+WW+GAP2, base+WH-plus.size[1]-int(WH*0.06)),plus)
 
-out.save('УСТАРЕЛО_логотип.png'); print('ok',out.size)
+out.save(OUT_DIR / 'УСТАРЕЛО_логотип.png'); print('ok',out.size)
 prev=Image.new('RGB',out.size,(243,229,207)); prev.paste(out,(0,0),out)
-prev.save('/tmp/lp.png')
+prev.save(Path(tempfile.gettempdir()) / 'lp.png')   # превью, не вход

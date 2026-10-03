@@ -1,8 +1,31 @@
 # Мыло, лицо v2: правки текста поверх v1 (ДУБИНА, ПРОТИВ ВОЗРАСТНОГО ЗАПАХА, 90 г)
 from PIL import Image,ImageDraw,ImageFont
 import numpy as np,cv2
-F='/home/user/tools/fonts/Montserrat-'
-im=Image.open('../исходники_дизайнера/мыло_лицо_основа_для_скрипта.png').convert('RGB');a=np.array(im).astype(int)
+# Пути считаются от расположения самого файла, поэтому запускать можно из любой
+# папки (правлено 03.10.2026). Раньше часть скриптов работала только из
+# финальные_макеты/, а make_spines_light.py — только из скрипты_генерации/.
+# Каталог шрифтов задаётся переменными FONTS_DIR и DEJAVU_DIR; значения по
+# умолчанию — прежние пути. Логика, тексты, координаты, цвета и сиды не менялись.
+import os, tempfile
+from pathlib import Path
+_HERE = Path(__file__).resolve().parent; _PACK = _HERE.parent
+IN_DIR = _PACK / 'исходники_дизайнера'; OUT_DIR = _PACK / 'финальные_макеты'
+# Montserrat лежит в архиве (04_упаковка/шрифты/Montserrat, лицензия OFL 1.1).
+# Переменная FONTS_DIR переопределяет каталог; прежний путь /home/user/tools/fonts
+# больше не требуется.
+FONTS = (os.environ.get('FONTS_DIR') or str(_PACK / 'шрифты' / 'Montserrat')).rstrip('/')
+DEJAVU = os.environ.get('DEJAVU_DIR', '/usr/share/fonts/truetype/dejavu').rstrip('/')
+import sys
+def _need_faces(*names):
+    miss = [f'Montserrat-{x}.ttf' for x in names if not (Path(FONTS) / f'Montserrat-{x}.ttf').exists()]
+    if miss:
+        sys.exit(f"Нет шрифтов в {FONTS}: {', '.join(miss)}.\n"
+                 "Montserrat распространяется по лицензии OFL 1.1 и лежит в архиве:\n"
+                 "04_упаковка/шрифты/Montserrat/. Если каталог пуст — скачайте начертания\n"
+                 "из https://github.com/JulietaUla/Montserrat или задайте FONTS_DIR.")
+_need_faces('Bold','Regular','Medium','ExtraBold')
+F=FONTS + '/Montserrat-'
+im=Image.open(IN_DIR / 'мыло_лицо_основа_для_скрипта.png').convert('RGB');a=np.array(im).astype(int)
 H,W=a.shape[:2];m=np.zeros((H,W),np.uint8)
 s=a.sum(2)
 def reg(x0,y0,x1,y1,cond): 
@@ -28,7 +51,7 @@ def text(x,ytop,t,f,fill,anchor='l'):
     d.text((X,ytop-hb[1]),t,font=f,fill=fill)
     return X+b[0]+w
 # логотип вдвое меньше, по центру коробки (ось x=686), центр по y=210
-mark=Image.open('../исходники_дизайнера/знак_v2_A_для_скрипта.png').convert('RGBA'); mark=mark.crop(mark.getbbox()); mark=mark.resize((round(mark.size[0]*42/mark.size[1]),42),Image.LANCZOS)
+mark=Image.open(IN_DIR / 'знак_v2_A_для_скрипта.png').convert('RGBA'); mark=mark.crop(mark.getbbox()); mark=mark.resize((round(mark.size[0]*42/mark.size[1]),42),Image.LANCZOS)
 fb=cap(F+'Bold.ttf',14);f4=cap(F+'Regular.ttf',12)
 w1=fb.getbbox('ДУБИНА');w2=f4.getbbox('40+')
 gw=mark.size[0]+9+(w1[2]-w1[0])+4+(w2[2]-w2[0]);x0=398  # левый край, как у исходного логотипа
@@ -39,4 +62,4 @@ fw=cap(F+'ExtraBold.ttf',37)
 text(686,366,'ВОЗРАСТНОГО',fw,CREAM,'c'); text(686,424,'ЗАПАХА',fw,CREAM,'c')
 fs=cap(F+'Medium.ttf',14)
 for i,t_ in enumerate(['pH 5,3','с танинами дуба']): text(969,549+i*23,t_,fs,INK,'r')
-im.save('ДУБИНА_мыло_лицо.png');print('ok')
+im.save(OUT_DIR / 'ДУБИНА_мыло_лицо.png');print('ok')

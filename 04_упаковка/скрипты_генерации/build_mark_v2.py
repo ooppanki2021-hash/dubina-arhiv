@@ -3,6 +3,20 @@
    Вариант A — лист с прожилками; вариант B — лист + жёлудь."""
 from PIL import Image, ImageDraw
 import numpy as np, math, sys
+# Пути считаются от расположения самого файла, поэтому запускать можно из любой
+# папки (правлено 03.10.2026). Раньше часть скриптов работала только из
+# финальные_макеты/, а make_spines_light.py — только из скрипты_генерации/.
+# Каталог шрифтов задаётся переменными FONTS_DIR и DEJAVU_DIR; значения по
+# умолчанию — прежние пути. Логика, тексты, координаты, цвета и сиды не менялись.
+import os, tempfile
+from pathlib import Path
+_HERE = Path(__file__).resolve().parent; _PACK = _HERE.parent
+IN_DIR = _PACK / 'исходники_дизайнера'; OUT_DIR = _PACK / 'финальные_макеты'
+# Montserrat лежит в архиве (04_упаковка/шрифты/Montserrat, лицензия OFL 1.1).
+# Переменная FONTS_DIR переопределяет каталог; прежний путь /home/user/tools/fonts
+# больше не требуется.
+FONTS = (os.environ.get('FONTS_DIR') or str(_PACK / 'шрифты' / 'Montserrat')).rstrip('/')
+DEJAVU = os.environ.get('DEJAVU_DIR', '/usr/share/fonts/truetype/dejavu').rstrip('/')
 INK=(43,30,24); LEAF=(30,62,40); CREAM=(246,239,222); OCHRE=(197,135,49)
 S=2400; ring=Image.new('RGBA',(S,S),(0,0,0,0)); d=ImageDraw.Draw(ring); cx=cy=S/2
 rng=np.random.default_rng(7)
@@ -61,6 +75,6 @@ for name,ac in [('A',False),('B',True)]:
     knock=knock.point(lambda v:255 if v>20 else 0).filter(ImageFilter.MaxFilter(int(S*0.018)//2*2+1))
     r.putalpha(ImageChops.subtract(r.getchannel('A'),knock))   # просвет вокруг листа
     r.alpha_composite(lf,pos)
-    out=r.resize((1200,1200),Image.LANCZOS); out.save(f'../исходники_дизайнера/знак_v2_{name}_для_скрипта.png')
+    out=r.resize((1200,1200),Image.LANCZOS); out.save(IN_DIR / f'знак_v2_{name}_для_скрипта.png')
 
 print('ok')

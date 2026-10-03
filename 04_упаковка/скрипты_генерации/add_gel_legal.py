@@ -1,10 +1,23 @@
 # -*- coding: utf-8 -*-
 from PIL import Image, ImageDraw, ImageFont
 
-SRC='УСТАРЕЛО_спина_гель_v1.png'; OUT='УСТАРЕЛО_спина_гель_v2.png'
+# Пути считаются от расположения самого файла (правлено 03.10.2026).
+import os, sys
+from pathlib import Path
+_HERE = Path(__file__).resolve().parent; _PACK = _HERE.parent
+OUT_DIR = _PACK / 'финальные_макеты'
+DEJAVU = os.environ.get('DEJAVU_DIR', '/usr/share/fonts/truetype/dejavu').rstrip('/')
+SRC=OUT_DIR / 'УСТАРЕЛО_спина_гель_v1.png'; OUT=OUT_DIR / 'УСТАРЕЛО_спина_гель_v2.png'
+if not SRC.exists():
+    sys.exit(
+        f"Нет входного файла: {SRC.name}\n"
+        "Конвейер был: _v1 -> (этот скрипт) -> _v2 -> swap_logo.py -> _v3.\n"
+        "В архиве сохранён только конечный _v3, промежуточные _v1 и _v2 не\n"
+        "архивировались. Для пересборки цепочки нужен исходный _v1 — его здесь нет.\n"
+        "Правка текста поверх него бессмысленна без самого исходника.")
 GREEN=(31,69,53); INK=(59,44,30)
-F ="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FB="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+F =DEJAVU + "/DejaVuSans.ttf"
+FB=DEJAVU + "/DejaVuSans-Bold.ttf"
 
 im=Image.open(SRC).convert('RGB'); W,H=im.size
 BL, BR, BT, BB = 22, 839, 22, 1217          # рамка исходника

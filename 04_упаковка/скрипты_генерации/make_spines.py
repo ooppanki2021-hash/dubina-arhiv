@@ -1,9 +1,23 @@
 # -*- coding: utf-8 -*-
 from PIL import Image, ImageDraw, ImageFont
+# Пути считаются от расположения самого файла, поэтому запускать можно из любой
+# папки (правлено 03.10.2026). Раньше часть скриптов работала только из
+# финальные_макеты/, а make_spines_light.py — только из скрипты_генерации/.
+# Каталог шрифтов задаётся переменными FONTS_DIR и DEJAVU_DIR; значения по
+# умолчанию — прежние пути. Логика, тексты, координаты, цвета и сиды не менялись.
+import os, tempfile
+from pathlib import Path
+_HERE = Path(__file__).resolve().parent; _PACK = _HERE.parent
+IN_DIR = _PACK / 'исходники_дизайнера'; OUT_DIR = _PACK / 'финальные_макеты'
+# Montserrat лежит в архиве (04_упаковка/шрифты/Montserrat, лицензия OFL 1.1).
+# Переменная FONTS_DIR переопределяет каталог; прежний путь /home/user/tools/fonts
+# больше не требуется.
+FONTS = (os.environ.get('FONTS_DIR') or str(_PACK / 'шрифты' / 'Montserrat')).rstrip('/')
+DEJAVU = os.environ.get('DEJAVU_DIR', '/usr/share/fonts/truetype/dejavu').rstrip('/')
 
 BG=(59,44,30); CREAM=(242,237,224); GREEN=(31,69,53); INK=(59,44,30)
-F ="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FB="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+F =DEJAVU + "/DejaVuSans.ttf"
+FB=DEJAVU + "/DejaVuSans-Bold.ttf"
 
 PW,PH=430,1380          # корешок
 TW,TH=PH,PW             # холст до поворота
@@ -80,4 +94,4 @@ print("кегль:",SZ)
 M=60; GAP=80
 c=Image.new("RGB",(M*2+PW*2+GAP,M*2+PH),BG)
 c.paste(L,(M,M)); c.paste(R,(M+PW+GAP,M))
-c.save("УСТАРЕЛО_корешки_порошок_цветной.png"); print("ok",c.size)
+c.save(OUT_DIR / "УСТАРЕЛО_корешки_порошок_цветной.png"); print("ok",c.size)
