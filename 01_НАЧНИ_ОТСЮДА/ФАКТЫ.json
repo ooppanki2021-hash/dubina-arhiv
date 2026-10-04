@@ -44,7 +44,7 @@
     "tracker_actions": 153,
     "pub_steps": 20,
     "pub_actions": 173,
-    "manifest_files": 289,
+    "manifest_files": 290,
     "metrics_date": "28.09.2026",
     "in_search": 3,
     "visits": 98,
@@ -174,7 +174,7 @@
     {
       "файл": "01_НАЧНИ_ОТСЮДА/ПРОЧТИ_ПЕРВЫМ.md",
       "КБ": 40,
-      "примерно_токенов": 10183
+      "примерно_токенов": 10273
     },
     {
       "файл": "03-сайт/сайт_текущий/kak-otlichit-istochnik-zapakha/index.html",

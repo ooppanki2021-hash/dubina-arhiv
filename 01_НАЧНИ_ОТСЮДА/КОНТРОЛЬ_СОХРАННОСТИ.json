@@ -1,14 +1,14 @@
 {
  "schema_version": 2,
  "date": "2026-10-04",
- "generated_at_utc": "2026-10-03T21:52:07+00:00",
- "base_commit": "38838ba8eeb775d37d9aaaf801821a34e1456e05",
+ "generated_at_utc": "2026-10-04T07:26:15+00:00",
+ "base_commit": "029233be4da04e3a4fd9f05fefd75ec158287421",
  "repository": "https://github.com/ooppanki2021-hash/dubina-arhiv",
- "purpose": "Инвентарь архива и описание согласованной актуализации без удаления. Обычный коммит с сохранением родителя; видимость репозитория не меняется. Весь sitemap отправлен на переобход по прямому указанию автора; запись о разовой отмене правила 28.09 добавлена в ИСТОРИЯ_РЕШЕНИЙ.md.",
+ "purpose": "Инвентарь архива и описание согласованной актуализации без удаления. Обычный коммит с сохранением родителя; видимость репозитория не меняется. Добавлен единый список живых напоминаний автору и строка о нём в карту файлов.",
  "counts": {
-  "files": 289,
+  "files": 290,
   "previous_baseline_files": 289,
-  "added_since_previous_baseline": 0,
+  "added_since_previous_baseline": 1,
   "renamed": 13,
   "deleted": 0,
   "removed_with_author_approval": 0,
@@ -126,8 +126,13 @@
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json",
-   "bytes": 74935,
-   "sha256": "4a40c72bbb39ac82f893b04d97297fc5ae6ed8d794d48db17b8788247d340596"
+   "bytes": 75034,
+   "sha256": "d9633bdede3ef999eb0e563b3138d254f5c88bf810c93c2e79dcb708a3fc5190"
+  },
+  {
+   "path": "01_НАЧНИ_ОТСЮДА/НАПОМИНАНИЯ_автору.md",
+   "bytes": 9195,
+   "sha256": "827cc0abc1379362a3654e7263b8221733f68d3808403dddaea4a0646a6bb474"
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/ПОЛНОЕ_ДОСЬЕ.md",
@@ -136,13 +141,13 @@
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/ПРОЧТИ_ПЕРВЫМ.md",
-   "bytes": 40732,
-   "sha256": "af199ba439c5e4710132598018d319d1ce4804b9b0e47a4b574161e5d5a97f77"
+   "bytes": 41095,
+   "sha256": "dcb715acd423ca0a8d527f97a940ce4e7e6edbf341ded5cd0d44c8829739c611"
   },
   {
    "path": "01_НАЧНИ_ОТСЮДА/ФАКТЫ.json",
    "bytes": 14104,
-   "sha256": "ba59274a1d23fab1e44587850c22de19a4a63cb9175173e612bcbdd3b5e18bc1"
+   "sha256": "01f3840cdcfcf5e6d0a0f36dabbeffe2f48b7d2d14d142211558d58a1c58f690"
   },
   {
    "path": "02_документы_проекта/AUDIO_чеклист.md",
@@ -1769,19 +1774,19 @@
   },
   {
    "date": "2026-10-04",
-   "generated_at_utc": "2026-10-03T21:45:57+00:00",
-   "base_commit": "c90935f4eb98936c7ae451d34d767befa96aeea0",
+   "generated_at_utc": "2026-10-03T21:52:07+00:00",
+   "base_commit": "38838ba8eeb775d37d9aaaf801821a34e1456e05",
    "files": 289,
    "counts": {
     "files": 289,
-    "previous_baseline_files": 288,
-    "added_since_previous_baseline": 1,
+    "previous_baseline_files": 289,
+    "added_since_previous_baseline": 0,
     "renamed": 13,
     "deleted": 0,
     "removed_with_author_approval": 0,
     "removed_with_author_approval_всего": 1
    },
-   "note": "Baseline 2026-10-04 перестал сопровождаться: снимок сайта и документы архива актуализированы. Его содержимое сохранено в истории Git (01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json на коммите c90935f)."
+   "note": "Baseline 2026-10-04 перестал сопровождаться: снимок сайта и документы архива актуализированы. Его содержимое сохранено в истории Git (01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json на коммите 38838ba)."
   }
  ],
  "validation": {
