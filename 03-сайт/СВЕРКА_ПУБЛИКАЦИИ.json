@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "checked_at_utc": "2026-10-03T21:36:18+00:00",
+ "checked_at_utc": "2026-10-05T10:28:05+00:00",
  "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
  "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
- "source_commit": "ea04776287895f98fcf84f4f951326b436e4d56d",
+ "source_commit": "7c5c0dcebc5277eea0c2921c8b9dd144d99cb6ee",
  "destination": "03-сайт/сайт_текущий",
- "note": "Удалён дубль метки yandex-verification с живой главной (коммит сайта ea04776287): оставлен действующий код 89b93e0a5051b627, удалён устаревший e3e7231de3258122. Снимок приведён к публикации.",
+ "note": "Опубликована новая версия приложения /app/ (коммит сайта 7c5c0dcebc): «Шаги к мечте», «Честный знак», сравнение упаковки; кэш mechta-v13.",
  "source_files": [
   {
    "path": "404.html",
@@ -39,8 +39,8 @@
   },
   {
    "path": "app/index.html",
-   "bytes": 76878,
-   "sha256": "10158654d990b835565ea1728f2be4e82a11950dbb228ddd8508649f5494bc36"
+   "bytes": 84722,
+   "sha256": "deb9eb6f56fcfe98286214d0dffff048dffa33180eb9b6e9978d7b7557464888"
   },
   {
    "path": "app/manifest.webmanifest",
@@ -50,7 +50,7 @@
   {
    "path": "app/sw.js",
    "bytes": 833,
-   "sha256": "69d5b3ab87258ff212e3ce8f1179594cf2d907eae3e109ad289a92aed17bb086"
+   "sha256": "3a2207f8a762ef6cd94e6353a693a3df61b880e887925bf4de7bb4e444b466f1"
   },
   {
    "path": "chto-takoe-2-nonenal/index.html",
@@ -2516,21 +2516,23 @@
  "tracker_versions": {
   "published": {
    "path": "03-сайт/сайт_текущий/app/index.html",
-   "bytes": 76878,
-   "sha256": "10158654d990b835565ea1728f2be4e82a11950dbb228ddd8508649f5494bc36"
+   "bytes": 84722,
+   "sha256": "deb9eb6f56fcfe98286214d0dffff048dffa33180eb9b6e9978d7b7557464888"
   },
   "newer_unpublished": {
    "path": "05_приложение/app/index.html",
-   "bytes": 80817,
-   "sha256": "219eae74165175b03e8ce143dc2c0feb9b45d713a61d60f97ad0bfd13af8f29c",
+   "bytes": 84722,
+   "sha256": "deb9eb6f56fcfe98286214d0dffff048dffa33180eb9b6e9978d7b7557464888",
    "steps": 20,
-   "actions": 153,
-   "untouched": true
+   "actions": 169,
+   "untouched": false,
+   "note": "опубликована 05.10.2026, совпадает с published"
   },
   "standalone": "05_приложение/МЕЧТА_автономная_копия.html"
  },
  "changed_site_files": [
-  "index.html"
+  "app/index.html",
+  "app/sw.js"
  ],
  "production_writes": false,
  "site_fix_2026_09_19": {
