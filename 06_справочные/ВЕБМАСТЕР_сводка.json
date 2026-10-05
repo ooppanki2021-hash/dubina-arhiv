@@ -1,0 +1,446 @@
+{
+ "api_version": "v4.1",
+ "user_id": "1773537030",
+ "площадки": [
+  {
+   "host_id": "https:zapahstarosti.ru:443",
+   "verified": true,
+   "host_data_status": null
+  }
+ ],
+ "верификация": {
+  "verification_uin": "89b93e0a5051b627",
+  "verification_state": "VERIFIED",
+  "verification_type": "META_TAG",
+  "latest_verification_time": "2026-08-31T22:07:04.880+03:00",
+  "fail_info": null,
+  "applicable_verifiers": [
+   "META_TAG",
+   "HTML_FILE",
+   "DNS"
+  ]
+ },
+ "владельцы": [
+  {
+   "user_login": "inna-rossia",
+   "verification_uin": "89b93e0a5051b627",
+   "verification_type": "META_TAG",
+   "verification_date": "2026-08-31T22:07:04.880+03:00"
+  }
+ ],
+ "sitemap_ы": [
+  {
+   "sitemap_id": "8825077b-4646-38a3-9d65-29862825e473",
+   "sitemap_url": "https://zapahstarosti.ru/sitemap.xml",
+   "last_access_date": "2026-09-24T16:26:08.000+03:00",
+   "errors_count": 0,
+   "urls_count": 25,
+   "children_count": 0,
+   "sources": [
+    "ROBOTS_TXT",
+    "WEBMASTER"
+   ],
+   "sitemap_type": "SITEMAP"
+  }
+ ],
+ "переобход": {
+  "состояния": {
+   "DONE": 46,
+   "IN_PROGRESS": 4
+  },
+  "незавершённые": [
+   "https://zapahstarosti.ru/ubrat-zapah/",
+   "https://zapahstarosti.ru/ochistitel-vozduha/",
+   "https://zapahstarosti.ru/kviz/",
+   "https://zapahstarosti.ru/karta-osetii/"
+  ],
+  "квота": {
+   "daily_quota": 150,
+   "quota_remainder": 150
+  }
+ },
+ "индексация": {
+  "всего_образцов": 24,
+  "статусы": {
+   "HTTP_2XX": 24
+  },
+  "последний_обход": "2026-10-04T03:00:00.000+03:00",
+  "страницы": [
+   {
+    "url": "https://zapahstarosti.ru/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-17T22:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/faq/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-18T16:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/sredstva-ot-zapaha/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-18T17:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/nabor/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-18T21:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-pogovorit-s-blizkim/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-ubrat-zapah-iz-shkafa/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-ubrat-zapah-s-divana/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-ubrat-zapah-s-matrasa/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-ubrat-zapah-v-sanuzle/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-ubrat-zapah-v-stiralnoj-mashine/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/karta-kvartiry/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kogda-k-vrachu/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kviz/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/lekarstva-i-zapah/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/material-metod/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/ochistitel-vozduha/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/odezhda-i-tekstil/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/poroshok-dlya-tekstila/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/tonik-protirka/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/ventilyatsiya-i-vlazhnost/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/zapah-v-kvartire/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-09-19T14:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/o-proekte/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-10-04T00:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/kak-pogovorit-s-blizkim/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-10-04T02:00:00.000+03:00"
+   },
+   {
+    "url": "https://zapahstarosti.ru/tonik-protirka/",
+    "status": "HTTP_2XX",
+    "http_code": 200,
+    "access_date": "2026-10-04T03:00:00.000+03:00"
+   }
+  ]
+ },
+ "сверка_с_sitemap": {
+  "в_sitemap_но_робот_не_скачивал": [
+   "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
+   "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
+   "https://zapahstarosti.ru/karta-osetii/",
+   "https://zapahstarosti.ru/ubrat-zapah/"
+  ],
+  "робот_скачивал_но_нет_в_sitemap": [
+   "https://zapahstarosti.ru/nabor/"
+  ]
+ },
+ "только_дашборд": {
+  "источник": "02_документы_проекта/ПОКАЗАТЕЛИ_поиска.json (снято руками)",
+  "дата_снятия": "28.09.2026",
+  "страниц_в_поиске": 3,
+  "исключено_low_quality": 4,
+  "примечание": "у этих цифр нет метода API; не принимать за свежие"
+ },
+ "сводка_площадки": {
+  "sqi": 0,
+  "excluded_pages_count": 1,
+  "searchable_pages_count": 2,
+  "site_problems": {
+   "RECOMMENDATION": 1
+  }
+ },
+ "в_поиске": [
+  {
+   "url": "https://zapahstarosti.ru/",
+   "last_access": "2026-09-28T22:56:01.000+03:00",
+   "title": "Запах старости: причины, 2-ноненаль и как избавиться"
+  },
+  {
+   "url": "https://zapahstarosti.ru/o-proekte/",
+   "last_access": "2026-09-27T22:00:26.000+03:00",
+   "title": "Инна Кучиева — врач и разработчик средств от возрастного запаха"
+  }
+ ],
+ "в_поиске_история": [
+  {
+   "date": "2026-09-02T10:00:11.180+03:00",
+   "value": 1
+  },
+  {
+   "date": "2026-09-06T10:00:09.133+03:00",
+   "value": 5
+  },
+  {
+   "date": "2026-09-07T10:00:02.566+03:00",
+   "value": 5
+  },
+  {
+   "date": "2026-09-09T10:00:06.709+03:00",
+   "value": 1
+  },
+  {
+   "date": "2026-09-10T10:10:02.445+03:00",
+   "value": 1
+  },
+  {
+   "date": "2026-09-15T10:00:10.113+03:00",
+   "value": 1
+  },
+  {
+   "date": "2026-09-19T10:00:11.592+03:00",
+   "value": 1
+  },
+  {
+   "date": "2026-09-20T10:00:02.413+03:00",
+   "value": 1
+  },
+  {
+   "date": "2026-09-23T10:00:05.948+03:00",
+   "value": 2
+  },
+  {
+   "date": "2026-09-24T10:00:10.768+03:00",
+   "value": 2
+  },
+  {
+   "date": "2026-09-26T10:00:10.143+03:00",
+   "value": 3
+  },
+  {
+   "date": "2026-09-28T10:00:01.162+03:00",
+   "value": 3
+  },
+  {
+   "date": "2026-09-30T10:00:04.421+03:00",
+   "value": 3
+  },
+  {
+   "date": "2026-10-02T10:00:05.489+03:00",
+   "value": 2
+  },
+  {
+   "date": "2026-10-05T10:20:04.297+03:00",
+   "value": 2
+  }
+ ],
+ "события_поиска": [
+  {
+   "url": "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
+   "title": "Как называется запах старости: 2-ноненаль простыми словами",
+   "event_date": "2026-10-02T00:00:00.000+03:00",
+   "last_access": "2026-09-27T00:00:00.000+03:00",
+   "event": "REMOVED_FROM_SEARCH",
+   "excluded_url_status": "LOW_QUALITY",
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
+   "title": "2-ноненаль: что это такое и как он связан с запахом кожи",
+   "event_date": "2026-09-26T00:00:00.000+03:00",
+   "last_access": "2026-09-22T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/o-proekte/",
+   "title": "Инна Кучиева — врач и разработчик средств от возрастного запаха",
+   "event_date": "2026-09-23T00:00:00.000+03:00",
+   "last_access": "2026-09-18T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
+   "title": "Как отличить источник запаха: тело, одежда, мебель или воздух — полная диагностика",
+   "event_date": "2026-09-09T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "REMOVED_FROM_SEARCH",
+   "excluded_url_status": "LOW_QUALITY",
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/karta-osetii/",
+   "title": "Карта Осетии: где собираем кору дуба для мыла — от Владикавказа до Цейского ущелья",
+   "event_date": "2026-09-09T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "REMOVED_FROM_SEARCH",
+   "excluded_url_status": "LOW_QUALITY",
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/o-proekte/",
+   "title": "О проекте",
+   "event_date": "2026-09-09T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "REMOVED_FROM_SEARCH",
+   "excluded_url_status": "LOW_QUALITY",
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/ubrat-zapah/",
+   "title": "Как уменьшить запах тела после 40: кожа — опыты, почему помогает и почему нет",
+   "event_date": "2026-09-09T00:00:00.000+03:00",
+   "last_access": "2026-09-04T00:00:00.000+03:00",
+   "event": "REMOVED_FROM_SEARCH",
+   "excluded_url_status": "LOW_QUALITY",
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
+   "title": "Как отличить источник запаха: тело, одежда, мебель или воздух — полная диагностика",
+   "event_date": "2026-09-06T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/karta-osetii/",
+   "title": "Карта Осетии: где собираем кору дуба для мыла — от Владикавказа до Цейского ущелья",
+   "event_date": "2026-09-06T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/o-proekte/",
+   "title": "О проекте",
+   "event_date": "2026-09-06T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/ubrat-zapah/",
+   "title": "Как уменьшить запах тела после 40: кожа — опыты, почему помогает и почему нет",
+   "event_date": "2026-09-06T00:00:00.000+03:00",
+   "last_access": "2026-08-30T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  },
+  {
+   "url": "https://zapahstarosti.ru/",
+   "title": "Запах старости: что это, откуда берётся и как уменьшить",
+   "event_date": "2026-08-31T00:00:00.000+03:00",
+   "last_access": "2026-08-25T00:00:00.000+03:00",
+   "event": "APPEARED_IN_SEARCH",
+   "excluded_url_status": null,
+   "bad_http_status": null,
+   "target_url": null
+  }
+ ],
+ "запросы_неделя": {
+  "с": "2026-09-27",
+  "по": "2026-10-03",
+  "запросы": []
+ },
+ "проблемы": {
+  "NOT_IN_SPRAV": "RECOMMENDATION"
+ },
+ "дата_сводки": "2026-10-05"
+}

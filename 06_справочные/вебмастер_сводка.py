@@ -17,12 +17,15 @@
   6. сверку скачанного против sitemap снимка архива: чего робот не видел и
      чего нет в sitemap.
 
-Чего здесь НЕТ и почему: число «страницы в поиске» и список исключённых из
-поиска Вебмастер показывает только в дашборде — у этих цифр нет метода API
-(проверено перебором имён 04.10.2026: /search-queries/, /search-appearance/,
-/indexing/count и другие отвечают 404). Поэтому сводка честно помечает их как
-«только дашборд» и берёт из ПОКАЗАТЕЛИ_поиска.json для сравнения, не выдавая
-старое число за свежее.
+  7. сводку площадки (/summary): ИКС, страниц в поиске, исключено, проблемы;
+  8. страницы в поиске (/search-urls/in-search/samples) и историю их числа;
+  9. события «появилась / выпала из поиска» с причиной (/search-urls/events/samples);
+ 10. популярные запросы за последнюю неделю (/search-queries/popular): показы, клики, позиции;
+ 11. диагностику: только проблемы в состоянии PRESENT.
+
+Поправка 06.10.2026: раньше здесь было написано, что числа «в поиске» и «исключено»
+есть только в дашборде. Это неверно — они отдаются методами /summary и /search-urls/
+(проверено живым запросом). Старый перебор имён попал не в те пути.
 
 Токен: переменная окружения YANDEX_TOKEN или файл token.txt рядом со скриптом
 (одна строка) — та же договорённость, что у webmaster_recrawl.py. В архив токен
@@ -159,6 +162,21 @@ def main():
         }
 
     # ---------- печать ----------
+
+    def try_api(path, default):
+        try:
+            return api(version, база + path, token)
+        except Exception as e:
+            return {"_ошибка": str(e)} if default is None else default
+    сводка["сводка_площадки"] = try_api("/summary", None)
+    сводка["в_поиске"] = try_api("/search-urls/in-search/samples?limit=100", {}).get("samples", [])
+    сводка["в_поиске_история"] = try_api("/search-urls/in-search/history", {}).get("history", [])
+    сводка["события_поиска"] = try_api("/search-urls/events/samples?limit=100", {}).get("samples", [])
+    q = try_api("/search-queries/popular?order_by=TOTAL_SHOWS&query_indicator=TOTAL_SHOWS"
+                "&query_indicator=TOTAL_CLICKS&query_indicator=AVG_SHOW_POSITION&limit=50", {})
+    сводка["запросы_неделя"] = {"с": q.get("date_from"), "по": q.get("date_to"), "запросы": q.get("queries", [])}
+    диаг = try_api("/diagnostics", {}).get("problems", {})
+    сводка["проблемы"] = {k: v.get("severity") for k, v in диаг.items() if v.get("state") == "PRESENT"}
     print(f"Вебмастер, пользователь {uid}, API /{version}")
     for h in сводка["площадки"]:
         print(f"  площадка {h['host_id']}: verified={h['verified']}, "
@@ -191,6 +209,21 @@ def main():
               f"{д['страниц_в_поиске']}, исключено {д['исключено_low_quality']} — "
               f"метода API у этих цифр нет")
 
+    сп = сводка["сводка_площадки"]
+    print(f"  ИКС {сп.get('sqi')}; в поиске {сп.get('searchable_pages_count')}, исключено {сп.get('excluded_pages_count')}; проблемы {сп.get('site_problems')}")
+    for s in сводка["в_поиске"]:
+        print(f"      в поиске: {s['url']}")
+    последние = {}
+    for e in сводка["события_поиска"]:
+        последние.setdefault(e["url"], e)
+    for u, e in последние.items():
+        print(f"      {e['event_date'][:10]} {e['event']:<20} {e.get('excluded_url_status') or ''} {u}")
+    зн = сводка["запросы_неделя"]
+    print(f"  запросы {зн['с']}–{зн['по']}: {len(зн['запросы'])}")
+    for x in зн["запросы"][:15]:
+        i = x.get("indicators", {})
+        print(f"      {x.get('query_text')}: показы {i.get('TOTAL_SHOWS')}, клики {i.get('TOTAL_CLICKS')}, позиция {i.get('AVG_SHOW_POSITION')}")
+    print(f"  диагностика, есть сейчас: {сводка['проблемы'] or 'нет'}")
     if args.записать:
         stamp = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d")
         сводка["дата_сводки"] = stamp
