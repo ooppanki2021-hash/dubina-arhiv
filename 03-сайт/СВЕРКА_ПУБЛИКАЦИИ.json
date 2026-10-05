@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "checked_at_utc": "2026-10-05T16:47:41+00:00",
+ "checked_at_utc": "2026-10-05T18:53:54+00:00",
  "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
  "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
- "source_commit": "634f9db",
+ "source_commit": "d3139fb",
  "destination": "03-сайт/сайт_текущий",
- "note": "Опубликовано приложение /app/ (коммит сайта 634f9db): шаг 8 — тест на запах на добровольцах 60+, лаборатории ЦЭМиЭ, Оптиматест, ЦСС Групп; 181 поддействие; кэш mechta-v15.",
+ "note": "Опубликовано приложение /app/ (коммит сайта d3139fb): вкладка «Документы» — 15 зашифрованных документов по пяти продуктам (app/docs/*.bin), шаг «Формулы разработаны» обновлён; кэш mechta-v16.",
  "source_files": [
   {
    "path": "404.html",
@@ -21,6 +21,86 @@
    "path": "README.md",
    "bytes": 15,
    "sha256": "def52c78004b0029bc0232bd9ff2c404a508b0368f57a52517569e88ae9c8ca5"
+  },
+  {
+   "path": "app/docs/docs.bin",
+   "bytes": 247210,
+   "sha256": "5a116119de23573347282d445853c1d92f4d858fb15f307407bb0d0d4c2d23d2"
+  },
+  {
+   "path": "app/docs/w-1.bin",
+   "bytes": 50119,
+   "sha256": "93afb8922b8aa0cdaa10dceff384a9d7cab0ca803a33160213cb0f6942de6f40"
+  },
+  {
+   "path": "app/docs/w-10.bin",
+   "bytes": 40238,
+   "sha256": "0c7875fa96d836a4e4403936d2bcc33d37e05e6b4ac318a17233b31662bf8d65"
+  },
+  {
+   "path": "app/docs/w-11.bin",
+   "bytes": 41180,
+   "sha256": "116867a965c7840b32cece493b15f668d30ea236e1339197725ef23f193bd824"
+  },
+  {
+   "path": "app/docs/w-12.bin",
+   "bytes": 38238,
+   "sha256": "24ff988b57c87215814cdc11a5812c057f013c2ca30ef9eff9036c3e6fc6d916"
+  },
+  {
+   "path": "app/docs/w-13.bin",
+   "bytes": 40580,
+   "sha256": "6f13a73a09c1cc6bb1dae4a4aede9248ecd62579b2dccee8b62c838e9ee863c5"
+  },
+  {
+   "path": "app/docs/w-14.bin",
+   "bytes": 41283,
+   "sha256": "8ccb4d4f34d33053c9155b5f9f1c5e8f3632c4da0de6a6dd574750ef27562ea2"
+  },
+  {
+   "path": "app/docs/w-15.bin",
+   "bytes": 38137,
+   "sha256": "d73be35b2078330cb14e5b2e0ca08e6bcab1a0aa296b6dfefdb0fa53795009ce"
+  },
+  {
+   "path": "app/docs/w-2.bin",
+   "bytes": 51012,
+   "sha256": "3000174f7a55f31067ebc181ed30e0ea80c0ab30007c12201f2348c849941837"
+  },
+  {
+   "path": "app/docs/w-3.bin",
+   "bytes": 40706,
+   "sha256": "7a000175d604fd5229bc02b10b4a160edb04d79a5e13bfdc7d02583b6e64154e"
+  },
+  {
+   "path": "app/docs/w-4.bin",
+   "bytes": 43428,
+   "sha256": "32582ef9e846e7062b1aa5c470f0f0899e6915a6a7a677123481da05ffd8e589"
+  },
+  {
+   "path": "app/docs/w-5.bin",
+   "bytes": 42144,
+   "sha256": "07ec523e36b815fda1ff4419214032a3f4f4c755f39dd5e0d0b226e8663ab992"
+  },
+  {
+   "path": "app/docs/w-6.bin",
+   "bytes": 38877,
+   "sha256": "d287cb509f7f2c07dd95a335abf58d97b245889d55fc3e946236496041a040db"
+  },
+  {
+   "path": "app/docs/w-7.bin",
+   "bytes": 41832,
+   "sha256": "2a458a972fa813dc02670a4521c4c8e8029f50a56b9e096b174a18c8b9893aeb"
+  },
+  {
+   "path": "app/docs/w-8.bin",
+   "bytes": 41806,
+   "sha256": "9b3e6b042b43be41fc66eb1631f11c87ae9b441f44c3b190d0b140f4f80effb3"
+  },
+  {
+   "path": "app/docs/w-9.bin",
+   "bytes": 38473,
+   "sha256": "48f536ef6d1c100457fe3ae52b1555dae587c37ef8b482e57e4abf3bf9831cf2"
   },
   {
    "path": "app/icon-180.png",
@@ -39,8 +119,8 @@
   },
   {
    "path": "app/index.html",
-   "bytes": 88698,
-   "sha256": "22394f1e6add67b9077e92c684b60c400949f13e06059f7af39dbeda947d13d7"
+   "bytes": 95729,
+   "sha256": "59fee084f9a7ae4ee4f8e70c2a520394571803cf758dd65b87bbfa6179c6fc2f"
   },
   {
    "path": "app/manifest.webmanifest",
@@ -49,8 +129,8 @@
   },
   {
    "path": "app/sw.js",
-   "bytes": 833,
-   "sha256": "8d42565a272e6f2bd4dd1685c66648d938e75af0433713b4286816085eb72f5e"
+   "bytes": 852,
+   "sha256": "a3d9aff76c8e58ecb7bb8311a45480aefc42ed3d05029be65872982bafbe9d0e"
   },
   {
    "path": "chto-takoe-2-nonenal/index.html",
@@ -2516,17 +2596,17 @@
  "tracker_versions": {
   "published": {
    "path": "03-сайт/сайт_текущий/app/index.html",
-   "bytes": 88698,
-   "sha256": "22394f1e6add67b9077e92c684b60c400949f13e06059f7af39dbeda947d13d7"
+   "bytes": 95729,
+   "sha256": "59fee084f9a7ae4ee4f8e70c2a520394571803cf758dd65b87bbfa6179c6fc2f"
   },
   "newer_unpublished": {
    "path": "05_приложение/app/index.html",
-   "bytes": 95728,
-   "sha256": "8d8714b09005499c0ce0f00243d7c5844914a4f3bd561bb12cffeb95ef650410",
+   "bytes": 95729,
+   "sha256": "59fee084f9a7ae4ee4f8e70c2a520394571803cf758dd65b87bbfa6179c6fc2f",
    "steps": 20,
    "actions": 181,
-   "untouched": true,
-   "note": "новее опубликованной (634f9db): вкладка «Документы» (зашифрованы), шаг «Формулы разработаны» обновлён; не опубликована"
+   "untouched": false,
+   "note": "опубликована 05.10.2026, совпадает со снимком сайта (коммит d3139fb)"
   },
   "standalone": "05_приложение/МЕЧТА_автономная_копия.html"
  },
