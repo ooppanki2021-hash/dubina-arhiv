@@ -1701,6 +1701,11 @@ async function syncNow(){
 }
 function renderSync(msg){
   const st = document.getElementById('syncStatus'); if(!st) return;
+  if(!SYNC_TOKEN_ENC){ // токен ещё не вшит — синхронизация готовится
+    document.getElementById('syncConnectRow').classList.add('hide'); document.getElementById('syncOnRow').classList.add('hide');
+    st.innerHTML = '⏳ Синхронизация между устройствами скоро включится. Пока данные хранятся на этом устройстве — переносите их через «Экспорт / Импорт».';
+    return;
+  }
   const on = !!syncKey;
   document.getElementById('syncConnectRow').classList.toggle('hide', on);
   document.getElementById('syncOnRow').classList.toggle('hide', !on);
