@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "checked_at_utc": "2026-10-05T18:53:54+00:00",
+ "checked_at_utc": "2026-10-05T19:18:35+00:00",
  "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
  "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
- "source_commit": "d3139fb",
+ "source_commit": "ec54025",
  "destination": "03-сайт/сайт_текущий",
- "note": "Опубликовано приложение /app/ (коммит сайта d3139fb): вкладка «Документы» — 15 зашифрованных документов по пяти продуктам (app/docs/*.bin), шаг «Формулы разработаны» обновлён; кэш mechta-v16.",
+ "note": "Опубликовано приложение /app/ (коммит сайта ec54025): шаг 8 перестроен, вложения — письмо и контакты лабораторий; 178 поддействий; кэш mechta-v17.",
  "source_files": [
   {
    "path": "404.html",
@@ -119,8 +119,8 @@
   },
   {
    "path": "app/index.html",
-   "bytes": 95729,
-   "sha256": "59fee084f9a7ae4ee4f8e70c2a520394571803cf758dd65b87bbfa6179c6fc2f"
+   "bytes": 100718,
+   "sha256": "2f73876878a2e7a5cd1b9f786e77ff4a7ac9add86a9240955628a5327e469a32"
   },
   {
    "path": "app/manifest.webmanifest",
@@ -130,7 +130,7 @@
   {
    "path": "app/sw.js",
    "bytes": 852,
-   "sha256": "a3d9aff76c8e58ecb7bb8311a45480aefc42ed3d05029be65872982bafbe9d0e"
+   "sha256": "30b47477e8a8ce74f8e645c955ce3f1a779442c9a85e30aa632c2e5504afd102"
   },
   {
    "path": "chto-takoe-2-nonenal/index.html",
@@ -2596,8 +2596,8 @@
  "tracker_versions": {
   "published": {
    "path": "03-сайт/сайт_текущий/app/index.html",
-   "bytes": 95729,
-   "sha256": "59fee084f9a7ae4ee4f8e70c2a520394571803cf758dd65b87bbfa6179c6fc2f"
+   "bytes": 100718,
+   "sha256": "2f73876878a2e7a5cd1b9f786e77ff4a7ac9add86a9240955628a5327e469a32"
   },
   "newer_unpublished": {
    "path": "05_приложение/app/index.html",
@@ -2605,8 +2605,8 @@
    "sha256": "2f73876878a2e7a5cd1b9f786e77ff4a7ac9add86a9240955628a5327e469a32",
    "steps": 20,
    "actions": 178,
-   "untouched": true,
-   "note": "новее опубликованной (d3139fb): шаг 8 перестроен, вложения — письмо и контакты лабораторий; не опубликована"
+   "untouched": false,
+   "note": "опубликована 05.10.2026, совпадает со снимком сайта (коммит ec54025)"
   },
   "standalone": "05_приложение/МЕЧТА_автономная_копия.html"
  },
