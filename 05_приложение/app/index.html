@@ -417,6 +417,14 @@ body.locked{overflow:hidden}
   <div class="panel hide" id="docsList">
     <h2>Документы для технолога</h2>
     <div id="docsBox"></div>
+    <div class="doc-prod"><h3>Мои файлы</h3>
+      <div id="filesBox" class="hint" style="margin-top:0"></div>
+      <div class="row hide" id="filesUpRow">
+        <input type="file" id="fileIn" multiple class="hide" onchange="uploadFiles(this.files)">
+        <button class="btn" onclick="document.getElementById('fileIn').click()">＋ Загрузить файл</button>
+      </div>
+      <div class="hint" id="filesMsg"></div>
+    </div>
     <div class="row" style="margin-top:14px"><button class="btn ghost" onclick="lockDocs()">Закрыть документы</button></div>
   </div>
   <div class="panel hide" id="docsRead">
@@ -431,6 +439,25 @@ body.locked{overflow:hidden}
 <!-- ============ ДАННЫЕ ============ -->
 <section id="data" class="hide">
   <div class="panel">
+    <h2>Синхронизация</h2>
+    <div class="hint" id="syncStatus" style="margin-top:0"></div>
+    <div class="row" id="syncConnectRow">
+      <input type="password" class="ti" id="syncPass" placeholder="Пароль синхронизации" autocomplete="off" onkeydown="if(event.key==='Enter')syncConnect()">
+      <button class="btn" onclick="syncConnect()">Подключить</button>
+    </div>
+    <div class="row hide" id="syncOnRow">
+      <button class="btn ghost" onclick="syncNow()">Обновить сейчас</button>
+      <button class="btn ghost" onclick="syncDisconnect()">Отключить на этом устройстве</button>
+    </div>
+    <div class="hint">
+      <b>Как это работает.</b> Галочки, заметки, дела и правки пути хранятся в зашифрованном файле на GitHub.
+      Подключите синхронизацию на каждом устройстве один раз — дальше приложение само подтягивает актуальную версию
+      при открытии и отправляет изменения через несколько секунд после правки.<br><br>
+      Если правили на двух устройствах почти одновременно, сохранится то, что изменено позже.
+      Помощник тоже видит этот файл и может его поправить по вашей просьбе.
+    </div>
+  </div>
+  <div class="panel">
     <h2>Сохранность</h2>
     <div class="hint" id="storageState"></div>
     <div class="row">
@@ -440,7 +467,7 @@ body.locked{overflow:hidden}
     </div>
     <div class="hint">
       <b>Как это работает.</b> Всё хранится прямо в твоём браузере — галочки, заметки, прогресс.
-      Ничего никуда не уходит.<br><br>
+      Без синхронизации ничего никуда не уходит.<br><br>
       <b>Когда нужен помощник.</b> Нажми «Выгрузить состояние» — скачается маленький файл.
       Пришли его в чат, и я увижу, где ты, что сделано и что буксует.
       «Загрузить состояние» — вернуть данные обратно или перенести на другое устройство.<br><br>
@@ -455,8 +482,8 @@ body.locked{overflow:hidden}
       <b>Про код.</b> Закрывает приложение от чужих глаз, если кто-то случайно наберёт адрес папки.
       Спрашивается один раз за сеанс — пока окно открыто, повторно не побеспокоит.<br><br>
       Код хранится отдельно на каждом устройстве: сменила на компьютере — на телефоне остался прежний.<br><br>
-      ⚠️ Это защита от посторонних глаз, а не сейф. Данные всё равно лежат только у тебя
-      на устройстве и на сайт не попадают — там пустая заготовка.
+      ⚠️ Это защита от посторонних глаз, а не сейф. Без синхронизации данные лежат только на устройстве;
+      с синхронизацией — ещё и в зашифрованном файле на GitHub. На сайт они не попадают.
     </div>
   </div>
 </section>
@@ -942,9 +969,17 @@ function refreshMileTexts(){
   if(!diffBase().length){ S.milesTextVer = MILES_TEXT_VERSION; save(); }
 }
 
-function save(){
+function saveLocal(){
   if(!canStore) return;
   try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ canStore=false; renderStorage(); }
+}
+function save(){
+  // При включённой синхронизации отмечаем время изменения и отправляем на GitHub.
+  if(syncReady && syncKey){
+    const j = stateJSON();
+    if(j !== syncLastJSON){ S.updatedAt = Date.now(); syncLastJSON = j; syncSchedule(); }
+  }
+  saveLocal();
 }
 
 /* ======================= УТИЛИТЫ ======================= */
@@ -1445,7 +1480,7 @@ function b64ToBytes(s){const b=atob(s);const u=new Uint8Array(b.length);for(let 
 async function docsKey(pass){
   const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveKey']);
   return crypto.subtle.deriveKey({name:'PBKDF2', salt:hexToBytes(DOCS_SALT), iterations:DOCS_ITER, hash:'SHA-256'},
-    base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+    base, {name:'AES-GCM', length:256}, false, ['encrypt','decrypt']);
 }
 async function docsDecrypt(key, bytes){
   return new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM', iv:bytes.slice(0,12)}, key, bytes.slice(12)));
@@ -1482,6 +1517,7 @@ function renderDocs(){
       <button class="btn ghost" onclick="readDoc(${pi},${di})">Читать</button>
       ${(!DOCS_INLINE && d.w) ? `<button class="btn ghost" onclick="wordDoc(${pi},${di})">Word</button>` : ''}
     </div>`).join('')}</div>`).join('');
+  filesRender();
 }
 function readDoc(pi, di){
   const d = DOCS.products[pi].docs[di];
@@ -1506,12 +1542,256 @@ async function wordDoc(pi, di){
   }catch(e){ toast('Не удалось скачать файл. Нужен интернет.'); }
 }
 function lockDocs(){
-  DOCS = null; DOCS_KEY = null;
+  DOCS = null; DOCS_KEY = null; FILES = null; FILES_SHA = null;
   document.getElementById('docView').innerHTML = '';
   document.getElementById('docsBox').innerHTML = '';
   document.getElementById('docsList').classList.add('hide');
   document.getElementById('docsRead').classList.add('hide');
   document.getElementById('docsLock').classList.remove('hide');
+}
+
+/* ======================= СИНХРОНИЗАЦИЯ С GITHUB ======================= */
+const SYNC_REPO = 'ooppanki2021-hash/dubina-arhiv';
+const SYNC_BRANCH = 'sostoyanie';
+const SYNC_PATH = 'sostoyanie.bin';
+const SYNC_SALT = '';
+const SYNC_ITER = 1000000;
+const SYNC_TOKEN_ENC = '';
+const SYNC_LS = 'dubrava_sync_key_v1';
+let syncKey = null, syncToken = null, syncSha = null, syncTimer = null, syncReady = false,
+    syncLastJSON = null, syncInfo = '', syncBusy = false, syncDirty = false;
+function bytesToB64(u){ let s=''; for(let i=0;i<u.length;i+=0x8000) s+=String.fromCharCode.apply(null,u.subarray(i,i+0x8000)); return btoa(s); }
+function stateJSON(){ const c = {...S}; delete c.updatedAt; return JSON.stringify(c); }
+async function syncImport(raw){ return crypto.subtle.importKey('raw', raw, {name:'AES-GCM'}, false, ['encrypt','decrypt']); }
+async function syncDeriveRaw(pass){
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveBits']);
+  return new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2', salt:hexToBytes(SYNC_SALT), iterations:SYNC_ITER, hash:'SHA-256'}, base, 256));
+}
+async function syncEnc(obj){
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM', iv}, syncKey, new TextEncoder().encode(JSON.stringify(obj))));
+  const out = new Uint8Array(12+ct.length); out.set(iv); out.set(ct,12); return btoa(bytesToB64(out)); // в файле — текст base64: двоичное GitHub может перекодировать
+}
+async function syncDec(b64){ return JSON.parse(new TextDecoder().decode(await docsDecrypt(syncKey, b64ToBytes(atob(b64.replace(/\s/g,'')).trim())))); }
+async function syncApi(method, body){
+  const url = `https://api.github.com/repos/${SYNC_REPO}/contents/${SYNC_PATH}` + (method==='GET' ? `?ref=${SYNC_BRANCH}` : '');
+  const headers = {'Authorization':'Bearer '+syncToken, 'Accept':'application/vnd.github+json'};
+  if(body) headers['Content-Type'] = 'application/json';
+  return fetch(url, {method, cache:'no-store', headers, body: body ? JSON.stringify(body) : undefined});
+}
+async function syncPull(){
+  const r = await syncApi('GET');
+  if(r.status === 404){ syncSha = null; return null; }
+  if(!r.ok) throw new Error('pull '+r.status);
+  const j = await r.json(); syncSha = j.sha;
+  return await syncDec(j.content);
+}
+async function syncPush(retry){
+  const body = {message:'Состояние приложения — '+new Date().toLocaleString('ru-RU'), content: await syncEnc(S), branch: SYNC_BRANCH};
+  if(syncSha) body.sha = syncSha;
+  const r = await syncApi('PUT', body);
+  if(r.ok){
+    const j = await r.json(); syncSha = j.content.sha; syncDirty = false;
+    syncInfo = 'Отправлено на GitHub в '+new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
+    return;
+  }
+  if((r.status===409 || r.status===422) && !retry){
+    const remote = await syncPull();
+    if(remote && (remote.updatedAt||0) > (S.updatedAt||0)){ syncApply(remote, 'На другом устройстве изменения новее — загружены они'); syncDirty = false; return; }
+    return syncPush(true);
+  }
+  throw new Error('push '+r.status);
+}
+function syncApply(remote, msg){
+  const was = syncReady; syncReady = false;
+  S = remote; migrate(); refreshMileTexts(); saveLocal();
+  syncLastJSON = stateJSON(); syncReady = was;
+  syncInfo = 'Загружено с GitHub в '+new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
+  renderAll(); if(msg) toast(msg);
+}
+function syncSchedule(){
+  syncDirty = true; clearTimeout(syncTimer); syncTimer = setTimeout(syncFlush, 4000);
+  renderSync('Есть изменения — отправлю через пару секунд…');
+}
+async function syncFlush(){
+  clearTimeout(syncTimer); syncTimer = null;
+  if(!syncKey) return;
+  if(syncBusy){ syncTimer = setTimeout(syncFlush, 2000); return; }
+  syncBusy = true;
+  try{ await syncPush(); renderSync(); }
+  catch(e){ renderSync('⚠️ Не удалось отправить (нет интернета?). Отправлю, когда связь появится.'); }
+  finally{ syncBusy = false; }
+}
+async function syncStart(first){
+  try{
+    renderSync('Проверяю GitHub…');
+    const remote = await syncPull();
+    if(remote){
+      if(first){
+        const when = remote.updatedAt ? new Date(remote.updatedAt).toLocaleString('ru-RU') : 'неизвестно когда';
+        if(confirm('На GitHub уже есть состояние (изменено '+when+').\n\nОК — загрузить его на это устройство (здешние галочки и заметки заменятся).\nОтмена — отправить это устройство на GitHub (заменит то, что там).'))
+          syncApply(remote, 'Загружено с GitHub');
+        else { S.updatedAt = Date.now(); saveLocal(); await syncPush(); }
+      } else if((remote.updatedAt||0) > (S.updatedAt||0)) syncApply(remote, 'Загружена актуальная версия с GitHub');
+      else if((S.updatedAt||0) > (remote.updatedAt||0)) await syncPush();
+      else syncInfo = 'Всё совпадает с GitHub';
+    } else { S.updatedAt = S.updatedAt || Date.now(); saveLocal(); await syncPush(); }
+    syncLastJSON = stateJSON(); syncReady = true; renderSync(); if(DOCS_KEY) filesRender();
+  }catch(e){
+    syncLastJSON = stateJSON(); syncReady = true; syncDirty = true;
+    renderSync('⚠️ GitHub недоступен (нет интернета?). Изменения сохранятся здесь и уйдут позже.');
+  }
+}
+async function syncInit(){
+  renderSync();
+  const raw = localStorage.getItem(SYNC_LS);
+  if(!raw || !SYNC_TOKEN_ENC || !window.crypto || !crypto.subtle) return;
+  try{
+    syncKey = await syncImport(b64ToBytes(raw));
+    syncToken = new TextDecoder().decode(await docsDecrypt(syncKey, b64ToBytes(SYNC_TOKEN_ENC)));
+  }catch(e){ localStorage.removeItem(SYNC_LS); syncKey = null; renderSync('⚠️ Пароль синхронизации сменился — подключите заново.'); return; }
+  await syncStart(false);
+}
+async function syncConnect(){
+  const pass = document.getElementById('syncPass').value;
+  if(!pass){ renderSync('Введите пароль.'); return; }
+  if(!SYNC_TOKEN_ENC){ renderSync('Синхронизация ещё не настроена.'); return; }
+  if(!window.crypto || !crypto.subtle){ renderSync('Здесь синхронизация не работает. Откройте https://zapahstarosti.ru/app/'); return; }
+  renderSync('Проверяю пароль — пару секунд…');
+  try{
+    const raw = await syncDeriveRaw(pass);
+    syncKey = await syncImport(raw);
+    syncToken = new TextDecoder().decode(await docsDecrypt(syncKey, b64ToBytes(SYNC_TOKEN_ENC)));
+    localStorage.setItem(SYNC_LS, bytesToB64(raw));
+  }catch(e){ syncKey = null; renderSync('Неверный пароль.'); return; }
+  document.getElementById('syncPass').value = '';
+  await syncStart(true);
+}
+function syncDisconnect(){
+  if(!confirm('Отключить синхронизацию на этом устройстве? Данные здесь останутся.')) return;
+  localStorage.removeItem(SYNC_LS); syncKey = null; syncToken = null; syncReady = false; syncInfo = ''; renderSync();
+}
+async function syncNow(){
+  if(!syncKey) return;
+  if(syncTimer || syncDirty){ await syncFlush(); return; }
+  syncReady = false; await syncStart(false);
+}
+function renderSync(msg){
+  const st = document.getElementById('syncStatus'); if(!st) return;
+  const on = !!syncKey;
+  document.getElementById('syncConnectRow').classList.toggle('hide', on);
+  document.getElementById('syncOnRow').classList.toggle('hide', !on);
+  if(msg !== undefined) syncInfo = msg;
+  st.innerHTML = on ? '🔄 <b>Синхронизация включена.</b> '+esc(syncInfo||'')
+                    : (syncInfo ? esc(syncInfo)+'<br>' : '')+'Синхронизация на этом устройстве выключена.';
+}
+document.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState!=='visible' || !syncReady || !syncKey || syncBusy) return;
+  if(syncDirty){ syncFlush(); return; }
+  syncPull().then(r=>{ if(r && (r.updatedAt||0) > (S.updatedAt||0)) syncApply(r, 'Загружена актуальная версия с GitHub'); }).catch(()=>{});
+});
+window.addEventListener('online', ()=>{ if(syncDirty && syncKey) syncFlush(); });
+
+/* ======================= МОИ ФАЙЛЫ (загрузка в документы, шифруются паролем документов) ======================= */
+const FILES_DIR = 'faily';
+const FILES_MAX = 15*1024*1024;
+let FILES = null, FILES_SHA = null;
+function ghUrl(p){ return `https://api.github.com/repos/${SYNC_REPO}/contents/${p}`; }
+function ghHead(raw){ return {'Authorization':'Bearer '+syncToken, 'Accept': raw ? 'application/vnd.github.raw+json' : 'application/vnd.github+json', 'Content-Type':'application/json'}; }
+function ghGet(p, raw){ return fetch(ghUrl(p)+'?ref='+SYNC_BRANCH, {cache:'no-store', headers:ghHead(raw)}); }
+function ghPut(p, b64, msg, sha){ const b = {message:msg, content:b64, branch:SYNC_BRANCH}; if(sha) b.sha = sha; return fetch(ghUrl(p), {method:'PUT', headers:ghHead(), body:JSON.stringify(b)}); }
+function ghDel(p, sha, msg){ return fetch(ghUrl(p), {method:'DELETE', headers:ghHead(), body:JSON.stringify({message:msg, sha, branch:SYNC_BRANCH})}); }
+async function docsEncB64(bytes){
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM', iv}, DOCS_KEY, bytes));
+  const out = new Uint8Array(12+ct.length); out.set(iv); out.set(ct,12); return btoa(bytesToB64(out)); // в файле — текст base64: двоичное GitHub может перекодировать
+}
+function todayStr(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function fmtSize(n){ return n < 1024*1024 ? Math.max(1,Math.round(n/1024))+' КБ' : (n/1024/1024).toFixed(1).replace('.',',')+' МБ'; }
+async function filesLoad(quiet){
+  const r = await ghGet(FILES_DIR+'/spisok.bin');
+  if(r.status === 404){ FILES = []; FILES_SHA = null; }
+  else if(!r.ok) throw new Error('список '+r.status);
+  else { const j = await r.json(); FILES_SHA = j.sha;
+    FILES = JSON.parse(new TextDecoder().decode(await docsDecrypt(DOCS_KEY, b64ToBytes(atob(j.content.replace(/\s/g,'')).trim())))); }
+  if(!quiet) filesRender();
+}
+async function filesSaveList(){
+  const r = await ghPut(FILES_DIR+'/spisok.bin', await docsEncB64(new TextEncoder().encode(JSON.stringify(FILES))), 'Список файлов документов', FILES_SHA);
+  if(!r.ok) throw new Error('список '+r.status);
+  FILES_SHA = (await r.json()).content.sha;
+}
+function filesRender(){
+  const box = document.getElementById('filesBox'), up = document.getElementById('filesUpRow');
+  document.getElementById('docWordBtn').classList.remove('hide');
+  if(!box || !DOCS_KEY) return;
+  if(!syncKey){
+    up.classList.add('hide');
+    box.innerHTML = 'Сюда можно загружать свои файлы — сертификаты, договоры, протоколы, фото, сканы. '+
+      'Они шифруются паролем документов и видны на всех устройствах. Для этого включите синхронизацию во вкладке «Данные».';
+    return;
+  }
+  up.classList.remove('hide');
+  if(FILES === null){
+    box.textContent = 'Загружаю список…';
+    filesLoad().catch(()=>{ box.textContent = '⚠️ Не удалось получить список файлов (нет интернета?).'; });
+    return;
+  }
+  box.innerHTML = FILES.length ? FILES.map(f=>`<div class="doc-row"><span>${esc(f.name)} <small style="opacity:.6">· ${fmtSize(f.size)} · ${esc(f.date)}</small></span>
+      <button class="btn ghost" onclick="openFile('${f.id}')">Открыть</button>
+      <button class="btn ghost" onclick="delFile('${f.id}')">Удалить</button></div>`).join('')
+    : 'Пока нет загруженных файлов. Подойдёт любой: PDF, Word, Excel, фото.';
+}
+async function uploadFiles(list){
+  const msg = document.getElementById('filesMsg');
+  if(!syncKey || !DOCS_KEY) return;
+  const errs = [];
+  for(const f of Array.from(list)){
+    if(f.size > FILES_MAX){ errs.push('«'+f.name+'» больше 15 МБ'); continue; }
+    msg.textContent = 'Загружаю «'+f.name+'»…';
+    try{
+      const bytes = new Uint8Array(await f.arrayBuffer());
+      const id = Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+      const r = await ghPut(`${FILES_DIR}/${id}.bin`, await docsEncB64(bytes), 'Файл в документы', null);
+      if(!r.ok) throw new Error('код '+r.status);
+      const sha = (await r.json()).content.sha;
+      await filesLoad(true);
+      FILES.unshift({id, name:f.name, type:f.type||'', size:f.size, date:todayStr(), sha});
+      await filesSaveList();
+    }catch(e){ errs.push('«'+f.name+'» не загрузился ('+e.message+')'); }
+  }
+  document.getElementById('fileIn').value = '';
+  msg.textContent = errs.length ? '⚠️ '+errs.join('; ') : 'Готово — файл виден на всех устройствах.';
+  filesRender();
+}
+async function openFile(id){
+  const f = (FILES||[]).find(x=>x.id===id); if(!f) return;
+  const view = document.getElementById('docView');
+  document.getElementById('docsList').classList.add('hide');
+  document.getElementById('docsRead').classList.remove('hide');
+  document.getElementById('docWordBtn').classList.add('hide');
+  view.innerHTML = 'Загружаю…';
+  try{
+    const r = await ghGet(`${FILES_DIR}/${id}.bin`, true); if(!r.ok) throw new Error('код '+r.status);
+    const plain = await docsDecrypt(DOCS_KEY, b64ToBytes((await r.text()).trim()));
+    const url = URL.createObjectURL(new Blob([plain], {type: f.type || 'application/octet-stream'}));
+    let inner;
+    if(/^image\//.test(f.type)) inner = `<img src="${url}" alt="" style="max-width:100%;border-radius:8px">`;
+    else if(f.type === 'application/pdf') inner = `<iframe src="${url}" style="width:100%;height:70vh;border:0"></iframe>`;
+    else if(/^text\//.test(f.type)) inner = `<pre style="white-space:pre-wrap">${esc(new TextDecoder().decode(plain))}</pre>`;
+    else inner = '<p>Такой файл здесь не показывается — скачайте его и откройте на устройстве.</p>';
+    view.innerHTML = `<h3>${esc(f.name)}</h3><p><a class="btn" href="${url}" download="${esc(f.name)}">Скачать</a></p>` + inner;
+  }catch(e){ view.innerHTML = '⚠️ Не удалось открыть файл ('+esc(e.message)+').'; }
+}
+async function delFile(id){
+  const f = (FILES||[]).find(x=>x.id===id);
+  if(!f || !confirm('Удалить «'+f.name+'» со всех устройств?')) return;
+  try{
+    await filesLoad(true); FILES = FILES.filter(x=>x.id!==id); await filesSaveList();
+    await ghDel(`${FILES_DIR}/${id}.bin`, f.sha, 'Удалён файл из документов');
+    toast('Файл удалён');
+  }catch(e){ toast('⚠️ Не удалось удалить (нет интернета?)'); }
+  filesRender();
 }
 
 /* ======================= ВКЛАДКИ ======================= */
@@ -1525,7 +1805,7 @@ document.querySelectorAll('nav button').forEach(b=>{
 });
 
 /* ======================= СТАРТ ======================= */
-load(); renderAll();
+load(); renderAll(); syncInit();
 if(pathUpdates().length) setTimeout(()=>toast('Помощник обновил путь — загляните во вкладку «Путь»'), 1200);
 document.getElementById('newDate').value = todayISO();
 </script>
