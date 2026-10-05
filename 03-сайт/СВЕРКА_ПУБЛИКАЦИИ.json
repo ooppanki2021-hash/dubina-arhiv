@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-05T20:50:39+00:00",
+  "checked_at_utc": "2026-10-05T21:05:26+00:00",
   "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
   "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
-  "source_commit": "a6ea844",
+  "source_commit": "d968969",
   "destination": "03-сайт/сайт_текущий",
-  "note": "Опубликовано приложение /app/ (коммит сайта a6ea844): новый путь (21 шаг, 182 поддействия; гель и салфетки первыми; образцы раньше документов); вложения «Контакты лабораторий» и «Разговор по телефону» в шагах «Документы» и «Тест на запах»; письмо — гель и салфетки; кэш mechta-v21.",
+  "note": "Опубликовано приложение /app/ (коммит сайта d968969): новый путь (21 шаг, 183 поддействия; гель и салфетки первыми; образцы раньше документов); вложения «Контакты лабораторий» и «Разговор по телефону»; подпункт про надпись на дезодоранте — только по протоколу; кэш mechta-v22.",
   "source_files": [
     {
       "path": "404.html",
@@ -119,8 +119,8 @@
     },
     {
       "path": "app/index.html",
-      "bytes": 162980,
-      "sha256": "34915bbdca908271f6ef1df3ae393d867e057b4e6e2aee0835252a37e59e5c0b"
+      "bytes": 164158,
+      "sha256": "053c63cd12589fa0ad0c923c7db36f6d8ccf2d20ac9788b7c6ad79243b19b988"
     },
     {
       "path": "app/manifest.webmanifest",
@@ -130,7 +130,7 @@
     {
       "path": "app/sw.js",
       "bytes": 1004,
-      "sha256": "f9afdae35395418174b8415808e4a47a8c6645c45e53626a5c376ef65b44904b"
+      "sha256": "ad51229ee377d7bc61730da0f411f1e10660be571715790b856f3fea10f44896"
     },
     {
       "path": "chto-takoe-2-nonenal/index.html",
@@ -2596,17 +2596,17 @@
   "tracker_versions": {
     "published": {
       "path": "03-сайт/сайт_текущий/app/index.html",
-      "bytes": 162980,
-      "sha256": "34915bbdca908271f6ef1df3ae393d867e057b4e6e2aee0835252a37e59e5c0b"
+      "bytes": 164158,
+      "sha256": "053c63cd12589fa0ad0c923c7db36f6d8ccf2d20ac9788b7c6ad79243b19b988"
     },
     "newer_unpublished": {
       "path": "05_приложение/app/index.html",
-      "bytes": 162980,
-      "sha256": "34915bbdca908271f6ef1df3ae393d867e057b4e6e2aee0835252a37e59e5c0b",
+      "bytes": 164158,
+      "sha256": "053c63cd12589fa0ad0c923c7db36f6d8ccf2d20ac9788b7c6ad79243b19b988",
       "steps": 21,
-      "actions": 182,
+      "actions": 183,
       "untouched": true,
-      "note": "совпадает с опубликованной (a6ea844); новых неопубликованных правок нет"
+      "note": "совпадает с опубликованной (d968969); новых неопубликованных правок нет"
     },
     "standalone": "05_приложение/МЕЧТА_автономная_копия.html"
   },
