@@ -1233,6 +1233,7 @@ function moveSubTo(i, targetId){
     target.done = target.sub.every(x=>x.done);
   }
   const cur = S.miles.findIndex(x=>x.id===editStep);
+  renderMiles();                    // поля на экране должны соответствовать черновику, иначе readDraft перепутает тексты
   saveEdit();                       // сохраняем и текущий шаг, чтобы подпункт не задвоился
   startEdit(cur);                   // и остаёмся в нём
   toast('Подпункт перенесён в «'+target.n+'» — в конец списка');
