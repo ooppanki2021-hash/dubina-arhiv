@@ -2516,17 +2516,17 @@
  "tracker_versions": {
   "published": {
    "path": "03-сайт/сайт_текущий/app/index.html",
-   "bytes": 87319,
-   "sha256": "36d66ce387f99d850a2c1ec46601ff5cf46379acdfb1839f1b5bdc67a1475f42"
+   "bytes": 88698,
+   "sha256": "22394f1e6add67b9077e92c684b60c400949f13e06059f7af39dbeda947d13d7"
   },
   "newer_unpublished": {
    "path": "05_приложение/app/index.html",
-   "bytes": 87319,
-   "sha256": "36d66ce387f99d850a2c1ec46601ff5cf46379acdfb1839f1b5bdc67a1475f42",
+   "bytes": 88698,
+   "sha256": "22394f1e6add67b9077e92c684b60c400949f13e06059f7af39dbeda947d13d7",
    "steps": 20,
-   "actions": 176,
+   "actions": 181,
    "untouched": false,
-   "note": "опубликована 05.10.2026, совпадает с published"
+   "note": "опубликована 05.10.2026, совпадает со снимком сайта (коммит 634f9db)"
   },
   "standalone": "05_приложение/МЕЧТА_автономная_копия.html"
  },
