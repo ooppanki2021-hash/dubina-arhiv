@@ -1155,7 +1155,12 @@ function editHtml(m, mi){
     <label class="ed-l">Подпункты</label>
     ${draft.sub.map((s,i)=>`<div class="ed-sub"><input class="ed-in" id="edS${i}" value="${esc(s.t)}">
       <button class="mini" onclick="draftSub('up',${i})">↑</button><button class="mini" onclick="draftSub('down',${i})">↓</button>
-      <button class="mini" onclick="draftSub('del',${i})">🗑</button></div>`).join('')}
+      <button class="mini" title="Перенести в другой шаг" onclick="draftSub('pick',${i})">↪</button>
+      <button class="mini" onclick="draftSub('del',${i})">🗑</button></div>
+      ${draft.pick===i ? `<select class="ed-in" style="margin:0 0 8px" onchange="moveSubTo(${i}, this.value)">
+        <option value="">В какой шаг перенести?</option>
+        ${S.miles.filter(x=>x.id!==editStep).map(x=>`<option value="${esc(x.id)}">${esc(x.n)}</option>`).join('')}
+      </select>` : ''}`).join('')}
     <div class="row"><button class="btn ghost" onclick="draftSub('add')">+ Подпункт</button></div>
     <div class="row"><button class="btn" onclick="saveEdit()">Сохранить</button><button class="btn ghost" onclick="cancelEdit()">Отмена</button></div>
   </div></div>`;
@@ -1198,6 +1203,8 @@ function readDraft(){
 }
 function draftSub(op, i){
   readDraft();
+  if(op==='pick'){ draft.pick = draft.pick===i ? null : i; renderMiles(); return; }
+  draft.pick = null;
   if(op==='add') draft.sub.push({t:'', done:false, u:true});
   if(op==='del') draft.sub.splice(i,1);
   if(op==='up' && i>0) [draft.sub[i-1], draft.sub[i]] = [draft.sub[i], draft.sub[i-1]];
@@ -1214,6 +1221,21 @@ function saveEdit(){
   if(m.sub.length) m.done = m.sub.every(s=>s.done);
   editStep = null; draft = null;
   save(); renderMiles(); renderProgress(); toast('Сохранено');
+}
+function moveSubTo(i, targetId){
+  if(!targetId) return;
+  readDraft();
+  const target = S.miles.find(x=>x.id===targetId); if(!target) return;
+  const s = draft.sub.splice(i,1)[0]; draft.pick = null;
+  if(s && s.t.trim()){
+    target.sub = target.sub || [];
+    target.sub.push({...s, t:s.t.trim()});
+    target.done = target.sub.every(x=>x.done);
+  }
+  const cur = S.miles.findIndex(x=>x.id===editStep);
+  saveEdit();                       // сохраняем и текущий шаг, чтобы подпункт не задвоился
+  startEdit(cur);                   // и остаёмся в нём
+  toast('Подпункт перенесён в «'+target.n+'» — в конец списка');
 }
 function cancelEdit(){ editStep = null; draft = null; renderMiles(); }
 
