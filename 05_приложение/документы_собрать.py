@@ -9,7 +9,7 @@ from pathlib import Path
 import markdown
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
-ITER = 310000
+ITER = 1000000
 HERE = Path(__file__).resolve().parent
 H = Path('/home/user')
 PRODUCTS = [
@@ -46,7 +46,7 @@ def md_html(text):
 
 def main():
     pw = os.environ.get('DOCS_PASSWORD')
-    assert pw and len(pw) >= 12, 'нужен DOCS_PASSWORD (не короче 12 знаков)'
+    assert pw, 'нужен DOCS_PASSWORD'
     idx = HERE / 'app' / 'index.html'
     alone = HERE / 'МЕЧТА_автономная_копия.html'
     t = idx.read_text(encoding='utf-8')

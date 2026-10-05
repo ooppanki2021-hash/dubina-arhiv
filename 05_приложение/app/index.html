@@ -1256,7 +1256,7 @@ function resetAll(){
 
 /* ======================= ДОКУМЕНТЫ (зашифрованы) ======================= */
 const DOCS_SALT = '37dd402c6512322838e3fef0f53b749b';
-const DOCS_ITER = 310000;
+const DOCS_ITER = 1000000;
 const DOCS_INLINE = '';
 let DOCS = null, DOCS_KEY = null;
 function hexToBytes(h){const u=new Uint8Array(h.length/2);for(let i=0;i<u.length;i++)u[i]=parseInt(h.substr(i*2,2),16);return u;}
