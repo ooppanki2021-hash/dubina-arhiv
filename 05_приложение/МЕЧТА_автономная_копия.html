@@ -693,20 +693,37 @@ function migrate(){
 const MILES_TEXT_VERSION = 11;
 function refreshMileTexts(){
   if(!S || !Array.isArray(S.miles)) return;
-  if(!S.base){
-    // Первый запуск версии с редактированием: тексты по позиции, как раньше,
-    // затем запоминаем основу — с ней сравниваются будущие обновления.
-    if(S.milesTextVer !== MILES_TEXT_VERSION){
-      S.miles.forEach((m,i) => {
-        const src = DEFAULT_MILES[i]; if(!src) return;
-        m.n = src.n; m.d = src.d; m.why = src.why; m.sub = subsFromDefault(src, m.sub);
-      });
-    }
-    S.miles.forEach((m,i) => { if(!m.k && DEFAULT_MILES[i]) m.k = DEFAULT_MILES[i].k; if(!m.id) m.id = m.k || ('m'+i); });
-    S.base = snapDefaults(); S.baseOrder = DEFAULT_MILES.map(m=>m.k); S.milesTextVer = MILES_TEXT_VERSION; save(); return;
-  }
+  // Версия 11 — новый путь (гель и салфетки первыми, образцы раньше документов).
+  // По её решению путь заменяется целиком, без вопросов; галочки переносятся по тексту подпунктов.
+  if((S.milesTextVer||0) < FORCE_PATH_VERSION || !S.base){ forceNewPath(); return; }
   if(S.milesTextVer === MILES_TEXT_VERSION) return;
   if(!diffBase().length){ S.milesTextVer = MILES_TEXT_VERSION; save(); }
+}
+const FORCE_PATH_VERSION = 11;
+const OLD_KEYS = ['m01','m02','m03','m04','m05','m06','m07','m08','m09','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20'];
+const SUB_RENAMES = {
+  'Проверить имя на занятость в реестре — вдруг уже занято': 'Проверить имя «ДУБИНА» на занятость в реестре Роспатента — вдруг уже занято',
+  'Получить номер свидетельства и записать его — он пойдёт на упаковку': 'Получить номер декларации и записать его — он пойдёт на упаковку',
+  'Передать рецептуру технологу фабрики': 'Передать технологу фабрики рецептуры геля и лосьона для салфеток',
+  'Получить пробную партию': 'Получить пробную партию: гель и салфетки обеих фасовок — 15 и 80 штук',
+  'Дать попробовать 5–7 людям за 40 и собрать честные отзывы': 'Дать попробовать гель и салфетки 5–7 людям за 40 и собрать честные отзывы'
+};
+function forceNewPath(){
+  const doneBy = {};
+  S.miles.forEach(m => (m.sub||[]).forEach(s => { if(s && s.t && s.done){ doneBy[s.t] = true; if(SUB_RENAMES[s.t]) doneBy[SUB_RENAMES[s.t]] = true; } }));
+  const oldByK = {};
+  S.miles.forEach((m,i) => { const k = m.k || OLD_KEYS[i]; if(k) oldByK[k] = m; });
+  const isDefault = k => DEFAULT_MILES.some(d => d.k === k);
+  const userSteps = S.miles.filter(m => m.k && !isDefault(m.k));
+  S.miles = DEFAULT_MILES.map(src => {
+    const o = oldByK[src.k];
+    const sub = (src.sub||[]).map(s => ({t:s.t, done: !!doneBy[s.t] || (!o && !!s.done)}));
+    if(o) (o.sub||[]).filter(s => s && s.u && s.t).forEach(s => sub.push({...s}));
+    const done = sub.length ? sub.every(s => s.done) : (o ? !!o.done : !!src.done);
+    return {k:src.k, id:(o && o.id) || src.k, n:src.n, d:src.d, why:src.why, done, sub};
+  }).concat(userSteps);
+  S.base = snapDefaults(); S.baseOrder = DEFAULT_MILES.map(m => m.k); S.milesTextVer = MILES_TEXT_VERSION;
+  save();
 }
 
 function saveLocal(){
