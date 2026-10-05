@@ -1,11 +1,11 @@
 {
  "schema_version": 1,
- "checked_at_utc": "2026-10-05T15:30:04+00:00",
+ "checked_at_utc": "2026-10-05T16:47:41+00:00",
  "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
  "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
- "source_commit": "7c72e71",
+ "source_commit": "634f9db",
  "destination": "03-сайт/сайт_текущий",
- "note": "Опубликовано приложение /app/ (коммит сайта 7c72e71): подпись ИП в шаге 7, ГС1 — 100 GTIN бесплатно, отметки переносятся по тексту; кэш mechta-v14.",
+ "note": "Опубликовано приложение /app/ (коммит сайта 634f9db): шаг 8 — тест на запах на добровольцах 60+, лаборатории ЦЭМиЭ, Оптиматест, ЦСС Групп; 181 поддействие; кэш mechta-v15.",
  "source_files": [
   {
    "path": "404.html",
@@ -39,8 +39,8 @@
   },
   {
    "path": "app/index.html",
-   "bytes": 87319,
-   "sha256": "36d66ce387f99d850a2c1ec46601ff5cf46379acdfb1839f1b5bdc67a1475f42"
+   "bytes": 88698,
+   "sha256": "22394f1e6add67b9077e92c684b60c400949f13e06059f7af39dbeda947d13d7"
   },
   {
    "path": "app/manifest.webmanifest",
@@ -50,7 +50,7 @@
   {
    "path": "app/sw.js",
    "bytes": 833,
-   "sha256": "28f3b78c4d851fc809f06794b35a25a04cd731ca25d592467a2033915843d6f6"
+   "sha256": "8d42565a272e6f2bd4dd1685c66648d938e75af0433713b4286816085eb72f5e"
   },
   {
    "path": "chto-takoe-2-nonenal/index.html",
