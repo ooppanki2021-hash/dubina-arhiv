@@ -3,9 +3,9 @@
   "checked_at_utc": "2026-10-05T21:05:26+00:00",
   "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
   "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
-  "source_commit": "b51137e",
+  "source_commit": "255b831",
   "destination": "03-сайт/сайт_текущий",
-  "note": "Опубликовано приложение /app/ (коммит сайта b51137e): в шаг 5 добавлен подпункт «Ответы Mail.ru» с вложением (4 вопроса, ссылки, готовые ответы); 21 шаг, 184 поддействия; кэш mechta-v23.",
+  "note": "Опубликовано приложение /app/ (коммит сайта 255b831): во вложении шага 5 «Ответы Mail.ru» — 9 вопросов, ссылки и готовые ответы; 21 шаг, 184 поддействия; кэш mechta-v24.",
   "source_files": [
     {
       "path": "404.html",
