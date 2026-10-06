@@ -3,9 +3,9 @@
   "checked_at_utc": "2026-10-05T21:05:26+00:00",
   "archive_base_commit": "3a5d02f891ae331cc1d55a59995ee86a0de377bd",
   "source_repository": "https://github.com/ooppanki2021-hash/zapahstarosti",
-  "source_commit": "a364a9c",
+  "source_commit": "19587cf",
   "destination": "03-сайт/сайт_текущий",
-  "note": "Опубликовано приложение /app/ (коммит сайта a364a9c): в шаг 5 добавлена статья про мыло с хурмой; вложение — 7 новых статей; 21 шаг, 191 поддействие; кэш mechta-v26.",
+  "note": "Опубликовано приложение /app/ (коммит сайта 19587cf): шаг 5 — 9 новых статей (мыло с хурмой первым; добавлены пролежни и еда; темы из обзора Kippenberger 2012); 21 шаг, 193 поддействия; кэш mechta-v27.",
   "source_files": [
     {
       "path": "404.html",
