@@ -1,4 +1,5 @@
 <!DOCTYPE html><html lang="ru"><head>
+    <meta name="zen-verification" content="AJDBxGxNAQzyR7TN1y8VhuEwcVSu5AbsF9ZeuanyJDgUUgLOXy9BItN4VJPumay7" />
 <meta charset="utf-8">
 <meta name="yandex-verification" content="e3e7231de3258122" /><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Средство от запаха старости тела: как выбрать по составу</title>
@@ -101,7 +102,7 @@
 <div class="dropdown-menu">
 <a href="/kak-otlichit-istochnik-zapakha/">Найти источник за 10 минут</a>
 <a href="/kviz/">Квиз: где источник?</a>
-<a href="/karta-kvartiry/">Карта квартиры</a>
+<a href="/zapah-v-kvartire/#karta">Карта квартиры</a>
 <a href="/material-metod/">Таблица материал-метод</a>
 </div>
 </div>
@@ -238,6 +239,8 @@
 </li>
 </ul>
 
+<p><b>Кстати: нелепая история аллантоина.</b> Аллантоин — нежный компонент кремов, сывороток и детских пенок: успокаивает кожу, снимает раздражение, помогает восстановлению. А теперь его происхождение. Это конечный продукт переработки мочевой кислоты — одного из главных компонентов мочи. У большинства млекопитающих фермент уриказа доокисляет мочевую кислоту до водорастворимого аллантоина; фактически это «моча, доведённая до конца» — только на молекулярном уровне. И в этом вся нелепость: молекула с самой деликатной репутацией в косметике — производное самого неделикатного продукта. В крем аллантоин попадает синтетический (мочевую кислоту окисляют в лаборатории), но молекула химически та же, что образуется из мочи в природе. Дальше — ещё интереснее: у человека и остальных приматов ген уриказы сломался миллионы лет назад, поэтому у нас мочевая кислота не доходит до аллантоина и копится — вплоть до подагры. Так что детская пенка и подагрический приступ — две судьбы одной и той же молекулы. И бонус из деревни: окопник-«костолом», которым веками заживляли раны, — природная фабрика того же аллантоина. Народная медицина накладывала на раны эту «переработанную мочу» за века до того, как у молекулы появилось имя.</p>
+
 <h3>2. Для дезодорантов зрелой кожи</h3>
 <ul>
 <li><strong>Что ДОЛЖНО быть:</strong> растительные танины (Quercus Robur), антиоксиданты (витамин E — Tocopherol, экстракт зеленого чая Camellia Sinensis), цинковая соль рицинолевой кислоты (Zinc Ricinoleate).</li>
@@ -265,7 +268,7 @@
 
 <p><a href="/odezhda-i-tekstil/">Как правильно стирать текстиль от запаха →</a> • <a href="/poroshok-dlya-tekstila/">Как отстирать: порошок, 40 °C и 60 °C →</a> • <a href="/ubrat-zapah/">Как уменьшить запах тела: базовый уход →</a> • <a href="/ochistitel-vozduha/">Что реально очищает воздух →</a></p>
 
-<p class="small muted sans">Обновлено 25.09.2026. Автор — врач Инна Кучиева. Источники — по ссылкам в тексте.</p>
+<p class="small muted sans">Обновлено 25.09.2026. Автор — Инна Кучиева, бывший врач-психиатр. Источники — по ссылкам в тексте.</p>
 </div></main>
 <footer class="footer"><div class="container">© 2026</div><div class="container"><div class="content small"><div class="small" style="margin-top:8px"><a href="/politika-konfidencialnosti/">Политика обработки персональных данных</a> • <a href="/soglasie-na-obrabotku/">Согласие на обработку</a> • <a href="#" onclick="zsCookieSettings(event)">Настройки cookie</a></div><div style="margin-top:6px;font-size:10.5px;color:#A3ADB8">Владелец сайта: Кучиева Инесса Таймуразовна, г. Владикавказ, <a href="mailto:Inna.rossia@yandex.ru" style="color:inherit;text-decoration:none">Inna.rossia@yandex.ru</a></div></div></div></footer>
 
@@ -273,6 +276,7 @@
 
 <script>
 (function(){
+  var mq = window.matchMedia('(max-width:960px)');
   var btn = document.getElementById('menuToggle');
   var nav = document.querySelector('.nav');
   var backdrop = document.getElementById('menuBackdrop');
@@ -282,20 +286,31 @@
     backdrop.className = 'menu-backdrop';
     document.body.appendChild(backdrop);
   }
-  
-  // Выносим nav в body, чтобы z-index хедера не влиял на наложение
-  if(nav && nav.parentElement !== document.body){
-    document.body.appendChild(nav);
-  }
-  
-  if(nav && !nav.querySelector('.nav-header-mobile')){
-    var h = document.createElement('div');
-    h.className = 'nav-header-mobile';
-    h.innerHTML = '<span class="nav-header-title">Меню</span><button class="nav-close-btn" id="navCloseBtn" aria-label="Закрыть">✕</button>';
-    nav.insertBefore(h, nav.firstChild);
-    var closeBtn = document.getElementById('navCloseBtn');
-    if(closeBtn){
-      closeBtn.onclick = function(e){ e.stopPropagation(); closeNav(); };
+
+  function placeNav(){
+    if(!nav) return;
+    if(mq.matches){
+      if(nav.parentElement !== document.body){
+        document.body.appendChild(nav);
+      }
+      if(!nav.querySelector('.nav-header-mobile')){
+        var h = document.createElement('div');
+        h.className = 'nav-header-mobile';
+        h.innerHTML = '<span class="nav-header-title">Меню</span><button class="nav-close-btn" id="navCloseBtn" aria-label="Закрыть">\u2715</button>';
+        nav.insertBefore(h, nav.firstChild);
+        var closeBtn = nav.querySelector('#navCloseBtn');
+        if(closeBtn){ closeBtn.onclick = function(e){ e.stopPropagation(); closeNav(); }; }
+      }
+    } else {
+      var holder = document.querySelector('.header-inner');
+      if(holder && nav.parentElement !== holder){
+        holder.insertBefore(nav, (btn && btn.parentElement === holder) ? btn : null);
+      }
+      var mh = nav.querySelector('.nav-header-mobile');
+      if(mh){ mh.remove(); }
+      nav.classList.remove('open');
+      if(backdrop) backdrop.classList.remove('open');
+      document.body.style.overflow = '';
     }
   }
 
@@ -339,6 +354,9 @@
       }
     }
   });
+
+  placeNav();
+  if(mq.addEventListener){ mq.addEventListener('change', placeNav); } else if(mq.addListener){ mq.addListener(placeNav); }
 })();
 </script>
 <!--CONSENT-START-->

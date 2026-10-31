@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="ru"><head>
+    <meta name="zen-verification" content="AJDBxGxNAQzyR7TN1y8VhuEwcVSu5AbsF9ZeuanyJDgUUgLOXy9BItN4VJPumay7" /><meta charset="utf-8">
 <meta name="yandex-verification" content="e3e7231de3258122" /><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, follow">
 <title>Набор «Тело + текстиль» — как сочетать мыло, тоник и порошок</title>
@@ -74,7 +75,7 @@
 <div class="dropdown-menu">
 <a href="/kak-otlichit-istochnik-zapakha/">Найти источник за 10 минут</a>
 <a href="/kviz/">Квиз: где источник?</a>
-<a href="/karta-kvartiry/">Карта квартиры</a>
+<a href="/zapah-v-kvartire/#karta">Карта квартиры</a>
 <a href="/material-metod/">Таблица материал-метод</a>
 </div>
 </div>
@@ -143,20 +144,22 @@
 <div class="kstati">Подарок, который не обижает: набор "Неделя свежести" с чек-листом и инструкцией выглядит как забота, а не как намек "ты пахнешь".</div>
 
 <div class="note">Эта страница отвечает на один конкретный вопрос. Если вопрос другой — перейдите по ссылкам ниже.</div>
-<h2>Проверка результата</h2>
-<p>Через 24 часа после обработки понюхайте зону снова без парфюма. Если запах вернулся — источник глубже, нужен следующий шаг.</p>
-<h2>Что делать если не помогло</h2>
+<h2>Как понять, что уход работает</h2>
+<p>Запах тела не меняется за один душ, поэтому оценивать стоит через неделю регулярного ухода. Проще всего проверять по ткани: она за ночь собирает кожное сало, и запах на ней слышен лучше, чем на коже. Наденьте на ночь свежую хлопковую футболку, утром понюхайте ворот и наволочку и сравните с тем, что было неделю назад.</p>
+<h2>Если запах остался</h2>
 <ul>
-<li>Повторите через день — иногда нужно 2 цикла</li>
-<li>Пройдите <a href="/kak-otlichit-istochnik-zapakha/">диагностику за 10 минут</a></li>
-<li>Посмотрите <a href="/zapah-v-kvartire/">карту квартиры</a> и <a href="/sredstva-ot-zapaha/">что нейтрализует</a></li>
+<li>Тело чистое, а подушка и одеяло пахнут — дело в постели. Её стирают при 60 °C, подушку и одеяло — по ярлыку: <a href="/odezhda-i-tekstil/">как стирать текстиль</a></li>
+<li>Вещи пахнут сразу после стирки — проверьте <a href="/kak-ubrat-zapah-v-stiralnoj-mashine/">стиральную машину</a></li>
+<li>Пахнет кресло, матрас или шкаф — источник в мебели: <a href="/kak-otlichit-istochnik-zapakha/">как отличить источник</a></li>
+<li>Запах появился резко или стал необычным — ацетон, аммиак, гниль — это повод <a href="/kogda-k-vrachu/">пойти к врачу</a>, а не менять средства</li>
 </ul>
-<div class="kstati"><b>Кстати</b>Запах часто возвращается не потому, что метод плохой, а потому что вещь не досушили полностью. Правило: если сомневаешься — досуши ещё 2 часа на балконе.</div>
-<h2>Профилактика</h2>
+<div class="kstati"><b>Кстати</b>С возрастом обоняние слабеет, и свой запах человек часто просто не слышит. Поэтому проверку лучше доверить близкому — и подать её как заботу, а не как упрёк: <a href="/kak-pogovorit-s-blizkim/">как об этом поговорить</a>.</div>
+<h2>Распорядок на неделю</h2>
 <ul>
-<li>Раз в неделю — быстрая проверка зоны</li>
-<li>Раз в месяц — полная обработка</li>
-<li>Раз в 3 месяца — замена текстиля который удерживает запах</li>
+<li>Каждый день — мягко вымыть подмышки, пах и складки кожи, насухо промокнуть и надеть чистое бельё</li>
+<li>Между душами — освежить подмышки и складки, особенно в жару и после прогулки</li>
+<li>Два-три раза в неделю — стирать постельное бельё и домашнюю одежду при 60 °C, если ткань это выдерживает, и сушить до конца</li>
+<li>Раз в неделю — проветрить подушки и одеяло на балконе или у открытого окна</li>
 </ul>
 
 </section></main>
@@ -165,6 +168,7 @@
 
 <script>
 (function(){
+  var mq = window.matchMedia('(max-width:960px)');
   var btn = document.getElementById('menuToggle');
   var nav = document.querySelector('.nav');
   var backdrop = document.getElementById('menuBackdrop');
@@ -174,20 +178,31 @@
     backdrop.className = 'menu-backdrop';
     document.body.appendChild(backdrop);
   }
-  
-  // Выносим nav в body, чтобы z-index хедера не влиял на наложение
-  if(nav && nav.parentElement !== document.body){
-    document.body.appendChild(nav);
-  }
-  
-  if(nav && !nav.querySelector('.nav-header-mobile')){
-    var h = document.createElement('div');
-    h.className = 'nav-header-mobile';
-    h.innerHTML = '<span class="nav-header-title">Меню</span><button class="nav-close-btn" id="navCloseBtn" aria-label="Закрыть">✕</button>';
-    nav.insertBefore(h, nav.firstChild);
-    var closeBtn = document.getElementById('navCloseBtn');
-    if(closeBtn){
-      closeBtn.onclick = function(e){ e.stopPropagation(); closeNav(); };
+
+  function placeNav(){
+    if(!nav) return;
+    if(mq.matches){
+      if(nav.parentElement !== document.body){
+        document.body.appendChild(nav);
+      }
+      if(!nav.querySelector('.nav-header-mobile')){
+        var h = document.createElement('div');
+        h.className = 'nav-header-mobile';
+        h.innerHTML = '<span class="nav-header-title">Меню</span><button class="nav-close-btn" id="navCloseBtn" aria-label="Закрыть">\u2715</button>';
+        nav.insertBefore(h, nav.firstChild);
+        var closeBtn = nav.querySelector('#navCloseBtn');
+        if(closeBtn){ closeBtn.onclick = function(e){ e.stopPropagation(); closeNav(); }; }
+      }
+    } else {
+      var holder = document.querySelector('.header-inner');
+      if(holder && nav.parentElement !== holder){
+        holder.insertBefore(nav, (btn && btn.parentElement === holder) ? btn : null);
+      }
+      var mh = nav.querySelector('.nav-header-mobile');
+      if(mh){ mh.remove(); }
+      nav.classList.remove('open');
+      if(backdrop) backdrop.classList.remove('open');
+      document.body.style.overflow = '';
     }
   }
 
@@ -231,6 +246,9 @@
       }
     }
   });
+
+  placeNav();
+  if(mq.addEventListener){ mq.addEventListener('change', placeNav); } else if(mq.addListener){ mq.addListener(placeNav); }
 })();
 </script>
 <!--CONSENT-START-->
