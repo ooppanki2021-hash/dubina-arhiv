@@ -6,6 +6,7 @@ Uses only the Python 3 standard library. Does not edit files or access the netwo
 Baseline: 01_НАЧНИ_ОТСЮДА/КОНТРОЛЬ_СОХРАННОСТИ.json (schema 2, 27.09.2026).
 Site snapshot: 03-сайт/сайт_текущий + 03-сайт/СВЕРКА_ПУБЛИКАЦИИ.json.
 """
+import re
 from pathlib import Path
 from hashlib import sha256
 from html.parser import HTMLParser
@@ -138,14 +139,35 @@ def main():
                        | set(publication.get('service_pages_noindex', [])))
     require(closed_urls == expected_closed,
             'Изменился список закрытых контентных URL')
+    # Страница-заглушка: отдаёт meta refresh и canonical на другую страницу, в карты
+    # не входит намеренно (`/karta-kvartiry/` после слияния 09.10). Такие адреса
+    # вычитаем из сверки, но требуем, чтобы у них был canonical вне самой себя —
+    # иначе «заглушка» может оказаться полноценной страницей, забытой в карте.
+    placeholders = set()
+    for page in pages:
+        relative = page.relative_to(SITE).as_posix()
+        url = 'https://zapahstarosti.ru/' + (relative[:-len('index.html')] or '')
+        if url in open_urls and url not in main_urls:
+            html = page.read_text(encoding='utf-8')
+            canonical = re.search(r'<link[^>]+rel="canonical"[^>]+href="([^"]+)"', html)
+            if canonical and canonical.group(1).rstrip('/') != url.rstrip('/'):
+                placeholders.add(url)
+    open_urls -= placeholders
     require(open_urls == set(main_urls),
-            'Открытые страницы не совпадают с основной картой')
+            'Открытые страницы не совпадают с основной картой: '
+            + str(sorted(open_urls ^ set(main_urls))))
 
     # --- трекер и упаковка -------------------------------------------------
     newer = ROOT / '05_приложение/app/index.html'
     standalone = ROOT / '05_приложение/МЕЧТА_автономная_копия.html'
-    require(newer.read_bytes() == standalone.read_bytes(),
-            'Новая PWA и автономная копия расходятся')
+    # Автономная копия отличается от PWA ровно одним: в неё вшиты документы
+    # (DOCS_INLINE — base64). До 02.11.2026 здесь требовалось полное побайтовое
+    # равенство, и проверка падала всегда, маскируя настоящие расхождения.
+    def _strip_docs(html):
+        return re.sub(r"const DOCS_INLINE = '[^']*';", "const DOCS_INLINE = '';", html)
+
+    require(_strip_docs(newer.read_text(encoding='utf-8')) == _strip_docs(standalone.read_text(encoding='utf-8')),
+            'Новая PWA и автономная копия расходятся не только вложением документов')
     for key, path in (('published', SITE / 'app/index.html'),
                       ('newer_unpublished', newer)):
         record = publication['tracker_versions'][key]

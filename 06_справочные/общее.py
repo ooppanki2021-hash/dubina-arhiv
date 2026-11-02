@@ -20,11 +20,17 @@ import re
 def tracker_stats(path):
     """Число этапов и поддействий трекера прямо из разметки, без ручных констант.
 
-    Этапы — вхождения `{n:'`, поддействия — объекты вида `{ t:'…', done:true|false }`.
-    Считается из самой разметки, а не хранится константой, чтобы число не могло
-    отстать от содержимого файла.
+    Формат сменился 06.10.2026: сначала путь писали как `{n:'…', sub:[{ t:'…', done:true }]}`,
+    с версии с постоянными ключами — как JSON `{"k":"m01","n":"…","sub":[{"t":"…","done":true}]}`.
+    Старый шаблон на новом файле давал 0/0, и эти нули уходили в СВЕРКУ и в проверки
+    README как «факт» (обнаружено 02.11.2026). Поэтому считаем оба формата: основной —
+    новый, старый — запасной, для истории и для опубликованной копии, если она отстала.
     """
     text = path.read_text(encoding="utf-8")
-    steps = len(re.findall(r"\{n:'", text))
-    actions = len(re.findall(r"\{\s*t:'[^']*'\s*,\s*done:(?:true|false)\s*\}", text))
-    return steps, actions
+    steps_new = len(re.findall(r'"k"\s*:\s*"m\d{2}"', text))
+    actions_new = len(re.findall(r'"t"\s*:\s*"[^"]*"\s*,\s*"done"\s*:\s*(?:true|false)', text))
+    if steps_new:
+        return steps_new, actions_new
+    steps_old = len(re.findall(r"\{n:'", text))
+    actions_old = len(re.findall(r"\{\s*t:'[^']*'\s*,\s*done:(?:true|false)\s*\}", text))
+    return steps_old, actions_old
