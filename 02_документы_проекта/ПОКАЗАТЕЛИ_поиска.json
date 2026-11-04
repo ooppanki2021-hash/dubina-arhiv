@@ -1,44 +1,72 @@
 {
- "schema_version": 1,
- "date": "28.09.2026",
- "taken_from": [
-  "Яндекс.Вебмастер, API zapahstarosti.ru: /search-urls/in-search/samples, /search-urls/events/samples, /indexing/samples, /recrawl/quota, /recrawl/queue",
-  "Яндекс.Метрика, счётчик 111871686, 60 дней"
- ],
- "written_to_report": "02_документы_проекта/АНАЛИТИКА_отчёт_28-09-2026.md",
- "note": "Машинный снимок показателей для README и отчётов. Числа сняты из API, не из памяти. Обновлять только новым снятием из API и с новой датой — прежние значения сохранять в истории Git.",
- "search": {
-  "hosts": 1,
-  "pages_in_search": 3,
-  "pages_in_search_list": [
-   "/",
-   "/chto-takoe-2-nonenal/",
-   "/o-proekte/"
+  "schema_version": 1,
+  "date": "04.11.2026",
+  "previous_snapshot": "28.09.2026 (см. историю Git: search.pages_in_search=3, metrika.visits_60d=98)",
+  "taken_from": [
+    "Яндекс.Вебмастер, API zapahstarosti.ru: /summary, /diagnostics, /sitemaps, /recrawl/quota, /recrawl/queue, /indexing/history",
+    "Яндекс.Метрика, счётчик 111871686 — скриншоты отчёта «Обзор» от автора (04.11), два периода"
   ],
-  "versions_from": "22.09.2026",
-  "indexing_allowed": 25,
-  "sitemap_urls": 25,
-  "excluded_low_quality": 4,
-  "excluded_date": "09.09.2026",
-  "still_excluded": 3,
-  "still_excluded_list": [
-   "/kak-otlichit-istochnik-zapakha/",
-   "/karta-osetii/",
-   "/ubrat-zapah/"
+  "note": "Числа сняты из API и из выгрузки Метрики, не из памяти. Прежние значения сохраняются в истории Git, не перезаписывать задним числом.",
+  "search": {
+    "pages_in_search": 2,
+    "excluded_pages_count": 1,
+    "sqi": 0,
+    "sitemap_urls": 24,
+    "sitemap_last_access": "2026-09-24T16:26:08+03:00",
+    "last_crawl_http_2xx": "2026-10-04",
+    "crawl_since_2026_10-25": "нет ни одного обхода",
+    "recrawl_quota_left": 150,
+    "recrawl_queue_total": 50,
+    "recrawl_done": 21,
+    "recrawl_failed": 29,
+    "recrawl_failed_2026_10_24": "24 из 24 — все заявки дня упали",
+    "diagnostics_present": [
+      "NOT_IN_SPRAV (RECOMMENDATION, с 30.09.2026)"
+    ],
+    "diagnostics_note": "NO_METRIKA_COUNTER_BINDING = ABSENT, но привязка счётчика к Вебмастеру недоступна на стороне Яндекса («временно недоступна»)"
+  },
+  "metrika": {
+    "counter": 111871686,
+    "period_month_oct_2026": {
+      "visits": 4,
+      "visitors": 3,
+      "new_visitors": 2,
+      "returning": 1,
+      "views": 7,
+      "time_on_site": "5 м 10 с",
+      "depth": 1.75,
+      "bounce_rate_percent": 0,
+      "sources": {
+        "search": 4,
+        "referral": 0,
+        "direct": 0
+      },
+      "entry_pages": {
+        "/chto-takoe-2-nonenal/": 1,
+        "/o-proekte/#waitlist": 1,
+        "/odezhda-i-tekstil/": 1,
+        "/poroshok-dlya-tekstila/": 1
+      },
+      "note": "Проблема со всем сайтом: 4 визита за месяц, все из поиска. Внешних переходов ноль — проверить донора 9111.ru по Метрике пока нечем."
+    },
+    "period_all_time_old_site": {
+      "visits": 103,
+      "visitors": 59,
+      "views": 512,
+      "depth": 4.97,
+      "bounce_rate_percent": 53,
+      "sources": {
+        "direct": 50,
+        "referral": 38,
+        "search": 15
+      },
+      "note": "ЭТО СТАРЫЙ САЙТ. Доказательство: заголовки в отчёте («…— без стыда», «кто открыл в Shiseido») не совпадают с текущими; /uhod-za-suhoj-kozhej/ в отчёте есть, вживую отдаёт 404; /?admin=1 — 7 просмотров от собственных заходов. Использовать эти числа как показатель текущего сайта НЕЛЬЗЯ."
+    }
+  },
+  "fixed_2026_11_04": [
+    "/odezhda-i-tekstil/: GC-MS -> GC-FID, три вещества, пары 26-104 раза для 2-ноненаля (4-8,5 — додекан), dateModified 04.11, lastmod в sitemap только у этой страницы",
+    "MAX пост 11 опубликован и исправлен по первоисточнику Abdul-Bari et al., 2020",
+    "IndexNow: 25 из 25 изменённых в 08c59a6 страниц оповещены (16 + 9)"
   ],
-  "http_host_removed": "28.09.2026 — запись http:zapahstarosti.ru:80 удалена по согласию автора, на главное зеркало не влияет",
-  "recrawl_quota_left": 142,
-  "recrawl_queue_done": 50
- },
- "metrika": {
-  "visits_60d": 98,
-  "visits_from_search": 8,
-  "visits_direct": 64,
-  "visits_referral": 21,
-  "visits_internal": 3,
-  "views_60d": 505,
-  "visitors_60d": 56,
-  "bounce_rate_percent": 54.1
- },
- "main_conclusion": "Узкое место — доверие к страницам, а не индексация: переобход исключённые как LOW_QUALITY страницы не возвращает."
+  "main_conclusion": "Сайт для поиска почти не существует: 2 страницы в индексе, обхода нет с 04.10, 4 визита за месяц. Причина со стороны Яндекса (аварии ЦОД 8-11.10), но и со стороны сайта: 24 страницы не в индексе, переобход не помогает. До восстановления обхода Яндекса ничего не пинговать; работать над содержанием и смотреть Google."
 }
