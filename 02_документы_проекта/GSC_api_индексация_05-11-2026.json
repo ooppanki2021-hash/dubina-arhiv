@@ -1,0 +1,242 @@
+{
+ "https://zapahstarosti.ru/chto-takoe-2-nonenal/": {
+  "coverage": "Страница просканирована, но пока не проиндексирована",
+  "crawl": "2026-08-24",
+  "canonical": "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
+  "userCanonical": "https://zapahstarosti.ru/chto-takoe-2-nonenal/",
+  "robots": "ALLOWED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/faq/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-28",
+  "canonical": "https://zapahstarosti.ru/faq/",
+  "userCanonical": "https://zapahstarosti.ru/faq/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-11-02",
+  "canonical": "https://zapahstarosti.ru/",
+  "userCanonical": "https://zapahstarosti.ru/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/": {
+  "coverage": "Страница просканирована, но пока не проиндексирована",
+  "crawl": "2026-09-17",
+  "canonical": "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
+  "userCanonical": "https://zapahstarosti.ru/kak-otlichit-istochnik-zapakha/",
+  "robots": "ALLOWED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/kak-pogovorit-s-blizkim/": {
+  "coverage": "Обнаружена, не проиндексирована",
+  "crawl": "",
+  "canonical": null,
+  "userCanonical": null,
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "pageFetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ "https://zapahstarosti.ru/kak-ubrat-zapah-iz-shkafa/": {
+  "coverage": "Обнаружена, не проиндексирована",
+  "crawl": "",
+  "canonical": null,
+  "userCanonical": null,
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "pageFetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ "https://zapahstarosti.ru/kak-ubrat-zapah-s-divana/": {
+  "coverage": "Обнаружена, не проиндексирована",
+  "crawl": "",
+  "canonical": null,
+  "userCanonical": null,
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "pageFetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ "https://zapahstarosti.ru/kak-ubrat-zapah-s-matrasa/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-14",
+  "canonical": "https://zapahstarosti.ru/kak-ubrat-zapah-s-matrasa/",
+  "userCanonical": "https://zapahstarosti.ru/kak-ubrat-zapah-s-matrasa/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/kak-ubrat-zapah-v-sanuzle/": {
+  "coverage": "Обнаружена, не проиндексирована",
+  "crawl": "",
+  "canonical": null,
+  "userCanonical": null,
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "pageFetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ "https://zapahstarosti.ru/kak-ubrat-zapah-v-stiralnoj-mashine/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-22",
+  "canonical": "https://zapahstarosti.ru/kak-ubrat-zapah-v-stiralnoj-mashine/",
+  "userCanonical": "https://zapahstarosti.ru/kak-ubrat-zapah-v-stiralnoj-mashine/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/karta-osetii/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-08",
+  "canonical": "https://zapahstarosti.ru/karta-osetii/",
+  "userCanonical": "https://zapahstarosti.ru/karta-osetii/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/kogda-k-vrachu/": {
+  "coverage": "URL неизвестен Google",
+  "crawl": "",
+  "canonical": null,
+  "userCanonical": null,
+  "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+  "verdict": "NEUTRAL",
+  "indexing": "INDEXING_STATE_UNSPECIFIED",
+  "pageFetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+ },
+ "https://zapahstarosti.ru/kviz/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-11-01",
+  "canonical": "https://zapahstarosti.ru/kviz/",
+  "userCanonical": "https://zapahstarosti.ru/kviz/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/lekarstva-i-zapah/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-27",
+  "canonical": "https://zapahstarosti.ru/lekarstva-i-zapah/",
+  "userCanonical": "https://zapahstarosti.ru/lekarstva-i-zapah/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/material-metod/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-28",
+  "canonical": "https://zapahstarosti.ru/material-metod/",
+  "userCanonical": "https://zapahstarosti.ru/material-metod/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/o-proekte/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-11-03",
+  "canonical": "https://zapahstarosti.ru/o-proekte/",
+  "userCanonical": "https://zapahstarosti.ru/o-proekte/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/ochistitel-vozduha/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-27",
+  "canonical": "https://zapahstarosti.ru/ochistitel-vozduha/",
+  "userCanonical": "https://zapahstarosti.ru/ochistitel-vozduha/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/odezhda-i-tekstil/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-26",
+  "canonical": "https://zapahstarosti.ru/odezhda-i-tekstil/",
+  "userCanonical": "https://zapahstarosti.ru/odezhda-i-tekstil/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/poroshok-dlya-tekstila/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-09-25",
+  "canonical": "https://zapahstarosti.ru/poroshok-dlya-tekstila/",
+  "userCanonical": "https://zapahstarosti.ru/poroshok-dlya-tekstila/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/sredstva-ot-zapaha/": {
+  "coverage": "Индексирование страницы запрещено тегом noindex",
+  "crawl": "2026-08-23",
+  "canonical": "https://zapahstarosti.ru/sredstva-ot-zapaha/",
+  "userCanonical": "https://zapahstarosti.ru/sredstva-ot-zapaha/",
+  "robots": "ALLOWED",
+  "verdict": "NEUTRAL",
+  "indexing": "BLOCKED_BY_META_TAG",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/tonik-protirka/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-27",
+  "canonical": "https://zapahstarosti.ru/tonik-protirka/",
+  "userCanonical": "https://zapahstarosti.ru/tonik-protirka/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/ubrat-zapah/": {
+  "coverage": "Страница отправлена и проиндексирована",
+  "crawl": "2026-10-13",
+  "canonical": "https://zapahstarosti.ru/ubrat-zapah/",
+  "userCanonical": "https://zapahstarosti.ru/ubrat-zapah/",
+  "robots": "ALLOWED",
+  "verdict": "PASS",
+  "indexing": "INDEXING_ALLOWED",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/ventilyatsiya-i-vlazhnost/": {
+  "coverage": "Индексирование страницы запрещено тегом noindex",
+  "crawl": "2026-08-23",
+  "canonical": "https://zapahstarosti.ru/ventilyatsiya-i-vlazhnost/",
+  "userCanonical": "https://zapahstarosti.ru/ventilyatsiya-i-vlazhnost/",
+  "robots": "ALLOWED",
+  "verdict": "NEUTRAL",
+  "indexing": "BLOCKED_BY_META_TAG",
+  "pageFetch": "SUCCESSFUL"
+ },
+ "https://zapahstarosti.ru/zapah-v-kvartire/": {
+  "coverage": "Индексирование страницы запрещено тегом noindex",
+  "crawl": "2026-08-23",
+  "canonical": "https://zapahstarosti.ru/zapah-v-kvartire/",
+  "userCanonical": "https://zapahstarosti.ru/zapah-v-kvartire/",
+  "robots": "ALLOWED",
+  "verdict": "NEUTRAL",
+  "indexing": "BLOCKED_BY_META_TAG",
+  "pageFetch": "SUCCESSFUL"
+ }
+}
